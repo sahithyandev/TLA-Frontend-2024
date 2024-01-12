@@ -3,7 +3,7 @@ import { useRoutes } from 'react-router-dom';
 import Home from './Pages/Home'
 import Thaipongal from './Pages/Thaipongal';
 import Sotkanai from './Pages/Sotkanai';
-import ComingSoon from './Pages/comingSoon/ComingSoon';
+import ComingSoon from './shared/comingSoon/ComingSoon';
 
 function Router() {
     return (
