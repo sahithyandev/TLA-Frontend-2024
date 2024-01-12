@@ -1,0 +1,125 @@
+.agenda-card {
+    width: 325px;
+    height: 546px;
+    left: 372px;
+    top: 837px;
+
+    background: #E3E7EB;
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 15px;
+}
+
+.agenda-card2 {
+    width: 325px;
+    height: 546px;
+    left: 723px;
+    top: 837px;
+
+    background: #E3E7EB;
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 15px;
+}
+
+.agenda-title {
+    width: 264px;
+    height: 27px;
+    left: 403px;
+    top: 995px;
+
+    font-family: 'Heading' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px !important;
+    line-height: 18px;
+    text-align: center;
+
+    color: #002245 !important;
+}
+
+.agenda-card-title {
+    /* font-family: 'bavantech13'; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    color: #022345 !important;
+    ;
+    font-size: 20px !important;
+    font-family: 'Heading' !important;
+    /* identical to box height, or 85% */
+
+    text-align: center;
+}
+
+.agenda-title2 {
+
+    font-family: 'Heading' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 17px !important;
+    /* identical to box height, or 85% */
+
+    text-align: center;
+    padding: 20px;
+
+    color: #002245 !important;
+}
+
+.agenda-text-title {
+    width: 191px;
+    height: 56px;
+    left: 439px;
+    top: 1060px;
+    font-family: 'Heading' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px !important;
+    line-height: 28px;
+    /* or 88% */
+
+    text-align: center;
+
+    color: #002245 !important;
+}
+.agenda-card22 {
+    box-sizing: border-box;
+    width: 235px;
+    left: 769px;
+    background: #FFFFFF;
+    border: 1px solid #002245;
+    border-radius: 15px;
+}
+
+.event-detail {
+    width: 247px;
+    height: 84px;
+    left: 411px;
+    right: 211px;
+    top: 1135px;
+    font-family: 'Heading' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px !important;
+    line-height: 28px;
+    /* or 140% */
+
+    text-align: center;
+    color: #002245 !important;
+}
+
+.agenda-list {
+
+    font-family: 'Para' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px !important;
+    line-height: 17px;
+    /* or 106% */
+    text-align: center;
+    color: #002245 !important;
+}
+
+.agenda-img{
+    width: 400px;
+   
+}

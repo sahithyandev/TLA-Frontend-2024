@@ -1,0 +1,23 @@
+.heading {
+    color: #022345 !important;
+    font-size: 80px !important;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.heading-icon {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-image: url(../images/Introduction/circle2.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    /* animation: rotate 5s infinite; */
+}
+
+@keyframes rotate {
+    50% {transform: rotate(180deg);}
+}
