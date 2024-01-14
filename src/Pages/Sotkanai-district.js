@@ -10,6 +10,5 @@ const SotkanaiDistrict = () => {
             </Helmet>
         </>
     );
-
 }
 export default SotkanaiDistrict;
