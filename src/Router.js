@@ -4,6 +4,7 @@ import Home from './Pages/Home'
 import Thaipongal from './Pages/Thaipongal';
 import SotkanaiMain from './Pages/Sotkanai-main';
 import SotkanaiDistrict from './Pages/Sotkanai-district';
+import Aramiyam from './Pages/Aramiyam';
 import ComingSoon from './shared/comingSoon/ComingSoon';
 
 function Router() {
@@ -27,6 +28,10 @@ function Router() {
                     {
                         path: 'sotkanai-district',
                         element: <SotkanaiDistrict />
+                    },
+                    {
+                        path: 'aramiyam',
+                        element: <Aramiyam />
                     },
                     {
                         path: 'comingSoon',
