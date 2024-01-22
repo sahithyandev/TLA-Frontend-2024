@@ -3,7 +3,7 @@ import {
     Grid, Container
 } from '@mui/material';
 import './pongalintro.css';
-import pongalimg from '../../../../images/Events/Card Illustration/ani4.png';
+import pongalimg from '../../../../images/Events/Card Illustration/pongal.png';
 
 
 function PongalIntro() {
