@@ -20,3 +20,14 @@
 @keyframes rotate {
     50% {transform: rotate(180deg);}
 }
+
+@media (max-width : 768px) {
+    .heading {
+        font-size: 50px !important;
+    }
+    .heading-icon {
+        height: 100px;
+        width: 100px;
+    }
+    
+}
