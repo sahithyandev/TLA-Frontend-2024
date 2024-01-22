@@ -1,33 +1,38 @@
 .heading {
     color: #022345 !important;
-    font-size: 80px !important;
+    font-size: 80px;
     font-family: 'Heading' !important;
     letter-spacing: normal;
     text-align: center;
-}
-
-.heading-icon {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    background-image: url(../images/Introduction/circle2.png);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    z-index: -1;
 }
 
 @keyframes rotate {
     50% {transform: rotate(180deg);}
 }
 
-@media (max-width : 768px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     .heading {
-        font-size: 50px !important;
+        font-size: 30px;
     }
-    .heading-icon {
-        height: 100px;
-        width: 100px;
-    }
-    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1296px) {
+  
 }
