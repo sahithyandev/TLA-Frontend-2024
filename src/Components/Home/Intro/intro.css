@@ -12,7 +12,6 @@
 }
 
 .intro-heading {
-
     color: #022345 !important;
     font-size: 80px !important;
     font-family: 'Heading' !important;
@@ -23,15 +22,11 @@
 }
 
 .intro-heading1 {
-
     color: #717274 !important;
-    
     font-size: 30px !important;
     font-family: 'Para' !important;
     letter-spacing: normal;
     text-align: center;
-    
-
 }
 
 
