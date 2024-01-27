@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import SotkanaiIntro from "../Components/events/sotkanai/intro/sotkanaiIntro";
+import Sponsors from "../Components/events/sotkanai/sponsers/Sponsers";
 
 
 const SotkanaiMain = () => {
@@ -12,6 +13,7 @@ const SotkanaiMain = () => {
                 <meta name="keywords" content="TLA, Tamil Literary Association, Thai Pongal" />
             </Helmet>
             <SotkanaiIntro />
+            <Sponsors/>
 
            
         </>
