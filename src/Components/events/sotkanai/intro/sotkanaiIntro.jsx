@@ -3,7 +3,7 @@ import {
     Grid, Container
 } from '@mui/material';
 import './sotkanaiIntro.css';
-import sotkanaiImg from '../../../../images/Events/Card Illustration/ani1.png';
+import sotkanaiImg from '../../../../images/Events/Card Illustration/sotkanai.png';
 
 
 function SotkanaiIntro() {
