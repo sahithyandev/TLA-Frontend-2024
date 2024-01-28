@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import SotkanaiIntro from "../Components/events/sotkanai/intro/sotkanaiIntro";
 import Sponsors from "../Components/events/sotkanai/sponsers/Sponsers";
 
-
 const SotkanaiMain = () => {
     return (
         <>
@@ -14,8 +13,6 @@ const SotkanaiMain = () => {
             </Helmet>
             <SotkanaiIntro />
             <Sponsors/>
-
-           
         </>
     );
 
