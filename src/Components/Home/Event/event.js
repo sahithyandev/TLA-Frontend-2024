@@ -13,7 +13,7 @@ import sotkanai from '../../../images/Events/Card Illustration/sotkanai.png'
 import brammam from '../../../images/Events/Card Illustration/brammam.png'
 import jeevanathi from '../../../images/Events/Card Illustration/jeevanathi.png'
 import kovil from '../../../images/Events/Card Illustration/kovil.png'
-import ppl from '../../../images/Events/Card Illustration/ppl.png'
+import ppl from '../../../images/Events/Card Illustration/cricket.png'
 import foodfestival from '../../../images/Events/Card Illustration/foodfestival.png'
 import blooddonation from '../../../images/Events/Card Illustration/blooddonation.png'
 
@@ -74,13 +74,13 @@ const social = [
     {
         title: 'இரத்ததான முகாம் ',
         img: blooddonation,
-        link: '/events/comingsSoon',
+        link: '/events/blood-donation',
         descriiption: 'சாதி மத பேதமின்றி எமது சொந்தங்களை உதவிக்கரம் கொடுத்து உயிரை காப்பாற்றும் வகையில் மேற்கொள்ளப்பட்டு வருகின்றது. இது மன்றத்தின் சாதி மத பேதத்தை கடந்து ஒவ்வொரு வருடமும் வீரநடை போடுகின்றது.'
     },
     {
         title:'கோவில்',
         img: kovil,
-        link: '/events/comingSoon',
+        link: '/events/kovil',
         descriiption:'வருடந்தோறும் இரத்மலானையில் உள்ள திருநந்தீஸ்வர ஆலயத்தில் சிவராத்திரி , நவராத்திரி மற்றும் தைப்பொங்கல் பூசைகள் தமிழ் இலக்கிய மன்றத்தால் சிறப்பாக நடாத்தபட்டு வருகின்றன. இந்நேரங்களில் மாணவர்களின் இறைவழிபாடுகள் மற்றும் சிரமதான பணிகள் நடைபெறுகின்றன'
     }
 ]
@@ -95,7 +95,7 @@ const carnival = [
     {
         title:'உணவுத் திருவிழா',
         img: foodfestival,
-        link: '/events/comingSoon',
+        link: '/events/food-festival',
         descriiption:'எமது பாரம்பரிய உணவுகளை சகோதர மொழி மாணவர்களுடன் பகிர்ந்துண்னும் நிகழ்வு'
     }
 ]
