@@ -71,7 +71,7 @@ function Sponsors() {
 
                 </Grid>
             </Container>
-            {/* <ImageGallery autoPlay items={sponsorAds} /> */}
+           
         </div>
     );
 }
