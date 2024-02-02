@@ -27,7 +27,7 @@ function Home() {
             <Intro />
             <Event />
             <Gallery />
-            <Timeline />
+            {/* <Timeline /> */}
             <Contact />
         </>)
 }
