@@ -12,7 +12,7 @@ const SotkanaiMain = () => {
                 <meta name="keywords" content="TLA, Tamil Literary Association, Thai Pongal" />
             </Helmet>
             <SotkanaiIntro />
-            <Sponsors/>
+            {/* <Sponsors/> */}
         </>
     );
 

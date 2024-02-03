@@ -6,14 +6,14 @@ import {
 import './event.css'
 
 import tamilaruvi from '../../../images/Events/Card Illustration/tamilaruvi.png'
-import aramiyam from '../../../images/Events/Card Illustration/aramiyam.png'
+import aramiyam from '../../../images/Events/Card Illustration/aramiyamintro.png'
 import pongal from '../../../images/Events/Card Illustration/pongal.png'
 import vanivila from '../../../images/Events/Card Illustration/vanivila.png'
 import sotkanai from '../../../images/Events/Card Illustration/sotkanai.png'
 import brammam from '../../../images/Events/Card Illustration/brammam.png'
 import jeevanathi from '../../../images/Events/Card Illustration/jeevanathi.png'
 import kovil from '../../../images/Events/Card Illustration/kovil.png'
-import ppl from '../../../images/Events/Card Illustration/cricket.png'
+import ppl from '../../../images/Events/Card Illustration/ppl.png'
 import foodfestival from '../../../images/Events/Card Illustration/foodfestival.png'
 import blooddonation from '../../../images/Events/Card Illustration/blooddonation.png'
 
