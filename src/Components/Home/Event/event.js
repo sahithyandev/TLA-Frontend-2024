@@ -6,7 +6,7 @@ import {
 import './event.css'
 
 import tamilaruvi from '../../../images/Events/Card Illustration/tamilaruvi.png'
-import aramiyam from '../../../images/Events/Card Illustration/aramiyam.png'
+import aramiyam from '../../../images/Events/Card Illustration/aramiyamintro.png'
 import pongal from '../../../images/Events/Card Illustration/pongal.png'
 import vanivila from '../../../images/Events/Card Illustration/vanivila.png'
 import sotkanai from '../../../images/Events/Card Illustration/sotkanai.png'
@@ -74,13 +74,13 @@ const social = [
     {
         title: 'இரத்ததான முகாம் ',
         img: blooddonation,
-        link: '/events/comingsSoon',
+        link: '/events/blood-donation',
         descriiption: 'சாதி மத பேதமின்றி எமது சொந்தங்களை உதவிக்கரம் கொடுத்து உயிரை காப்பாற்றும் வகையில் மேற்கொள்ளப்பட்டு வருகின்றது. இது மன்றத்தின் சாதி மத பேதத்தை கடந்து ஒவ்வொரு வருடமும் வீரநடை போடுகின்றது.'
     },
     {
         title:'கோவில்',
         img: kovil,
-        link: '/events/comingSoon',
+        link: '/events/kovil',
         descriiption:'வருடந்தோறும் இரத்மலானையில் உள்ள திருநந்தீஸ்வர ஆலயத்தில் சிவராத்திரி , நவராத்திரி மற்றும் தைப்பொங்கல் பூசைகள் தமிழ் இலக்கிய மன்றத்தால் சிறப்பாக நடாத்தபட்டு வருகின்றன. இந்நேரங்களில் மாணவர்களின் இறைவழிபாடுகள் மற்றும் சிரமதான பணிகள் நடைபெறுகின்றன'
     }
 ]
@@ -95,7 +95,7 @@ const carnival = [
     {
         title:'உணவுத் திருவிழா',
         img: foodfestival,
-        link: '/events/comingSoon',
+        link: '/events/food-festival',
         descriiption:'எமது பாரம்பரிய உணவுகளை சகோதர மொழி மாணவர்களுடன் பகிர்ந்துண்னும் நிகழ்வு'
     }
 ]
@@ -136,12 +136,12 @@ function Event() {
                     <div className="intro-heading1">தமிழர் தேசம் எங்கிலும் பரந்து வாழும் பாடசாலை மாணவர்களின் பல்முக திறமைகளுக்கு களம் அமைத்து அகில இலங்கைரீதியில் அந்த சாதனை வீர்ர்களுக்கு அங்கீகாரத்தை வழங்க தமிழ் இலக்கிய மன்றத்தால் பெருமையுடன் நடாத்தபடும் போட்டிகள்</div>
                     <Grid container
                         spacing={4}
-                        columns={16}
+                        // columns={16}
                         direction="row"
                         justifyContent="center"
                         alignItems="center">
                         {competiton.map((event, index) => <>
-                            <Grid item xs={5}>
+                            <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index}>
                                 <Link to={event.link}>
                                     <div className="event-card">
                                         <div className="event-card-top">
@@ -163,13 +163,12 @@ function Event() {
                     <div className="intro-heading1">தாங்கள் கடந்து வந்த அனுபவங்களையும் படிப்பினைகளையும் தமது தம்பி, தங்கைகளுக்கும் கூறி அவர்களை வழிநடத்தி அவர்களின் இலக்குகளை அடைய கைகோர்க்கும் சிரேஷ்ட மாணவர்களுக்கும் பல்கலைக்கழக மாணவர்களுக்குமான உறவுப்பாலம்</div>
                     <Grid container
                         spacing={4}
-                        columns={16}
                         direction="row"
                         justifyContent="center"
                         alignItems="center"
                         >
                         {guidence.map((event, index) => <>
-                            <Grid item xs={5}>
+                            <Grid item xl='4' lg='4' md='3' sm='6' xs='12' key={index}>
                                 <Link to={event.link}>
                                     <div className="event-card">
                                         <div className="event-card-top">
@@ -195,6 +194,7 @@ function Event() {
                         justifyContent="space-around"
                         alignItems="center"
                         spacing={4}
+                        
                     >
                         {social.map((event, index) => <>
                             <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index} >
@@ -217,12 +217,11 @@ function Event() {
                     <div className="intro-heading1">பல்கலையில் பயிலும் தமிழ் மாணவர்களின் கலைத்திறமைகளை வெளி உலகிற்கு பறைசாற்றிடும் நிகழ்வுகள் பல்கலையில் பயிலும் தமிழ் மாணவர்களின் கலைத்திறமைகளை வெளி உலகிற்கு பறைசாற்றிடும் நிகழ்வுகள்</div>
                     <Grid container
                         spacing={4}
-                        columns={16}
                         direction="row"
                         justifyContent="center"
                         alignItems="center">
                         {carnival.map((event, index) => <>
-                            <Grid item xs={5}>
+                            <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index}>
                                 <Link to={event.link}>
                                     <div className="event-card">
                                         <div className="event-card-top">

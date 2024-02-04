@@ -14,7 +14,7 @@ const Thaipongal = () => {
             </Helmet>
                 <PongalIntro />
                 <Agenda />
-                <Sponsors />
+                {/* <Sponsors /> */}
                 <PongalGallery />
         </>
     );
