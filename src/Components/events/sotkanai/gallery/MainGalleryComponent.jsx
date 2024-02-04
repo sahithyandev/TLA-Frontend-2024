@@ -20,7 +20,7 @@ const imageData ={
           {
             "name": "முல்லைத்தீவு",
             "images": [
-                "https://cdn.audleytravel.com/5237/3740/79/1332748-jaffna-library.jpg",
+                "https://assets-global.website-files.com/576fd5a8f192527e50a4b95c/5eabf07d46d66a4f49bfe76d_sumbarines%20in%20Mullaitivu.jpg",
               "district2_image2.jpg",
               "district2_image10.jpg"
             ]
@@ -28,7 +28,7 @@ const imageData ={
             {
                 "name": "மன்னார்",
                 "images": [
-                    "https://cdn.audleytravel.com/5237/3740/79/1332748-jaffna-library.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/a/af/Lighthouse%2C_Talaimannar.jpg",
                 "district6_image2.jpg",
                 "district6_image10.jpg"
                 ]
@@ -57,7 +57,7 @@ const imageData ={
           {
             "name": "திருகோணமலை",
             "images": [
-                "https://cdn.audleytravel.com/5237/3740/79/1332748-jaffna-library.jpg",
+                "https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2018/09/og-image-for-trincomalee-tourist-attractions.jpg",
               "district3_image2.jpg",
               "district3_image10.jpg"
             ]
@@ -73,7 +73,7 @@ const imageData ={
             {
                 "name": "அம்பாறை",
                 "images": [
-                    "https://cdn.audleytravel.com/5237/3740/79/1332748-jaffna-library.jpg",
+                    "https://upload.wikimedia.org/wikipedia/commons/a/af/Lighthouse%2C_Talaimannar.jpg",
                 "district5_image2.jpg",
                 "district5_image10.jpg"
                 ]
@@ -86,7 +86,7 @@ const imageData ={
             {
                 "name": "kandy",
                 "images": [
-                    "https://cdn.audleytravel.com/5237/3740/79/1332748-jaffna-library.jpg",
+                    "https://whc.unesco.org/uploads/thumbs/site_0450_0020-1200-630-20151105154018.jpg",
                 "district9_image2.jpg",
                 "district9_image10.jpg"
                 ]
@@ -120,14 +120,6 @@ const imageData ={
                 "district12_image10.jpg"
                 ]
             },
-            {
-                "name": "gampaha",
-                "images": [
-                    "https://cdn.audleytravel.com/5237/3740/79/1332748-jaffna-library.jpg",
-                "district13_image2.jpg",
-                "district13_image10.jpg"
-                ]
-            },
                 {
                     "name": "kalutara",
                     "images": [
@@ -141,22 +133,6 @@ const imageData ={
         {
             "name": "southern",
             "districts": [
-            {
-                "name": "galle",
-                "images": [
-                    "https://cdn.audleytravel.com/5237/3740/79/1332748-jaffna-library.jpg",
-                "district15_image2.jpg",
-                "district15_image10.jpg"
-                ]
-            },
-            {
-                "name": "matara",
-                "images": [
-                    "https://cdn.audleytravel.com/5237/3740/79/1332748-jaffna-library.jpg",
-                "district16_image2.jpg",
-                "district16_image10.jpg"
-                ]
-            },
                 {
                     "name": "hambantota",
                     "images": [
