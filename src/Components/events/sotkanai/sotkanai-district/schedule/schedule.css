@@ -8,6 +8,16 @@
     padding-top: 2rem;
     /* background-color: #E3E7EB !important; */
 }
+.head-landing-body {
+    color: #022345 !important;
+    font-size: 20px !important;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 2rem;
+    /* background-color: #E3E7EB !important; */
+}
 
 
 .sotkanai-district-landing-container-div {
@@ -97,4 +107,11 @@
     .intro-description {
         font-size: 30px !important;      
     }
+}
+
+.vertical-align{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
 }
