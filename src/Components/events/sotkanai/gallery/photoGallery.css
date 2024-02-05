@@ -29,6 +29,14 @@
     justify-content: space-evenly;
   }
   
+  @media only screen and (max-width: 600px) {
+    .images-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  
   .district-container {
     margin: 10px;
     text-align: center;
@@ -37,7 +45,7 @@
     position: relative;
   }
   
-  img {
+  .imgx{
     max-width: 100%;
     height: auto;
     max-height: 250px;
@@ -49,7 +57,7 @@
   .district-name {
     /* max-width: 30%; */
     margin-top: 5px;
-    margin-left: 15%;
+    margin-left: 5%;
     color: #ffffff !important;
     font-family: 'Heading' !important;
     font-size: 25px;
@@ -62,16 +70,26 @@
     padding: 5px; /* Optional: Add padding to the district name */
   
     /* Responsive adjustments */
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
       margin-left: 15%;
     }
   
     @media (max-width: 480px) {
       margin-left: 5%;
       font-size: 10px;
-    }
+    } */
   }
 
+  .set-width {
+    width: 70%;
+    padding: 10px;
+    margin: auto;
+  }
   
+  @media only screen and (max-width: 768px) {
+    .set-width {
+      width: 90%;
+    }
+  }
   
   

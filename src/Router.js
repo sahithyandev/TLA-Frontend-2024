@@ -41,6 +41,7 @@ function Router() {
 
                         path: 'jeevanathi',
                         element:<Jeevanathi/>
+                    },{
 
                     
                     },

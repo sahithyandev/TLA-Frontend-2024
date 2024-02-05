@@ -1,23 +1,45 @@
-.sotkanai-landing-container-div {
+.head-landing-heading1 {
+    color: #022345 !important;
+    font-size: 30px !important;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 2rem;
+    /* background-color: #E3E7EB !important; */
+}
+.head-landing-body {
+    color: #022345 !important;
+    font-size: 20px !important;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 2rem;
+    /* background-color: #E3E7EB !important; */
+}
+
+
+.sotkanai-district-landing-container-div {
     height: 100vh;
-    background-image: url(../../../../images/Introduction/intro_back.png),url(../../../../images/Introduction/intro_back_flip.png);
+    background-image: url(../../../../../images/Introduction/intro_back.png),url(../../../../../images/Introduction/intro_back_flip.png);
     background-position: right,left;
     background-size: 20%;
     background-repeat: no-repeat; 
 }
-.sotkanai-landing-container {
+.sotkanai-district-landing-container {
     min-height: 90vh;
 }
-.sotkanai-landing-heading1 {
+.sotkanai-district-landing-heading1 {
     color: #022345 !important;
-    font-size: 50px !important;
+    font-size: 30px !important;
     font-family: 'Heading' !important;
     letter-spacing: normal;
     text-align: center;
     line-height: 1.5;
     padding-top: 2rem;
 }
-.sotkanai-icon {
+.sotkanai-district-icon {
     height: 50vh;
     width: auto;
     margin-left: auto;
@@ -26,7 +48,7 @@
   }
   
   @media only screen and (max-width: 768px) {
-    .sotkanai-icon {
+    .sotkanai-district-icon {
       height: auto;
       width: 70%;
     }
@@ -85,4 +107,11 @@
     .intro-description {
         font-size: 30px !important;      
     }
+}
+
+.vertical-align{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
 }
