@@ -41,8 +41,12 @@ function Router() {
 
                         path: 'jeevanathi',
                         element:<Jeevanathi/>
+
+                    
                     },
+                   
                     {    
+
                         path: 'kovil',
                         element: <Kovil />
                     },
