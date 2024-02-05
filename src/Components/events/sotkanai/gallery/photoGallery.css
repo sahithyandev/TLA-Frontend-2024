@@ -1,0 +1,77 @@
+.province-landing-heading1 {
+    color: #022345 !important;
+    font-size: 30px !important;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+.province-landing-heading-letter {
+    font-size: 70px;
+    line-height: 1;
+}
+
+/* styles.css */
+.province-container {
+    margin-bottom: 20px;
+  }
+  
+  .province-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .district-container {
+    margin: 10px;
+    text-align: center;
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 4%;
+    position: relative;
+
+  }
+  
+  .district-name {
+    /* max-width: 30%; */
+    margin-top: 5px;
+    margin-left: 15%;
+    color: #ffffff !important;
+    font-family: 'Heading' !important;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    border-radius: 8%;
+    background-color: #022345; 
+    padding: 5px; /* Optional: Add padding to the district name */
+  
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      margin-left: 15%;
+    }
+  
+    @media (max-width: 480px) {
+      margin-left: 5%;
+      font-size: 10px;
+    }
+  }
+
+  
+  
+  
