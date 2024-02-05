@@ -1,15 +1,18 @@
 import React,{event} from "react";
 import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
-import School1 from "../../../../images/Events/jeevanathi/schools1.png";
-import School2 from "../../../../images/Events/jeevanathi/schools2.png";
-import School3 from "../../../../images/Events/jeevanathi/schools3.png";
-import School4 from "../../../../images/Events/jeevanathi/schools4.png";
-import Flood1 from "../../../../images/Events/jeevanathi/flood1.png";
-import Flood2 from "../../../../images/Events/jeevanathi/flood2.png";
-import Flood3 from "../../../../images/Events/jeevanathi/flood3.png";
-import Flood4 from "../../../../images/Events/jeevanathi/flood4.png";
-import Flood5 from "../../../../images/Events/jeevanathi/flood5.png";
-import Flood6 from "../../../../images/Events/jeevanathi/flood6.png";
+import School1 from "../../../../images/Events/jeevanathi/udaweriya-2018/school1.jpg";
+import School2 from "../../../../images/Events/jeevanathi/udaweriya-2018/school2.jpg";
+import School3 from "../../../../images/Events/jeevanathi/udaweriya-2018/school3.jpg";
+import School4 from "../../../../images/Events/jeevanathi/udaweriya-2018/school4.jpg";
+import Flood1 from "../../../../images/Events/jeevanathi/flood-2018/flood1.jpg";
+import Flood2 from "../../../../images/Events/jeevanathi/flood-2018/flood2.jpg";
+import Flood3 from "../../../../images/Events/jeevanathi/flood-2018/flood3.jpg";
+import Flood4 from "../../../../images/Events/jeevanathi/flood-2018/flood4.jpg";
+import Landslide1 from "../../../../images/Events/jeevanathi/landslide-badulla-2014/landslide1.jpg";
+import Landslide2 from "../../../../images/Events/jeevanathi/landslide-badulla-2014/landslide2.jpg";
+import Landslide3 from "../../../../images/Events/jeevanathi/landslide-badulla-2014/landslide3.jpg";
+import Landslide4 from "../../../../images/Events/jeevanathi/landslide-badulla-2014/landslide4.jpg";
+
 
 
 
@@ -18,13 +21,19 @@ const pastEvents = [
     projectName: "உடவேரிய பாடசாலை திட்டம் - 2018",
     photos: [School1, School2, School3, School4],
     description:
-      "தமிழ் இலக்கிய மன்றம், கற்றல் உபகரணங்களுக்கு ஒரு தொகையுடன் மொத்தம் 2,00,000.00 ரூபாய் செலவிட்டது. ஒரு மாணவருக்கு 4000.00 ரூபாய் வீதம், அபிவிருத்திக்காக மேலும் 1,00,000.00 ரூபா கையளிக்கப்பட்டது. பள்ளியின், இந்த திட்டத்திற்கு 3,00,000.00 ரூபாய் செலவிடப்பட்டது.",
+      "ஜீவநதி திட்டத்தின் மூலம் பதுளை மாவட்டத்தில் அமைந்திருக்கும் உடவெறியா கிராமத்தின் பாடசாலை மாணவர்களுக்காக அப்பியாசக் கொப்பிகள், புத்தகப்பை, சப்பாத்து, காலணி உறை போன்றவையும் மற்றும் உடவெறியா பாடசாலை அபிவிருத்திக்குச் சிறிய நிதியுதவியும் வழங்கி வைக்கப்பட்டது.",
   },
   {
     projectName: "வெள்ள நிவாரணத் திட்டம் - 2018",
-    photos: [Flood1, Flood2, Flood3, Flood4,Flood5,Flood6],
+    photos: [Flood1, Flood2, Flood3, Flood4],
     description:
-      "கிளிநொச்சி மற்றும் முல்லைத்தீவில் வெள்ளத்தால் பாதிக்கப்பட்ட மக்களுக்கு தமிழ் இலக்கிய மன்றத்தினால் உதவிகள் வழங்கப்பட்டன.",
+      "நாட்டின் பல்வேறு மாவட்ட மக்களிடமிருந்து நிவாரண பொருட்கள் எமது மன்றத்தினால் சேகரிக்கப்பட்டு கிளிநொச்சி மற்றும் முல்லைத்தீவில் வெள்ளத்தினால் பாதிக்கப்பட்ட மக்களுக்கு வழங்கப்பட்டது.",
+  },
+
+  {
+    projectName: "மண்சரிவு நிவாரண திட்டம் - 2014",
+    photos: [Landslide1,Landslide2,Landslide3,Landslide4],
+    description: "பதுளை மாவட்டத்தில் மண்சரிவினால் பாதிக்கப்பட்ட மக்களுக்கு நிவாரண உதவிகள் எமது தமிழிலக்கிய மன்றத்தினால் வழங்கி வைக்கப்பட்டது.",
   },
 ];
 
@@ -103,7 +112,7 @@ function PastProject() {
                     image={photo}
                     style={{
                       objectFit: "cover",
-                      maxWidth: "90%",
+                      maxWidth: "70%",
                       margin: "0 auto",
                     }}
                   />
