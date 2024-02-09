@@ -1,14 +1,19 @@
-.sotkanai-landing-container-div {
+.aramiyam-landing-container-div {
     height: 100vh;
     background-image: url(../../../../images/Introduction/intro_back.png),url(../../../../images/Introduction/intro_back_flip.png);
     background-position: right,left;
     background-size: 20%;
     background-repeat: no-repeat; 
 }
-.sotkanai-landing-container {
+
+.aramiyam-landing-container {
     min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.sotkanai-landing-heading1 {
+
+.aramiyam-landing-heading1 {
     color: #022345 !important;
     font-size: 50px !important;
     font-family: 'Heading' !important;
@@ -16,30 +21,25 @@
     text-align: center;
     line-height: 1.5;
     padding-top: 2rem;
+    margin: 2rem;
 }
-.sotkanai-icon {
+
+.aramiyam-icon{
     height: 50vh;
     width: auto;
     margin-left: auto;
     margin-right: auto;
     display: block;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .sotkanai-icon {
-      height: auto;
-      width: 70%;
-    }
-  }
+}
 
-.sotknai-landing-heading-letter {
+.aramiyam-landing-heading-letter {
     font-size: 70px;
     line-height: 1;
 }
 
 .intro-decription {
     color: #717274 !important;
-    font-size: 30px !important;
+    font-size: 30px;
     font-family: 'Para' !important;
     letter-spacing: normal;
     text-align: center;
@@ -49,15 +49,23 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .intro-decription {
-        font-size: 30px !important;
+        font-size: 25px;
+    }
+    .aramiyam-icon{
+        height: auto;
+        width: auto;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .intro-decription {
-        font-size: 30px !important;
+        font-size: 25px !important;
         
+    }
+    .aramiyam-icon{
+        height: auto;
+        width: auto;
     }
 }
 
@@ -66,6 +74,10 @@
     .intro-decription {
         font-size: 30px !important;   
     }
+    .aramiyam-icon{
+        height: auto;
+        width: auto;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -73,16 +85,19 @@
     .intro-decription {
         font-size: 30px !important;   
     } 
-}
-@media only screen and (min-width: 1100px) {
-    .intro-decription {
-        font-size: 30px !important;       
+    .aramiyam-icon{
+        height: auto;
+        width: auto;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1296px) {
     .intro-description {
-        font-size: 30px !important;      
+        font-size: 25px;      
+    }
+    .aramiyam-icon{
+        height: auto;
+        width: auto;
     }
 }
