@@ -9,73 +9,84 @@
 
 .contact-container {
     margin: auto;
-    width: 35%;
-    padding: 10px;
-   
-
+    width: 80%;
 }
 
-.contact-row{
-    font-size: 18px;
-    color: #022345 ;
-    margin-top: 3px;
-    margin-bottom: 7px;
-    font-weight: 700;
+.contact-row {
+    color: #022345;
+    margin-top: 3vh;
+    font-size: 28px !important;
+    font-family: 'Para' !important;
 }
 
-.contact-input{
+.contact-input {
     width: 100%;
-    height: 65px;
+    height: 5vh;
     border: none;
     border-radius: 5px;
     font-size: 20px;
 }
 
-.contact-send-button{
-    width: 160px;
-    height: 58px;
-    background-color: #022345;
-    color: white;
-    font-size: 18px;
-    margin-top:20px ;
-    border-radius: 10px;
-}
-.contact-container-div{
-    background-image: url(../../../images/BackgroundImage/BG01.png);
-    background-position:center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    min-height:100vh
+.message-input {
+    height: 20vh !important;
 }
 
-.contact-icon-div{
+.contact-send-button {
+    width: 150px;
+    height: 40px;
+    background-color: #022345;
+    color: white;
+    font-size: 28px !important;
+    font-family: 'Para' !important;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.contact-container-div {
+    min-height: 100vh
+}
+
+.contact-icon-div {
     display: flex;
     border: 2px solid rgb(226, 225, 225);
     border-radius: 5px;
-background-color: #ffffff;
-
+    background-color: #ffffff;
 }
 
-.contact-icon{
-    margin: 20px 0px 0px 0px;
+.contact-icon {
+    margin: 5px 0px 0px 0px;
     font-size: 25px;
-    color: black;
-    width: 42px;
+    color: #022345;
+    width: 35px;
 }
-textarea:focus, input:focus{
+
+textarea:focus,
+input:focus {
     outline: none;
 }
 
 
+.col-right {
+    margin-top: 3vh;
+    margin-left: 5vw;
+}
 
+.nav-text {
+    font-size: 28px !important;
+    font-family: 'Para' !important;
+    margin-top: 4vh;
+    color: #022345;
+}
 
 @media only screen and (max-width: 900px) {
-    .contact-container {
-        border-radius: 10px;background: #f3f3f3;
+    /* .contact-container {
+        border-radius: 10px;
+        background: #f3f3f3;
         width: 90%;
         padding: 10px;
-        
-    
+    } */
+    .col-right{
+        margin-bottom: 3vh;
+        margin-left: 0;
     }
-
 }
