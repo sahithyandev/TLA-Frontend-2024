@@ -53,14 +53,14 @@ function PastProject() {
 
   return (
     <>
-      <h1 style={{ fontFamily: "Heading", color: "#022345", textAlign: 'center' }}>
+      <h1 style={{ fontFamily: "Heading", color: "#022345", textAlign: 'center', marginTop:'12vh' }}>
       கடந்த காலங்களில் வழங்கப்பட்ட உதவிகள்
       </h1>
       {pastEvents.map((event, index) => (
         <Card
           key={index}
           style={{
-            width: '1200',
+            width: '70%',
             height: '700',
             margin: "16px",
             background: "#e3e7eb",
@@ -100,7 +100,7 @@ function PastProject() {
                   lg={6}
                   key={photoIndex}
                   style={{
-                    padding: "2px", 
+                    padding: "2vw", 
                     boxSizing: "border-box", 
                   }}
                 >
@@ -108,11 +108,11 @@ function PastProject() {
                     component="img"
                     alt={`Project ${event.projectName} - Photo ${photoIndex + 1}`}
                     height="100%"
-                    width="100%"
+                    width="60%"
                     image={photo}
                     style={{
                       objectFit: "cover",
-                      maxWidth: "70%",
+                      maxWidth: "100%",
                       margin: "0 auto",
                     }}
                   />
@@ -161,9 +161,9 @@ function PastProject() {
               color="text.secondary"
               style={{
                 textAlign: "center",
-                maxWidth: "900px",
-                margin: "16px",
-                fontFamily: "Heading",
+                maxWidth: "90%",
+                margin: "20px",
+                fontFamily: 'Para',
                 color: "#022345",
               }}
             >
