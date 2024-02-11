@@ -214,7 +214,7 @@ function Event() {
                 </Container>
                 <Container maxWidth='lg' className="event-container" sx={{ pb: 4 }}>
                     <Heading>களியாட்டங்கள்</Heading>
-                    <div className="intro-heading1">பல்கலையில் பயிலும் தமிழ் மாணவர்களின் கலைத்திறமைகளை வெளி உலகிற்கு பறைசாற்றிடும் நிகழ்வுகள் பல்கலையில் பயிலும் தமிழ் மாணவர்களின் கலைத்திறமைகளை வெளி உலகிற்கு பறைசாற்றிடும் நிகழ்வுகள்</div>
+                    <div className="intro-heading1">ஓடி ஓடி களைத்திருக்கும் பல்கலைக்கழக மாணவர்கள் ஒய்யாரமாக கதைபேசி சக நண்பர்களுடன் உறவாடி கவலைகளை மறந்திருக்கும் தருணங்கள்</div>
                     <Grid container
                         spacing={4}
                         direction="row"
