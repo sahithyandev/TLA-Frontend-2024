@@ -14,7 +14,6 @@
 
 .contact-row {
     color: #022345;
-    margin-top: 3vh;
     font-size: 28px !important;
     font-family: 'Para' !important;
 }
@@ -38,8 +37,8 @@
     color: white;
     font-size: 28px !important;
     font-family: 'Para' !important;
-    margin-top: 20px;
-    border-radius: 10px;
+    margin-top: 6px;
+    border-radius: 5px;
 }
 
 .contact-container-div {
