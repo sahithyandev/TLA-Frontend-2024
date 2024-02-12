@@ -26,7 +26,7 @@ function Home() {
             <Landing />
             <Intro />
             <Event />
-            <Gallery />
+            {/* <Gallery /> */}
             {/* <Timeline /> */}
             <Contact />
         </>)
