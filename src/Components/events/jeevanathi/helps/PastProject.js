@@ -1,4 +1,5 @@
-import React,{event} from "react";
+import React from "react";
+import "./pastproject.css"; 
 import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 import School1 from "../../../../images/Events/jeevanathi/udaweriya-2018/school1.jpg";
 import School2 from "../../../../images/Events/jeevanathi/udaweriya-2018/school2.jpg";
@@ -12,7 +13,6 @@ import Landslide1 from "../../../../images/Events/jeevanathi/landslide-badulla-2
 import Landslide2 from "../../../../images/Events/jeevanathi/landslide-badulla-2014/landslide2.jpg";
 import Landslide3 from "../../../../images/Events/jeevanathi/landslide-badulla-2014/landslide3.jpg";
 import Landslide4 from "../../../../images/Events/jeevanathi/landslide-badulla-2014/landslide4.jpg";
-
 
 
 
@@ -37,8 +37,6 @@ const pastEvents = [
   },
 ];
 
-
-
 function PastProject() {
   const maxVisiblePhotos = 4;
 
@@ -53,125 +51,53 @@ function PastProject() {
 
   return (
     <>
-      <h1 style={{ fontFamily: "Heading", color: "#022345", textAlign: 'center', marginTop:'12vh' }}>
-      கடந்த காலங்களில் வழங்கப்பட்ட உதவிகள்
-      </h1>
-      {pastEvents.map((event, index) => (
-        <Card
-          key={index}
-          style={{
-            width: '70%',
-            height: '700',
-            margin: "16px",
-            background: "#e3e7eb",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <CardContent
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography
-              variant="h6"
-              component="div"
-              style={{
-                marginBottom: "18px",
-                fontFamily: "Heading",
-                color: "#022345",
-                textAlign: "center",
-              }}
-            >
-              {event.projectName}
-            </Typography>
-            <Grid container spacing={2} justifyContent="center">
-              {event.photos.slice(0, visiblePhotos).map((photo, photoIndex) => (
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  lg={6}
-                  key={photoIndex}
-                  style={{
-                    padding: "2vw", 
-                    boxSizing: "border-box", 
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    alt={`Project ${event.projectName} - Photo ${photoIndex + 1}`}
-                    height="100%"
-                    width="60%"
-                    image={photo}
-                    style={{
-                      objectFit: "cover",
-                      maxWidth: "100%",
-                      margin: "0 auto",
-                    }}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-            {event.photos.length > maxVisiblePhotos && (
-              <div style={{ textAlign: "center", margin: "8px" }}>
-                {visiblePhotos < event.photos.length ? (
-                  <>
-                    <button
-                      onClick={() => showMorePhotos(event)}
-                      style={{
-                        backgroundColor: "#022345",
-                        color: "#ffffff",
-                        padding: "8px 16px",
-                        borderRadius: "2px",
-                        cursor: "pointer",
-                        marginRight: "8px",
-                        fontFamily: "Heading"
-                      }}
-                    >
-                      மேலும் பார்க்க
+      <h1>கடந்த காலங்களில் வழங்கப்பட்ட உதவிகள்</h1>
+      <div className="cardContainer">
+        {pastEvents.map((event, index) => (
+          <Card key={index} className="card">
+            <CardContent className="cardContent">
+              <Typography variant="h6" component="div" className="projectName">
+                {event.projectName}
+              </Typography>
+              <Grid container spacing={2} justifyContent="center" className="photoGrid">
+                {event.photos.slice(0, visiblePhotos).map((photo, photoIndex) => (
+                  <Grid item xs={12} sm={6} md={4} lg={6} key={photoIndex} className="photoItem">
+                    <CardMedia
+                      component="img"
+                      alt={`Project ${event.projectName} - Photo ${photoIndex + 1}`}
+                      height="100%"
+                      width="60%"
+                      image={photo}
+                      className="photo"
+                    />
+                  </Grid>
+                ))}
+              </Grid>
+              {event.photos.length > maxVisiblePhotos && (
+                <div className="buttonContainer">
+                  {visiblePhotos < event.photos.length ? (
+                    <>
+                      <button
+                        onClick={() => showMorePhotos(event)}
+                        className="button"
+                      >
+                        மேலும் பார்க்க
+                      </button>
+                    </>
+                  ) : (
+                    <button onClick={showLessPhotos} className="button">
+                      குறைவாக பார்க்க
                     </button>
-                   
-                  </>
-                ) : (
-                  <button
-                    onClick={showLessPhotos}
-                    style={{
-                      backgroundColor: "#022345",
-                      color: "#ffffff",
-                      padding: "8px 16px",
-                      borderRadius: "2px",
-                      cursor: "pointer",
-                      fontFamily: "Heading"
-                    }}
-                  >
-                    குறைவாக பார்க்க 
-                  </button>
-                )}
-              </div>
-            )}
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              style={{
-                textAlign: "center",
-                maxWidth: "90%",
-                margin: "20px",
-                fontFamily: 'Para',
-                color: "#022345",
-              }}
-            >
-              {event.description}
-            </Typography>
-          </CardContent>
-        </Card>
-      ))}
+                  )}
+                </div>
+              )}
+              <Typography variant="body2" color="text.secondary" className="description">
+                {event.description}
+              </Typography>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </>
   );
 }
