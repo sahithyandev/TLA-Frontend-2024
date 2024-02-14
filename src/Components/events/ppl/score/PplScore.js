@@ -10,8 +10,8 @@ function PplScore() {
         <>
             <div className='score-landing-container-div'>
                 <Container className='score-landing-container'>
-                    <div className='score-heading1'> Live Score & Stats </div>
-                    <div className='score-text'> https://stumpsapp.com/cric/aQJt </div>
+                    {/* <div className='score-heading1'> Live Score & Stats </div> */}
+                    {/* <div className='score-text'> https://stumpsapp.com/cric/aQJt </div> */}
                     <div className='score-heading2'>போட்டி முடிவுகள்</div>
                     <Box className='container'>
                         <Grid container spacing={2}>
@@ -23,7 +23,7 @@ function PplScore() {
                                                 <img src={firstPlace} alt='ppl' className='icon' />
                                             </Grid>
                                             <Grid item xs={6} className='text'>
-                                                <div>அணி பெயர்</div>
+                                                <div>Spicy Blasters</div>
                                             </Grid>
                                         </Grid>
                                     </Grid>
@@ -37,7 +37,7 @@ function PplScore() {
                                                 <img src={award} alt='ppl' className='icon' />
                                             </Grid>
                                             <Grid item xs={6} className='text'>
-                                                <div>ஆட்ட நாயகன்</div>
+                                                <div>Logithan</div>
                                             </Grid>
                                         </Grid>
                                     </Grid>
@@ -51,7 +51,7 @@ function PplScore() {
                                                 <img src={secondPlace} alt='ppl' className='icon' />
                                             </Grid>
                                             <Grid item xs={6} className='text'>
-                                                <div>அணி பெயர்</div>
+                                                <div>Cheddi Nadu Supper King</div>
                                             </Grid>
                                         </Grid>
                                     </Grid>

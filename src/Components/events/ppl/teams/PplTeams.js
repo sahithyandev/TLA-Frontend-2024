@@ -8,22 +8,28 @@ import Heading from "../../../../shared/Heading";
 
 const pplTeamImages = [
     {
-        img: pplteams
+        img: "https://live.staticflickr.com/65535/53529394853_f4b5dd313e_w.jpg",
+        thumbnail: "https://live.staticflickr.com/65535/53529394853_f4b5dd313e_w.jpg"
     },
     {
-        img: pplteams
+        img:"https://live.staticflickr.com/65535/53529210076_0d84cc3e63_w.jpg",
+        thumbnail:"https://live.staticflickr.com/65535/53529210076_0d84cc3e63_w.jpg"
     },
     {
-        img: pplteams
+        img: "https://live.staticflickr.com/65535/53529640430_0b6c574422_w.jpg",
+        thumbnail: "https://live.staticflickr.com/65535/53529640430_0b6c574422_w.jpg"
     },
     {
-        img: pplteams
+        img: "https://live.staticflickr.com/65535/53529210106_854f5020b6_w.jpg",
+        thumbnail: "https://live.staticflickr.com/65535/53529210106_854f5020b6_w.jpg"
     },
     {
-        img: pplteams
+        img: "https://live.staticflickr.com/65535/53529525849_2bbbaac9b5_w.jpg",
+        thumbnail: "https://live.staticflickr.com/65535/53529525849_2bbbaac9b5_w.jpg"
     },
     {
-        img: pplteams
+        img: "https://live.staticflickr.com/65535/53529640495_885558d677_w.jpg",
+        thumbnail: "https://live.staticflickr.com/65535/53529640495_885558d677_w.jpg"
     }
 ];
 
