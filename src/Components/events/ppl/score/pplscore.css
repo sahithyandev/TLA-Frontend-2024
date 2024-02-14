@@ -1,0 +1,61 @@
+.score-landing-container-div {
+    height: 100vh;
+}
+
+.score-landing-container {
+    min-height: 90vh;
+}
+
+.score-heading1 {
+    color: #022345 !important;
+    font-size: 32px;
+    font-family: Para;
+    font-weight: 600;
+    letter-spacing: normal;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.score-text {
+    color: #022345 !important;
+    font-size: 32px;
+    font-family: Para;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.score-heading2 {
+    color: #022345 !important;
+    font-size: 50px;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 465px;
+    top: 1142px;
+    justify-items: center;
+    background-color: #E3E7EB;
+}
+
+.icon {
+    width: 150px;
+    height: 150px;
+    margin-left: 100px;
+    margin-top: 50px;
+    display: block;
+}
+
+.text {
+    align-self: center;
+    color: #022345 !important;
+    font-size: 32px;
+    font-family: Para;
+}

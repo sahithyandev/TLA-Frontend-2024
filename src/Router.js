@@ -12,6 +12,7 @@ import BloodDonation from './Pages/Blood-donation';
 import FoodFestival from './Pages/Food-festival';
 import VaniVilla from './Pages/Vani-villa';
 import Thamilaruvi from './Pages/Thamilaruvi';
+import PPL from "./Pages/PPL";
 
 function Router() {
     return (
@@ -66,6 +67,10 @@ function Router() {
                     {
                         path: 'comingSoon',
                         element: <ComingSoon />
+                    },
+                    {
+                        path: 'ppl',
+                        element: <PPL />
                     },
                 ]
             },
