@@ -13,7 +13,7 @@ const Thaipongal = () => {
                 <meta name="keywords" content="TLA, Tamil Literary Association, Thai Pongal" />
             </Helmet>
                 <PongalIntro />
-                <Agenda />
+                {/* <Agenda /> */}
                 {/* <Sponsors /> */}
                 <PongalGallery />
         </>
