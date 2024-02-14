@@ -6,6 +6,7 @@ import SotkanaiMain from './Pages/Sotkanai-main';
 import SotkanaiDistrict from './Pages/Sotkanai-district';
 import Aramiyam from './Pages/Aramiyam';
 import ComingSoon from './shared/comingSoon/ComingSoon';
+import PPL from "./Pages/PPL";
 
 function Router() {
     return (
@@ -36,6 +37,10 @@ function Router() {
                     {
                         path: 'comingSoon',
                         element: <ComingSoon />
+                    },
+                    {
+                        path: 'ppl',
+                        element: <PPL />
                     },
                 ]
             },
