@@ -6,7 +6,7 @@ import {
 import './event.css'
 
 import tamilaruvi from '../../../images/Events/Card Illustration/tamilaruvi.png'
-import aramiyam from '../../../images/Events/Card Illustration/aramiyam.png'
+import aramiyam from '../../../images/Events/Card Illustration/aramiyamintro.png'
 import pongal from '../../../images/Events/Card Illustration/pongal.png'
 import vanivila from '../../../images/Events/Card Illustration/vanivila.png'
 import sotkanai from '../../../images/Events/Card Illustration/sotkanai.png'
@@ -29,13 +29,13 @@ const cultureEvent = [
     {
         title: 'வாணி விழா',
         img: vanivila,
-        link: '/events/comingSoon',
+        link: '/events/vani-villa',
         descriiption:'அந்திமாலைப் பொழுதிலே பல்கலைக்கழக வளாகத்தில் ஆரம்பமாகும் இவ் நிகழ்வு கல்விக்கு சரஸ்வதியும், செல்வத்திற்கு லஷ்மியும், வீரத்திற்கு துர்க்கையும் ஆகிய முப்பெரும் தேவிகளுக்கான இறை வழிபாட்டுடன் ஆரம்பமாகி இசை, நடனம், வில்லுப்பாட்டு, பல்லியம் போன்ற கலை நிகழ்ச்சிகளுடன் இரவுப்பொழுதினிலே இனிதே நிறைவேறும்'
     },
     {
         title: 'தமிழருவி',
         img: tamilaruvi,
-        link: '/events/comingSoon',
+        link: '/events/thamilaruvi',
         descriiption: 'தமிழ் சமூகத்தின் மிகப்பெரிய பேறுகளான கலை கல்வி மற்றும் கலாச்சாரம் ஆகியவற்றின் இன்றைய விருத்திக்கும் நாளைய இருப்பிற்கும் தூணாய் நிற்க முனையும் எம் மொறட்டுவை பல்கலைகழக தமிழ் மன்றம் வருடந்தோறும் தலைநகரில் இலட்சக்கணக்கானோர் முன்னிலையில் பிரம்மாண்டத்தின் உச்சமாக நடைபெறும் கலை நிகழ்வு "தமிழருவி" ஆகும்'
     }
 ]
@@ -44,7 +44,7 @@ const competiton = [
     {
         title: 'சொற்கணை',
         img: sotkanai,
-        link: '/events/sotkanai-main',
+        link: '/events/comingSoon',
         descriiption: '’’சொற்கணை’’ என்பது மாபெரும் விவாதச்சமர். இலங்கையின் 25 மாவட்டங்களில் தேர்வு செய்யப்பட்ட சிறந்த விவாத அணிகள் சொல் எனும் கணை கொண்டு களமாடும் இறுதிகட்ட விவாத சமர் தலை நகரில் பிரதான மண்டபத்தில் பல்லாயிரக்கணக்கானோர் முன்னிலையில் மிகவும் கோலாகலமாக நடைபெறுவதாகும்.'
     },
     {
@@ -59,7 +59,7 @@ const guidence = [
     {
         title: 'அரமியம்',
         img: aramiyam,
-        link: '/events/aramiyam',
+        link: '/events/comingSoon',
         descriiption:'பல்கலைக்கழகம் முடித்து தொழில் மற்றும் உயர்கல்விக்கு செல்ல இருக்கும் மாணவர்களின் எதிர்காலம் தொடர்பான கலந்துரையாடல்களும் தொழில் வழிகாட்டல்களும் மொரட்டுவை பல்கலைக்கழகத்தில் கல்விகற்ற பழைய மாணவர்களால் மேற்கோள்ளப்பட்டு வருகின்றன.'
     }
 ]
@@ -68,20 +68,20 @@ const social = [
     {
         title: 'ஜீவநதி',
         img: jeevanathi,
-        link: '/events/comingSoon',
+        link: '/events/jeevanathi',
         descriiption: 'இது மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றத்தின் ஜீவ காருண்யப் பயணம். வறுமையில் தங்கள் வாழ் நிலைகளைத் தொலைத்து விட்ட பின் தங்கிய மாவட்டத்தின் துயர் ஒழுகும் வறுமையினையும் மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றத்தின் இந்த ஜீவநதி என்ற பயணம் வெளியுலகை அறியச் செய்கிறது.'
-    },
-    {
-        title: 'இரத்ததான முகாம் ',
-        img: blooddonation,
-        link: '/events/comingsSoon',
-        descriiption: 'சாதி மத பேதமின்றி எமது சொந்தங்களை உதவிக்கரம் கொடுத்து உயிரை காப்பாற்றும் வகையில் மேற்கொள்ளப்பட்டு வருகின்றது. இது மன்றத்தின் சாதி மத பேதத்தை கடந்து ஒவ்வொரு வருடமும் வீரநடை போடுகின்றது.'
     },
     {
         title:'கோவில்',
         img: kovil,
-        link: '/events/comingSoon',
+        link: '/events/kovil',
         descriiption:'வருடந்தோறும் இரத்மலானையில் உள்ள திருநந்தீஸ்வர ஆலயத்தில் சிவராத்திரி , நவராத்திரி மற்றும் தைப்பொங்கல் பூசைகள் தமிழ் இலக்கிய மன்றத்தால் சிறப்பாக நடாத்தபட்டு வருகின்றன. இந்நேரங்களில் மாணவர்களின் இறைவழிபாடுகள் மற்றும் சிரமதான பணிகள் நடைபெறுகின்றன'
+    },
+    {
+        title: 'இரத்ததான முகாம் ',
+        img: blooddonation,
+        link: '/events/blood-donation',
+        descriiption: 'சாதி மத பேதமின்றி எமது சொந்தங்களை உதவிக்கரம் கொடுத்து உயிரை காப்பாற்றும் வகையில் மேற்கொள்ளப்பட்டு வருகின்றது. இது மன்றத்தின் சாதி மத பேதத்தை கடந்து ஒவ்வொரு வருடமும் வீரநடை போடுகின்றது.'
     }
 ]
 
@@ -136,12 +136,12 @@ function Event() {
                     <div className="intro-heading1">தமிழர் தேசம் எங்கிலும் பரந்து வாழும் பாடசாலை மாணவர்களின் பல்முக திறமைகளுக்கு களம் அமைத்து அகில இலங்கைரீதியில் அந்த சாதனை வீர்ர்களுக்கு அங்கீகாரத்தை வழங்க தமிழ் இலக்கிய மன்றத்தால் பெருமையுடன் நடாத்தபடும் போட்டிகள்</div>
                     <Grid container
                         spacing={4}
-                        columns={16}
+                        // columns={16}
                         direction="row"
                         justifyContent="center"
                         alignItems="center">
                         {competiton.map((event, index) => <>
-                            <Grid item xs={5}>
+                            <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index}>
                                 <Link to={event.link}>
                                     <div className="event-card">
                                         <div className="event-card-top">
@@ -163,13 +163,12 @@ function Event() {
                     <div className="intro-heading1">தாங்கள் கடந்து வந்த அனுபவங்களையும் படிப்பினைகளையும் தமது தம்பி, தங்கைகளுக்கும் கூறி அவர்களை வழிநடத்தி அவர்களின் இலக்குகளை அடைய கைகோர்க்கும் சிரேஷ்ட மாணவர்களுக்கும் பல்கலைக்கழக மாணவர்களுக்குமான உறவுப்பாலம்</div>
                     <Grid container
                         spacing={4}
-                        columns={16}
                         direction="row"
                         justifyContent="center"
                         alignItems="center"
                         >
                         {guidence.map((event, index) => <>
-                            <Grid item xs={5}>
+                            <Grid item xl='4' lg='4' md='3' sm='6' xs='12' key={index}>
                                 <Link to={event.link}>
                                     <div className="event-card">
                                         <div className="event-card-top">
@@ -195,6 +194,7 @@ function Event() {
                         justifyContent="space-around"
                         alignItems="center"
                         spacing={4}
+                        
                     >
                         {social.map((event, index) => <>
                             <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index} >
@@ -214,15 +214,14 @@ function Event() {
                 </Container>
                 <Container maxWidth='lg' className="event-container" sx={{ pb: 4 }}>
                     <Heading>களியாட்டங்கள்</Heading>
-                    <div className="intro-heading1">பல்கலையில் பயிலும் தமிழ் மாணவர்களின் கலைத்திறமைகளை வெளி உலகிற்கு பறைசாற்றிடும் நிகழ்வுகள் பல்கலையில் பயிலும் தமிழ் மாணவர்களின் கலைத்திறமைகளை வெளி உலகிற்கு பறைசாற்றிடும் நிகழ்வுகள்</div>
+                    <div className="intro-heading1">ஓடி ஓடி களைத்திருக்கும் பல்கலைக்கழக மாணவர்கள் ஒய்யாரமாக கதைபேசி சக நண்பர்களுடன் உறவாடி கவலைகளை மறந்திருக்கும் தருணங்கள்</div>
                     <Grid container
                         spacing={4}
-                        columns={16}
                         direction="row"
                         justifyContent="center"
                         alignItems="center">
                         {carnival.map((event, index) => <>
-                            <Grid item xs={5}>
+                            <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index}>
                                 <Link to={event.link}>
                                     <div className="event-card">
                                         <div className="event-card-top">
