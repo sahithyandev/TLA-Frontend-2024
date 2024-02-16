@@ -1,6 +1,6 @@
 import React from "react";
 
-const imageData = {
+const SotkanaiData = {
   provinces: [
     {
       name: "வடக்கு மாகாணம்",
@@ -359,3 +359,4 @@ const imageData = {
     },
   ],
 };
+export default SotkanaiData
