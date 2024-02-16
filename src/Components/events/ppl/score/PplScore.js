@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Grid, Box} from "@mui/material";
+import {Container, Box} from "@mui/material";
 import './pplscore.css';
 import firstPlace from "../../../../images/Events/ppl/first.png";
 import secondPlace from "../../../../images/Events/ppl/second.png";
@@ -10,54 +10,24 @@ function PplScore() {
         <>
             <div className='score-landing-container-div'>
                 <Container className='score-landing-container'>
-                    {/* <div className='score-heading1'> Live Score & Stats </div> */}
-                    {/* <div className='score-text'> https://stumpsapp.com/cric/aQJt </div> */}
-                    <div className='score-heading2'>போட்டி முடிவுகள்</div>
-                    <Box className='container'>
-                        <Grid container spacing={2}>
-                            <Grid item xs={6}>
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12}>
-                                        <Grid container spacing={2}>
-                                            <Grid item xs={6} className='text'>
-                                                <img src={firstPlace} alt='ppl' className='icon' />
-                                            </Grid>
-                                            <Grid item xs={6} className='text'>
-                                                <div>Spicy Blasters</div>
-                                            </Grid>
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={6}>
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12}>
-                                        <Grid container spacing={2}>
-                                            <Grid item xs={6} className='text'>
-                                                <img src={award} alt='ppl' className='icon' />
-                                            </Grid>
-                                            <Grid item xs={6} className='text'>
-                                                <div>Logithan</div>
-                                            </Grid>
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={6}>
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12}>
-                                        <Grid container spacing={2}>
-                                            <Grid item xs={6}>
-                                                <img src={secondPlace} alt='ppl' className='icon' />
-                                            </Grid>
-                                            <Grid item xs={6} className='text'>
-                                                <div>Cheddi Nadu Supper King</div>
-                                            </Grid>
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
+                    <div className='score-heading1'>போட்டி முடிவுகள்</div>
+                    <Box className='score-container'>
+                        <div className="score-column">
+                            <div className="score-row score-row-margin">
+                                <img src={firstPlace} alt="PPL First Place" className="score-icon" />
+                                <div className='score-text'>Spicy Blasters</div>
+                            </div>
+                            <div className="score-row">
+                                <img src={secondPlace} alt="PPL Second Place" className="score-icon" />
+                                <div className='score-text'>Cheddi Nadu Supper King</div>
+                            </div>
+                        </div>
+                        <div className='score-column'>
+                            <div className='score-row score-row-center'>
+                                <img src={award} alt="PPL Award" className="score-icon" />
+                                <div className='score-text'>Logithan</div>
+                            </div>
+                        </div>
                     </Box>
                 </Container>
             </div>
