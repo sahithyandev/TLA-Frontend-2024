@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import JeevanathiIntro from "../Components/events/jeevanathi/intro/Jeevanathiintro";
 import hand from "../images/Events/jeevanathi/people-hands-bringing-money-together-to-donate-to-charity 1.png";
 import PastProject from "../Components/events/jeevanathi/helps/PastProject";
-
+import PopupCard from "../Components/events/jeevanathi/popup/PopupCard";
 function Jeevanathi() {
   return (
     <>
@@ -27,29 +27,16 @@ function Jeevanathi() {
             width: '100%'
           }}
         />
-        <button
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '20%',
-            transform: 'translate(-50%, -50%)',
-            padding: '15px',
-            backgroundColor: 'rgba(255, 255, 255, 0.7)',
-            border: 'none',
-            borderRadius: '10px',
-            cursor: 'pointer',
-            color: '#022345',
-            fontFamily: 'Heading',
-            fontSize: '2vw',
-          }}
-          onClick={() =>
-            alert(
-              'வங்கி கணக்கு விபரம் \n 0080292080 \n BOC \n Jaffna main branch \n X XXXXX'
-            )
-          }
-        >
-          எம்முடன் இணையுங்கள்
-        </button>
+        <PopupCard
+          buttonText="எம்முடன் இணையுங்கள்"
+          content={[
+            "வங்கி கணக்கு விபரம்",
+            "0080292080",
+            "BOC",
+            "Jaffna main branch",
+            "X XXXXX"
+          ]}
+        />
       </div>
       <div
         style={{
