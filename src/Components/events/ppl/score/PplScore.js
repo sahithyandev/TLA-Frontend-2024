@@ -13,12 +13,16 @@ function PplScore() {
                     <div className='score-heading1'>போட்டி முடிவுகள்</div>
                     <Box className='score-container'>
                         <div className="score-column">
-                            <div className="score-row score-row-margin">
-                                <img src={firstPlace} alt="PPL First Place" className="score-icon" />
+                            <div className="score-row">
+                                <div className='ppl-score-icon-container'>
+                                    <img src={firstPlace} alt="PPL First Place" className="score-icon" />
+                                </div>
                                 <div className='score-text'>Spicy Blasters</div>
                             </div>
                             <div className="score-row">
-                                <img src={secondPlace} alt="PPL Second Place" className="score-icon" />
+                                <div className='ppl-score-icon-container'>
+                                    <img src={secondPlace} alt="PPL Second Place" className="score-icon" />
+                                </div>
                                 <div className='score-text'>Cheddi Nadu Supper King</div>
                             </div>
                         </div>

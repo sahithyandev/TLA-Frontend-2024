@@ -15,19 +15,18 @@
     letter-spacing: normal;
     text-align: center;
     line-height: 1.5;
-    padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
 .score-container {
     display: flex;
     background-color: #E3E7EB;
-    padding: 50px;
     height: 100%;
+    width: 100%;
 }
 
 .score-icon {
-    width: 150px;
+    width: auto;
     height: 150px;
     margin-right: 10px;
 }
@@ -50,17 +49,19 @@
     align-items: center;
 }
 
-.score-row-margin {
-    margin-bottom: 50px;
-}
-
 .score-row-center {
     justify-content: center;
 }
 
-@media (max-width: 768px) {
+.ppl-score-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+@media only screen and (max-width: 950px) {
     .score-container {
-        width: 100%;
         flex-direction: column;
         padding-top: 50px;
     }
@@ -69,5 +70,14 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 50px;
+    }
+
+    .score-text {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .ppl-score-icon-container {
+
     }
 }
