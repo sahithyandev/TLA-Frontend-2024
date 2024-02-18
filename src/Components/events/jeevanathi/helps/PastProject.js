@@ -1,5 +1,5 @@
-import React from "react";
 import "./pastproject.css"; 
+import React from "react";
 import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 import School1 from "../../../../images/Events/jeevanathi/udaweriya-2018/school1.jpg";
 import School2 from "../../../../images/Events/jeevanathi/udaweriya-2018/school2.jpg";
