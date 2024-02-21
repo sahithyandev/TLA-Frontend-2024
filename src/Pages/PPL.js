@@ -8,9 +8,9 @@ const PPL = () => {
     return (
         <>
             <Helmet>
-                <title>தைப்பொங்கல் | தமிழ் இலக்கிய மன்றம்</title>
+                <title>பொங்கல் Premier Leaque | தமிழ் இலக்கிய மன்றம்</title>
                 <meta name="description" content="மொரட்டுவ பல்கலைக்கழக தமிழ் மாணவர்களிடையே இடைத்தொடர்புகளை ஏற்படுத்த நடாத்தப்படும் துடுப்பாட்டநிகழ்வு." />
-                <meta name="keywords" content="TLA, Tamil Literary Association, PPL" />
+                <meta name="keywords" content="PPL, Tamil Literary Association, PPL" />
             </Helmet>
             <PplIntro />
             <PplScore />
