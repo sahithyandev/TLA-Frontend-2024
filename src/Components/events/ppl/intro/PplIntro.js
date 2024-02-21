@@ -20,7 +20,7 @@ function PplIntro() {
                     >
                         <Grid item sm='12'>
                             <Container maxWidth="md">
-                                <div className="ppl-intro-description">மொரட்டுவ பல்கலைக்கழக தமிழ் மாணவர்களிடையே இடைத்தொடர்புகளை ஏற்படுத்த நடாத்தப்படும் துடுப்பாட்டநிகழ்வு.</div>
+                                <div className="ppl-intro-description">மொரட்டுவ பல்கலைக்கழக தமிழ் மாணவர்களிடையே நடாத்தப்படும் துடுப்பாட்டநிகழ்வு.</div>
                             </Container>
                         </Grid>
                     </Grid>
