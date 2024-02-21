@@ -1,61 +1,83 @@
 .score-landing-container-div {
-    height: 100vh;
+    padding-bottom: 2rem;
 }
 
 .score-landing-container {
-    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .score-heading1 {
-    color: #022345 !important;
-    font-size: 32px;
-    font-family: Para;
-    font-weight: 600;
-    letter-spacing: normal;
-    text-align: center;
-    padding-top: 2rem;
-}
-
-.score-text {
-    color: #022345 !important;
-    font-size: 32px;
-    font-family: Para;
-    font-weight: 400;
-    letter-spacing: normal;
-    text-align: center;
-}
-
-.score-heading2 {
     color: #022345 !important;
     font-size: 50px;
     font-family: 'Heading' !important;
     letter-spacing: normal;
     text-align: center;
     line-height: 1.5;
-    padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-.container {
-    margin-left: 50px;
-    margin-right: 50px;
-    height: 465px;
-    top: 1142px;
-    justify-items: center;
+.score-container {
+    display: flex;
     background-color: #E3E7EB;
+    height: 100%;
+    width: 100%;
 }
 
-.icon {
-    width: 150px;
+.score-icon {
+    width: auto;
     height: 150px;
-    margin-left: 100px;
-    margin-top: 50px;
-    display: block;
+    margin-right: 10px;
 }
 
-.text {
-    align-self: center;
+.score-text {
     color: #022345 !important;
     font-size: 32px;
     font-family: Para;
+}
+
+.score-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.score-row {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.score-row-center {
+    justify-content: center;
+}
+
+.ppl-score-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+@media only screen and (max-width: 950px) {
+    .score-container {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .score-row {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .score-text {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .ppl-score-icon-container {
+
+    }
 }
