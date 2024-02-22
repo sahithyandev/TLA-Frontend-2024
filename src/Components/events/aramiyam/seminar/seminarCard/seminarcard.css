@@ -1,11 +1,10 @@
-
-:root{
-    --text-color : #002245
+:root {
+  --text-color: #002245;
 }
 
 .seminarCard {
-  height: 560px;
-  width: 90%;
+  height: fit-content;
+  width: 80vw;
   border-radius: 20px;
   background: #e3e7eb;
   box-shadow: 0px 4px 4px 0px rgba(0, 34, 69, 0.25);
@@ -23,13 +22,12 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  flex-shrink: calc(100% - 20px);
 }
 
 /* Responsive styles for screens smaller than 768px (typical mobile devices) */
 @media (max-width: 768px) {
   .seminarCard {
-    height: auto; /* Allow flexible height */
-    width: 100%; /* Occupy full width */
     background-image: url("../../../../../images/Events/aramiyam/seminarBGTop.png");
     background-position: top center;
     background-size: auto 20%; /* Adjust background image to fit within card */
@@ -42,7 +40,8 @@
   }
 
   .seminarCard .seminar-content {
-    flex-direction: row; /* Stack elements horizontally */
+    flex-direction: row;
+    align-items: center;
     width: 100% !important;
   }
 
@@ -50,21 +49,39 @@
     width: fit-content !important;
   }
 
-  .seminarCard .time-content-container {
-    width: 100%; /* Take full width */
+  .time-content-container {
+    width: 100%;
+    height: fit-content;
+  }
+  .time-content-container {
+    flex-direction: row !important;
+    height: fit-content;
+    height: 100px !important;
   }
 
   .time-heading,
   .time-text,
-  .seminar-heading,
-  .seminar-title,
+  .seminar-title {
+    font-size: 1.5rem !important;
+  }
   .seminar-description {
-    font-size: 1.6rem; /* Adjust for mobile readability */
+    font-size: 1.2rem !important;
   }
+  .profile-text {
+    font-size: 1.5rem !important;
+  }
+  .seminar-heading {
+    font-size: 2rem !important;
+  }
+}
 
-  .time-content-container{
-    flex-direction: column !important;
-  }
+.time-content-container {
+  align-self: flex-start;
+  width: 500px !important;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
 }
 .seminar-card-content {
   z-index: 0;
@@ -72,116 +89,106 @@
   border: #000000;
 }
 
-
-.profile-frame{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 200px;
+.profile-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
 }
 
-.profile-img{
-    width: 265px;
-    height: 265px;
-    margin-top: 2rem;
+.profile-img {
+  width: 265px;
+  height: 265px;
+  margin-top: 2rem;
 }
 
-
-.profile-content{
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
+.profile-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.profile-heading{
-    width: fit-content;
-    align-self: center;
-    margin-top: 2rem;
-    margin-right: 0.5rem;
-    font-size: 1.8rem;
-    font-family: 'Para';
-    color: var(--text-color);
-    text-align: center;
+.profile-heading {
+  width: fit-content;
+  align-self: center;
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+  font-family: "Para";
+  color: var(--text-color);
+  text-align: center;
 }
 
-.profile-text{
-    align-self: flex-start;
-    margin-top: 2rem;
-    font-size: 1.8rem;
-    font-family: 'Para';
-    color: #002345e3;
-    text-align: center;
+.profile-text {
+  align-self: flex-start;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-family: "Para";
+  color: #002345e3;
+  text-align: center;
 }
 
-.seminar-content{
-    display:flex;
-    flex-direction: column !important;
-    justify-content: space-evenly;
-    align-items: flex-start;
+.seminar-content {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.time-content-container{
-    align-self: flex-start;
-    width: 500px !important;
-    display: flex;
-    flex-direction: row !important;
-    align-items: center;
-    justify-content: space-evenly;
+.time-content {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px !important;
 }
 
-.time-content{
-    display:flex;
-    flex-direction: column !important;
-    justify-content: flex-start;
-    align-items: center;
+.time-heading {
+  align-self: center;
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+  font-family: "Para";
+  color: var(--text-color);
+  text-align: center;
 }
 
-.time-heading{
-    align-self: center;
-    margin-top: 2rem;
-    margin-right: 0.5rem;
-    font-size: 1.8rem;
-    font-family: 'Para';
-    color: var(--text-color);
-    text-align: center;
+.time-text {
+  align-self: center;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-family: "Para";
+  color: #002345e3;
+  text-align: center;
 }
 
-.time-text{
-    align-self: center;
-    margin-top: 0.5rem;
-    font-size: 1.5rem;
-    font-family: 'Para';
-    color: #002345e3;
-    text-align: center;
+.seminar-heading {
+  align-self: center;
+  margin-right: 0.5rem;
+  font-size: 3rem;
+  font-family: "Heading";
+  color: var(--text-color);
+  text-align: center;
 }
 
-.seminar-heading{
-    align-self: center;
-    margin-right: 0.5rem;
-    font-size: 3rem;
-    font-family: 'Heading';
-    color: var(--text-color);
-    text-align: center;
+.seminar-title {
+  align-self: flex-start;
+  margin-top: 2rem;
+  margin-left: 0%;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Para";
+  color: var(--text-color);
+  text-align: center;
 }
 
-.seminar-title{
-    align-self: flex-start;
-    margin-top: 2rem;
-    margin-left: 0%;
-    font-size: 2rem;
-    font-weight: 400;
-    font-family: 'Para';
-    color: var(--text-color);
-    text-align: center;
-}
-
-.seminar-description{
-    width: 500px;
-    align-self: flex-start;
-    margin-top: 2rem;
-    margin-left: 10px;
-    font-size: 1.5rem;
-    font-family: 'Para';
-    color: var(--text-color);
-    text-align: left;
+.seminar-description {
+  width: 500px;
+  align-self: flex-start;
+  margin-top: 2rem;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-family: "Para";
+  color: var(--text-color);
+  text-align: left;
 }
