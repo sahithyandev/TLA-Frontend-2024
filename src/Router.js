@@ -10,6 +10,8 @@ import Kovil from './Pages/Kovil';
 import ComingSoon from './shared/comingSoon/ComingSoon';
 import BloodDonation from './Pages/Blood-donation';
 import FoodFestival from './Pages/Food-festival';
+import Brammam from './Pages/Brammam';
+import BrammamEventAbout from './Components/events/brammam/aboutEvent/BrammamEventAbout';
 
 function Router() {
     return (
@@ -38,16 +40,10 @@ function Router() {
                         element: <Aramiyam />
                     },
                     {
-
                         path: 'jeevanathi',
-                        element:<Jeevanathi/>
-                    },{
-
-                    
-                    },
-                   
-                    {    
-
+                        element: <Jeevanathi />
+                    }, 
+                    {
                         path: 'kovil',
                         element: <Kovil />
                     },
@@ -58,6 +54,16 @@ function Router() {
                     {
                         path: 'food-festival',
                         element: <FoodFestival />
+
+                    },
+                    {
+                        path: 'brammam',
+                        element: <Brammam />
+
+                    },
+                    {
+                        path: 'brammam/:event',
+                        element: <BrammamEventAbout />
 
                     },
                     {
