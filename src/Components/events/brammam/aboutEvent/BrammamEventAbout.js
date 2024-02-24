@@ -23,7 +23,8 @@ import solalvalarImage from "../intro/images/solvalar.png"
 const BrammamEventAbout = () => {
     const { event } = useParams();
     const validEvents = ["meerigai", "olisuvadu", "solalvalar", "eluthoviyam"]
-    const showWinners = true;
+    const showWinners = false;
+    const showCompetitionsDetails = true;
     // first 2 are winners and last is logo
     const usedImages = [];
     if (event === "meerigai") {
@@ -53,9 +54,9 @@ const BrammamEventAbout = () => {
                         {EventData[event]["name"] + " - 2024"}
                     </div>
                     <div style={{ "marginTop": "50px" }} />
-                    <img 
-                    src={usedImages[2]} 
-                    alt="" className="sotkanai-icon" style={{ "height": "39vh", "filter":"grayscale(100%)" }} />
+                    <img
+                        src={usedImages[2]}
+                        alt="" className="sotkanai-icon" style={{ "height": "39vh", "filter": "grayscale(100%)" }} />
                     <Grid container direction="column" justifyContent="center" alignItems="center">
                         <Grid item sm='12'>
                             <Container maxWidth="md">
@@ -66,51 +67,54 @@ const BrammamEventAbout = () => {
                         </Grid>
                     </Grid>
 
+                    {
+                        showCompetitionsDetails &&
+                        <>
+                            <Heading >கருப்பொருள்</Heading>
+                            <Grid item sm='12'>
+                                <Container maxWidth="md" >
+                                    <div className="rules-decription" style={{ "color": "#717274" }}>
+                                        <ol type='1'>
+                                            {
+                                                EventData[event]["themes"].map((rule, index) => {
+                                                    return <li key={index}>{rule}</li>
+                                                })
+                                            }
+                                        </ol>
+                                    </div>
 
-                    <Heading >கருப்பொருள்</Heading>
-                    <Grid item sm='12'>
-                        <Container maxWidth="md" >
-                            <div className="rules-decription" style={{ "color": "#717274" }}>
-                                <ol type='1'>
-                                    {
-                                        EventData[event]["themes"].map((rule, index) => {
-                                            return <li key={index}>{rule}</li>
-                                        })
-                                    }
-                                </ol>
+                                </Container>
+                            </Grid>
+
+
+                            <div>
+                                <Heading >முடிவுத்திகதி: {" " + EventData[event]["deadline"]}</Heading>
                             </div>
 
-                        </Container>
-                    </Grid>
 
-
-                    <div>
-                        <Heading >முடிவுத்திகதி: {" " + EventData[event]["deadline"]}</Heading>
-                    </div>
-
-
-                    <Container maxWidth="md" >
-                        <center>
-                            <Link to={"rules"}>
-                                <button
-                                    style={{
-                                        marginTop: "30px",
-                                        padding: '15px',
-                                        backgroundColor: '#DFE5E8',
-                                        border: 'none',
-                                        borderRadius: '10px',
-                                        cursor: 'pointer',
-                                        color: '#022345',
-                                        fontFamily: 'Heading',
-                                        fontSize: '2vw',
-                                    }}
-                                >
-                                    போட்டி விதி முறைகள்
-                                </button>
-                            </Link>
-                        </center>
-                    </Container>
-
+                            <Container maxWidth="md" >
+                                <center>
+                                    <Link to={"rules"}>
+                                        <button
+                                            style={{
+                                                marginTop: "30px",
+                                                padding: '15px',
+                                                backgroundColor: '#DFE5E8',
+                                                border: 'none',
+                                                borderRadius: '10px',
+                                                cursor: 'pointer',
+                                                color: '#022345',
+                                                fontFamily: 'Heading',
+                                                fontSize: '2vw',
+                                            }}
+                                        >
+                                            போட்டி விதி முறைகள்
+                                        </button>
+                                    </Link>
+                                </center>
+                            </Container>
+                        </>
+                    }
 
                     {
                         showWinners &&
