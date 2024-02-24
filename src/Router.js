@@ -13,6 +13,9 @@ import FoodFestival from './Pages/Food-festival';
 import VaniVilla from './Pages/Vani-villa';
 import Thamilaruvi from './Pages/Thamilaruvi';
 import PPL from "./Pages/PPL";
+import Brammam from './Pages/Brammam';
+import BrammamEventAbout from './Components/events/brammam/aboutEvent/BrammamEventAbout';
+import ExtraInfo from './Components/events/brammam/ExtraInfo/ExtraInfo';
 
 function Router() {
     return (
@@ -49,6 +52,9 @@ function Router() {
                         element:<VaniVilla/>
                     },
                     {    
+                        element: <Jeevanathi />
+                    },
+                    {
                         path: 'kovil',
                         element: <Kovil />
                     },
@@ -63,6 +69,22 @@ function Router() {
                     {
                         path:'thamilaruvi',
                         element:<Thamilaruvi/>
+
+                    },
+                    {
+                        path: 'brammam',
+                        element: <Brammam />
+
+                    },
+                    {
+                        path: 'brammam/:event',
+                        element: <BrammamEventAbout />
+
+                    },
+                    {
+                        path: 'brammam/:event/rules',
+                        element: <ExtraInfo />
+
                     },
                     {
                         path: 'comingSoon',
