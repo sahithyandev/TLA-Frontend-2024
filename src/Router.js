@@ -12,6 +12,7 @@ import BloodDonation from './Pages/Blood-donation';
 import FoodFestival from './Pages/Food-festival';
 import Brammam from './Pages/Brammam';
 import BrammamEventAbout from './Components/events/brammam/aboutEvent/BrammamEventAbout';
+import ExtraInfo from './Components/events/brammam/ExtraInfo/ExtraInfo';
 
 function Router() {
     return (
@@ -42,7 +43,7 @@ function Router() {
                     {
                         path: 'jeevanathi',
                         element: <Jeevanathi />
-                    }, 
+                    },
                     {
                         path: 'kovil',
                         element: <Kovil />
@@ -64,6 +65,11 @@ function Router() {
                     {
                         path: 'brammam/:event',
                         element: <BrammamEventAbout />
+
+                    },
+                    {
+                        path: 'brammam/:event/rules',
+                        element: <ExtraInfo />
 
                     },
                     {
