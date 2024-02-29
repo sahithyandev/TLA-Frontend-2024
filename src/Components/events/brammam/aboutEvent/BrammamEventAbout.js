@@ -24,7 +24,7 @@ const BrammamEventAbout = () => {
     const { event } = useParams();
     const validEvents = ["meerigai", "olisuvadu", "solalvalar", "eluthoviyam"]
     const showWinners = false;
-    const showCompetitionsDetails = true;
+    const showCompetitionsDetails = false;
     // first 2 are winners and last is logo
     const usedImages = [];
     if (event === "meerigai") {

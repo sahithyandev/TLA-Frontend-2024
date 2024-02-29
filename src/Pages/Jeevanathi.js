@@ -31,10 +31,14 @@ function Jeevanathi() {
           buttonText="எம்முடன் இணையுங்கள்"
           content={[
             "வங்கி கணக்கு விபரம்",
-            "0080292080",
-            "BOC",
-            "Jaffna main branch",
-            "X XXXXX"
+            "Account Name : Tamil Literary Association",
+            "Account Number : 320654",
+            "Bank Name : Bank of Ceylon",
+            "Branch Name : Kattubeda Branch",
+            "",
+            "தொடர்புகளுக்கு",
+            "Kisanth - 077 591 4008", 
+            "Keethasaba - 076 263 7656"
           ]}
         />
       </div>
