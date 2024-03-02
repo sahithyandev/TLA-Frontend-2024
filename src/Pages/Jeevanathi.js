@@ -14,46 +14,46 @@ function Jeevanathi() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <div style={{ position: 'relative' }}>
-      <JeevanathiIntro />
-      <div style={{ position: 'relative' }}>
-        <img
-          src={hand}
+        <JeevanathiIntro />
+        <div style={{ position: 'relative' }}>
+          <img
+            src={hand}
+            style={{
+              maxWidth: '100%',
+              height: 'auto',
+              display: 'block',
+              margin: '0 auto',
+              objectFit: 'cover',
+              width: '100%'
+            }}
+          />
+          <PopupCard
+            buttonText="எம்முடன் இணையுங்கள்"
+            content={[
+              "வங்கி கணக்கு விபரம்",
+              "Account Name : Tamil Literary Association",
+              "Account Number : 320654",
+              "Bank Name : Bank of Ceylon",
+              "Branch Name : Kattubeda Branch",
+              "",
+              "தொடர்புகளுக்கு",
+              "Kisanth - 077 591 4008",
+              "Keethasaba - 076 263 7656"
+            ]}
+          />
+        </div>
+        <div
           style={{
-            maxWidth: '100%',
-            height: 'auto',
-            display: 'block',
-            margin: '0 auto',
-            objectFit: 'cover',
-            width: '100%'
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            height: '100%',
           }}
-        />
-        <PopupCard
-          buttonText="எம்முடன் இணையுங்கள்"
-          content={[
-            "வங்கி கணக்கு விபரம்",
-            "Account Name : Tamil Literary Association",
-            "Account Number : 320654",
-            "Bank Name : Bank of Ceylon",
-            "Branch Name : Kattubeda Branch",
-            "",
-            "தொடர்புகளுக்கு",
-            "Kisanth - 077 591 4008", 
-            "Keethasaba - 076 263 7656"
-          ]}
-        />
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '100%',
-          height: '100%',
-        }}
-      >
-        <PastProject />
-      </div>
+        >
+          <PastProject />
+        </div>
       </div>
     </>
   );
