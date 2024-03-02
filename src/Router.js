@@ -10,6 +10,9 @@ import Kovil from './Pages/Kovil';
 import ComingSoon from './shared/comingSoon/ComingSoon';
 import BloodDonation from './Pages/Blood-donation';
 import FoodFestival from './Pages/Food-festival';
+import VaniVilla from './Pages/Vani-villa';
+import Thamilaruvi from './Pages/Thamilaruvi';
+import PPL from "./Pages/PPL";
 import Brammam from './Pages/Brammam';
 import BrammamEventAbout from './Components/events/brammam/aboutEvent/BrammamEventAbout';
 import ExtraInfo from './Components/events/brammam/ExtraInfo/ExtraInfo';
@@ -42,6 +45,13 @@ function Router() {
                     },
                     {
                         path: 'jeevanathi',
+                        element:<Jeevanathi/>
+                    },
+                    {
+                        path:'vani-villa',
+                        element:<VaniVilla/>
+                    },
+                    {    
                         element: <Jeevanathi />
                     },
                     {
@@ -55,6 +65,10 @@ function Router() {
                     {
                         path: 'food-festival',
                         element: <FoodFestival />
+                    },
+                    {
+                        path:'thamilaruvi',
+                        element:<Thamilaruvi/>
 
                     },
                     {
@@ -75,6 +89,10 @@ function Router() {
                     {
                         path: 'comingSoon',
                         element: <ComingSoon />
+                    },
+                    {
+                        path: 'ppl',
+                        element: <PPL />
                     },
                 ]
             },

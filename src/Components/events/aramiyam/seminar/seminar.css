@@ -1,6 +1,8 @@
-.seminar-container{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+.seminar-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-container {
+  width: 80vh;
 }

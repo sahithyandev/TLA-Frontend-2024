@@ -23,7 +23,25 @@ import solalvalarImage from "../intro/images/solvalar.png"
 const BrammamEventAbout = () => {
     const { event } = useParams();
     const validEvents = ["meerigai", "olisuvadu", "solalvalar", "eluthoviyam"]
-    const showWinners = true;
+    const showDetails = {
+        "meerigai": {
+            showWinners: true,
+            showCompetitionDetails: true,
+        },
+        "olisuvadu": {
+            showWinners: true,
+            showCompetitionDetails: true,
+        },
+        "solalvalar": {
+            showWinners: true,
+            showCompetitionDetails: true,
+        },
+        "eluthoviyam": {
+            showWinners: false,
+            showCompetitionDetails: true,
+        }
+
+    }
     // first 2 are winners and last is logo
     const usedImages = [];
     if (event === "meerigai") {
@@ -47,73 +65,80 @@ const BrammamEventAbout = () => {
 
     if (validEvents.includes(event)) {
         return (
-            <div className="pongal-landing-container-div" style={{ "height": "fit-content" }}>
-                <Container>
-                    <div className="pongal-landing-heading1">
-                        {EventData[event]["name"] + " - 2024"}
-                    </div>
-                    <div style={{ "marginTop": "50px" }} />
-                    <img 
-                    src={usedImages[2]} 
-                    alt="" className="sotkanai-icon" style={{ "height": "39vh", "filter":"grayscale(100%)" }} />
-                    <Grid container direction="column" justifyContent="center" alignItems="center">
-                        <Grid item sm='12'>
-                            <Container maxWidth="md">
-                                <div className="intro-decription">
-                                    {EventData[event]["descriiption"]}
-                                </div>
-                            </Container>
+            <>
+                <div className="pongal-landing-container-div">
+                    <Container>
+                        <div className="pongal-landing-heading1">
+                            {EventData[event]["name"] + " - 2024"}
+                        </div>
+                        <div style={{ "marginTop": "50px" }} />
+                        <img
+                            src={usedImages[2]}
+                            alt="" className="sotkanai-icon" style={{ "height": "39vh", "filter": "grayscale(100%)" }} />
+                        <Grid container direction="column" justifyContent="center" alignItems="center">
+                            <Grid item sm='12'>
+                                <Container maxWidth="md">
+                                    <div className="intro-decription">
+                                        {EventData[event]["descriiption"]}
+                                    </div>
+                                </Container>
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </Container>
+                </div>
+
+                <Container>
+                    {
+                        showDetails[event]["showCompetitionDetails"] &&
+                        <>
+                            <Heading >கருப்பொருள்</Heading>
+                            <Grid item sm='12'>
+                                <Container maxWidth="md" >
+                                    <div className="rules-decription" style={{ "color": "#717274" }}>
+                                        <ol type='1'>
+                                            {
+                                                EventData[event]["themes"].map((rule, index) => {
+                                                    return <li key={index}>{rule}</li>
+                                                })
+                                            }
+                                        </ol>
+                                    </div>
+
+                                </Container>
+                            </Grid>
 
 
-                    <Heading >கருப்பொருள்</Heading>
-                    <Grid item sm='12'>
-                        <Container maxWidth="md" >
-                            <div className="rules-decription" style={{ "color": "#717274" }}>
-                                <ol type='1'>
-                                    {
-                                        EventData[event]["themes"].map((rule, index) => {
-                                            return <li key={index}>{rule}</li>
-                                        })
-                                    }
-                                </ol>
+                            <div>
+                                <Heading >முடிவுத்திகதி: {" " + EventData[event]["deadline"]}</Heading>
                             </div>
 
-                        </Container>
-                    </Grid>
 
-
-                    <div>
-                        <Heading >முடிவுத்திகதி: {" " + EventData[event]["deadline"]}</Heading>
-                    </div>
-
-
-                    <Container maxWidth="md" >
-                        <center>
-                            <Link to={"rules"}>
-                                <button
-                                    style={{
-                                        marginTop: "30px",
-                                        padding: '15px',
-                                        backgroundColor: '#DFE5E8',
-                                        border: 'none',
-                                        borderRadius: '10px',
-                                        cursor: 'pointer',
-                                        color: '#022345',
-                                        fontFamily: 'Heading',
-                                        fontSize: '2vw',
-                                    }}
-                                >
-                                    போட்டி விதி முறைகள்
-                                </button>
-                            </Link>
-                        </center>
-                    </Container>
-
+                            <Container maxWidth="md" >
+                                <center>
+                                    <Link to={"rules"}>
+                                        <button
+                                            style={{
+                                                marginTop: "30px",
+                                                padding: '15px',
+                                                backgroundColor: '#DFE5E8',
+                                                border: 'none',
+                                                borderRadius: '10px',
+                                                cursor: 'pointer',
+                                                color: '#022345',
+                                                fontFamily: 'Heading',
+                                                fontSize: '2vw',
+                                            }}
+                                        >
+                                            போட்டி விதி முறைகள்
+                                        </button>
+                                    </Link>
+                                </center>
+                            </Container>
+                        </>
+                    }
 
                     {
-                        showWinners &&
+                        showDetails[event]["showWinners"] &&
                         <>
                             <Heading>வெற்றியாளர்கள்</Heading>
                             <Container maxWidth='md' className="event-container" sx={{ pb: 4 }}>
@@ -152,7 +177,9 @@ const BrammamEventAbout = () => {
                     }
                     <div style={{ "marginTop": "60px" }}></div>
                 </Container>
-            </div>
+
+            </>
+
         );
     }
     else {
