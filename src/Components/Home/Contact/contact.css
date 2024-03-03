@@ -27,6 +27,15 @@
     font-size: 20px;
 }
 
+.valid-input{
+    display: none;
+    font-size: 12px;
+}
+.inValid-input{
+    display: block;
+    font-size: 12px;
+    color: red;
+}
 .message-input {
     height: 20vh !important;
 }
@@ -40,6 +49,17 @@
     font-family: 'Para' !important;
     margin-top: 6px;
     border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.response-message{
+    color: green;
+    font-size: 20px;
+    font-family: 'Para' !important;
+    text-align: center;
 }
 
 .contact-container-div {
@@ -88,6 +108,7 @@ input:focus {
     margin-top: 4vh;
     color: #022345;
     padding-left: 2px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 900px) {
