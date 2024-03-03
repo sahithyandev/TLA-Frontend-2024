@@ -25,20 +25,20 @@ const BrammamEventAbout = () => {
     const validEvents = ["meerigai", "olisuvadu", "solalvalar", "eluthoviyam"]
     const showDetails = {
         "meerigai": {
-            showWinners: true,
-            showCompetitionDetails: true,
+            showWinners: false,
+            showCompetitionDetails: false,
         },
         "olisuvadu": {
-            showWinners: true,
-            showCompetitionDetails: true,
+            showWinners: false,
+            showCompetitionDetails: false,
         },
         "solalvalar": {
-            showWinners: true,
-            showCompetitionDetails: true,
+            showWinners: false,
+            showCompetitionDetails: false,
         },
         "eluthoviyam": {
             showWinners: false,
-            showCompetitionDetails: true,
+            showCompetitionDetails: false,
         }
 
     }
