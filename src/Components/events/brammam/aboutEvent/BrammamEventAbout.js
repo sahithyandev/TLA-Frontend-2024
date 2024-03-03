@@ -23,8 +23,25 @@ import solalvalarImage from "../intro/images/solvalar.png"
 const BrammamEventAbout = () => {
     const { event } = useParams();
     const validEvents = ["meerigai", "olisuvadu", "solalvalar", "eluthoviyam"]
-    const showWinners = false;
-    const showCompetitionsDetails = false;
+    const showDetails = {
+        "meerigai": {
+            showWinners: false,
+            showCompetitionDetails: false,
+        },
+        "olisuvadu": {
+            showWinners: false,
+            showCompetitionDetails: false,
+        },
+        "solalvalar": {
+            showWinners: false,
+            showCompetitionDetails: false,
+        },
+        "eluthoviyam": {
+            showWinners: false,
+            showCompetitionDetails: false,
+        }
+
+    }
     // first 2 are winners and last is logo
     const usedImages = [];
     if (event === "meerigai") {
@@ -48,27 +65,31 @@ const BrammamEventAbout = () => {
 
     if (validEvents.includes(event)) {
         return (
-            <div className="pongal-landing-container-div" style={{ "height": "fit-content" }}>
-                <Container>
-                    <div className="pongal-landing-heading1">
-                        {EventData[event]["name"] + " - 2024"}
-                    </div>
-                    <div style={{ "marginTop": "50px" }} />
-                    <img
-                        src={usedImages[2]}
-                        alt="" className="sotkanai-icon" style={{ "height": "39vh", "filter": "grayscale(100%)" }} />
-                    <Grid container direction="column" justifyContent="center" alignItems="center">
-                        <Grid item sm='12'>
-                            <Container maxWidth="md">
-                                <div className="intro-decription">
-                                    {EventData[event]["descriiption"]}
-                                </div>
-                            </Container>
+            <>
+                <div className="pongal-landing-container-div">
+                    <Container>
+                        <div className="pongal-landing-heading1">
+                            {EventData[event]["name"] + " - 2024"}
+                        </div>
+                        <div style={{ "marginTop": "50px" }} />
+                        <img
+                            src={usedImages[2]}
+                            alt="" className="sotkanai-icon" style={{ "height": "39vh", "filter": "grayscale(100%)" }} />
+                        <Grid container direction="column" justifyContent="center" alignItems="center">
+                            <Grid item sm='12'>
+                                <Container maxWidth="md">
+                                    <div className="intro-decription">
+                                        {EventData[event]["descriiption"]}
+                                    </div>
+                                </Container>
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </Container>
+                </div>
 
+                <Container>
                     {
-                        showCompetitionsDetails &&
+                        showDetails[event]["showCompetitionDetails"] &&
                         <>
                             <Heading >கருப்பொருள்</Heading>
                             <Grid item sm='12'>
@@ -117,7 +138,7 @@ const BrammamEventAbout = () => {
                     }
 
                     {
-                        showWinners &&
+                        showDetails[event]["showWinners"] &&
                         <>
                             <Heading>வெற்றியாளர்கள்</Heading>
                             <Container maxWidth='md' className="event-container" sx={{ pb: 4 }}>
@@ -156,7 +177,9 @@ const BrammamEventAbout = () => {
                     }
                     <div style={{ "marginTop": "60px" }}></div>
                 </Container>
-            </div>
+
+            </>
+
         );
     }
     else {

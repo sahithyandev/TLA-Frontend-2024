@@ -16,6 +16,7 @@ import PPL from "./Pages/PPL";
 import Brammam from './Pages/Brammam';
 import BrammamEventAbout from './Components/events/brammam/aboutEvent/BrammamEventAbout';
 import ExtraInfo from './Components/events/brammam/ExtraInfo/ExtraInfo';
+import MovieNight from './Pages/Movie-night';
 
 function Router() {
     return (
@@ -94,6 +95,10 @@ function Router() {
                         path: 'ppl',
                         element: <PPL />
                     },
+                    {
+                        path:'movie-night',
+                        element:<MovieNight/>
+                    }
                 ]
             },
         ])
