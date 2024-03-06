@@ -7,7 +7,7 @@ import { Gif } from "@mui/icons-material";
 function SeminarCard({ SeminarData }) {
   return (
     <div className="frame seminarCard">
-      <div className="frame seminar-heading">கருத்தரங்கு {SeminarData.id}</div>
+      {/* <div className="frame seminar-heading">கருத்தரங்கு {SeminarData.id}</div> */}
       <Grid className="frame seminar-card-content" container spacing={2}>
         <Grid
           direction={"column"}
@@ -18,13 +18,13 @@ function SeminarCard({ SeminarData }) {
         >
           <img className="profile-img" src={SeminarData.speaker.profileImg} />
           <div className="profile-content">
-            <div className="profile-content profile-heading">பெயர் :</div>
+            {/* <div className="profile-content profile-heading">பெயர் :</div> */}
             <div className="profile-content profile-text">
               {SeminarData.speaker.name}
             </div>
           </div>
           <div className="profile-content">
-            <div className="profile-content profile-heading">பதவி :</div>
+            {/* <div className="profile-content profile-heading">பதவி :</div> */}
             <div className="profile-content profile-text">
               {SeminarData.speaker.position}
             </div>
