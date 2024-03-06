@@ -9,6 +9,8 @@ import eluthoviyamImg from "./images/eluthoviyam.png"
 import meerigaiImg from "./images/meerigai.png"
 import oliSuvaduImg from "./images/oli_suvadu.png"
 import solalvarImg from "./images/solvalar.png"
+
+
 const BrammamIntro = () => {
     const events = [
         {

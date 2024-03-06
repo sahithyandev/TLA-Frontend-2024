@@ -3,11 +3,12 @@ import Heading from "../../../../shared/Heading";
 import { Container, Grid } from "@mui/material";
 import SeminarCard from "./seminarCard/SeminarCard";
 import profileImg01 from "../../../../images/Events/aramiyam/profile01.png";
+import "./seminar.css";
 
 const SeminarData = [
   {
     id: 1,
-    title: "cv உருவாக்குதல் பற்றிய அறிவுரை",
+    title: "CV உருவாக்குதல் பற்றிய அறிவுரை",
     description:
       "இந்த கருத்தரங்கில், நல்ல அபிப்ராயத்தை ஏற்படுத்தவும், வேலை வாய்ப்புகளை அதிகரிக்கவும் நன்கு வடிவமைக்கப்பட்ட ரெஸ்யூமை வடிவமைப்பதன் முக்கியத்துவத்தைப் பற்றி விவாதித்தோம்.",
     time: "காலை 9:00",
@@ -40,10 +41,9 @@ const SeminarData = [
 
 function Seminar() {
   return (
-    <div>
-      <Container className="seminar-container" sx={{ pb: 4 }}>
-        <Heading>கருத்தரங்குகள்</Heading>
-
+    <div className="seminar-container">
+      <Container sx={{ pb: 4 }}>
+        <Heading className="heading">கருத்தரங்குகள்</Heading>
         <Grid
           className="card-container"
           container

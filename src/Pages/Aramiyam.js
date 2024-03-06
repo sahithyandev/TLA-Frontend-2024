@@ -24,7 +24,6 @@ function Aramiyam() {
           content="TLA, Tamil Literary Association, Aramiyam"
         />
       </Helmet>
-
       <AramiyamIntro />
       <Seminar />
     </div>

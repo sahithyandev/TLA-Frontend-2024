@@ -2,55 +2,104 @@ import React, { useState } from "react";
 import { Container, Grid } from "@mui/material";
 import "./contact.css";
 import Heading from "../../../shared/Heading";
-import { FaEnvelope, FaFacebook, FaYoutube, FaCalendar } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaYoutube, FaPhoneAlt } from "react-icons/fa";
 
 function Contact() {
+    const [formValid, setFormValid] = useState({
+        userName: false,
+        email: false,
+        message: false,
+        category: false,
+        phoneNumber: false
+    });
+    const [buttonClicked, setButtonClicked] = useState(false);
     const [formData, setFormData] = useState({
-        name: "",
+        userName: "",
         email: "",
         message: "",
         category: "",
         phoneNumber: "",
     });
 
-    // Handle input changes
+    const [responseMessage, setResponseMessage] = useState("");
+
+    const validateName = (userName) => {
+        return userName.length > 0;
+    };
+    const validatePhoneNumber = (phoneNumber) => {
+        return phoneNumber.length > 0;
+    };
+    const validateEmail = (email) => {
+        return /\S+@\S+\.\S+/.test(email);
+    }
+    const validateCategory = (category) => {
+        return category.length > 0;
+    }
+    const validateMessage = (message) => {
+        return message.length > 0 ? true : false;
+    }
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+
+        switch (name) {
+            case 'userName':
+                setFormValid((prevFormValid) => ({ ...prevFormValid, userName: validateName(value) }));
+                break;
+            case 'phoneNumber':
+                setFormValid((prevFormValid) => ({ ...prevFormValid, phoneNumber: validatePhoneNumber(value) }));
+                break;
+            case 'email':
+                setFormValid((prevFormValid) => ({ ...prevFormValid, email: validateEmail(value) }));
+                break;
+            case 'category':
+                setFormValid((prevFormValid) => ({ ...prevFormValid, category: validateCategory(value) }));
+                break;
+            case 'message':
+                setFormValid((prevFormValid) => ({ ...prevFormValid, message: validateMessage(value) }));
+                break;
+            default:
+            // Handle default case if needed
+        }
     };
 
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Validate form data before submission
-        if (!formData.name || !formData.email) {
-            alert("Name and email are required fields.");
-            return;
-        }
+        setButtonClicked(true);
+
+        console.log("submit" + e.target)
 
         try {
-            const response = await fetch("http://localhost:3001/contacts", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
-            const data = await response.json();
-            console.log(data);
-            alert("Message sent successfully");
-            setFormData({
-                name: "",
-                email: "",
-                message: "",
-                category: "",
-                phoneNumber: "",
-            });
+            console.log(formValid);
+            if (formValid.category && formValid.email && formValid.message && formValid.userName && formValid.phoneNumber) {
+                const response = await fetch("http://localhost:3001/contacts", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                });
+                setResponseMessage("உங்களுடைய தகவல் வெற்றிகரமாக அனுப்பப்பட்டுள்ளது")
+                document.getElementsByClassName("response-message")[0].style.color = "green";
+                setFormData({
+                    userName: "",
+                    email: "",
+                    message: "",
+                    category: "",
+                    phoneNumber: "",
+                });
+                setButtonClicked(false);
+            }
         } catch (error) {
-            console.log(error);
-            alert("Message not sent");
+            setResponseMessage("உங்களுடைய தகவல் அனுப்பப்படவில்லை")
+            document.getElementsByClassName("response-message")[0].style.color = "red";
         }
     };
+
+    const goSocialMedia = (url) => {
+        window.open(url, "_blank");
+    }
 
     return (
         <div className="contact-container" id="contact">
@@ -65,14 +114,15 @@ function Contact() {
                                 <div className="contact-icon-div">
                                     <input
                                         className="contact-input"
-                                        name="name"
-                                        value={formData.name}
+                                        name="userName"
+                                        value={formData.userName}
                                         onChange={handleInputChange}
                                     ></input>
                                     <span className="contact-icon material-symbols-outlined">
                                         person
                                     </span>
                                 </div>
+                                <div className={buttonClicked && !formData.userName ? 'inValid-input' : 'valid-input'}>பெயரை சரியாக உள்ளிடவும்</div>
                             </Grid>
                             <Grid item xs={8}>
                                 <div className="contact-row">தொலைபேசி எண்</div>
@@ -87,6 +137,7 @@ function Contact() {
                                         phone
                                     </span>
                                 </div>
+                                <div className={buttonClicked && !formData.phoneNumber ? 'inValid-input' : 'valid-input'}>தொலைபேசி எண்னை சரியாக உள்ளிடவும்</div>
                             </Grid>
                         </Grid>
                         <Grid item>
@@ -102,12 +153,13 @@ function Contact() {
                                     mail
                                 </span>
                             </div>
+                            <div className={buttonClicked && !formData.email ? 'inValid-input' : 'valid-input'}>மின்னஞ்சலை சரியாக உள்ளிடவும்</div>
                         </Grid>
                         <Grid item>
                             <div className="contact-row">தொடர்பு வகை</div>
                             <div className="contact-icon-div">
                                 <select
-                                    className="contact-select contact-icon-div"
+                                    className="contact-select contact-icon-div ${formData.category ? '' : 'inValid'}"
                                     name="category"
                                     value={formData.category}
                                     onChange={handleInputChange}
@@ -115,11 +167,12 @@ function Contact() {
                                     <option value="" disabled hidden>
                                         {/* ஓர் வகைய தேர்ந்தெடு */}
                                     </option>
-                                    <option value="option 1">அனுசரணை</option>
+                                    <option value="option 1">அனுசரனையாளர்கள்</option>
                                     <option value="option 2">நலன் விரும்பிகள்</option>
                                     <option value="option 3">மாணவர்கள்</option>
                                 </select>
                             </div>
+                            <div className={buttonClicked && !formData.category ? 'inValid-input' : 'valid-input'}>தொடர்புவகையை தெரிவு செய்யவும்</div>
                         </Grid>
                         <Grid item>
                             <div className="contact-row">தகவல்</div>
@@ -131,6 +184,7 @@ function Contact() {
                                     onChange={handleInputChange}
                                 ></textarea>
                             </div>
+                            <div className={buttonClicked && !formData.message ? 'inValid-input' : 'valid-input'}>தகவலை சரியாக உள்ளிடவும்</div>
                         </Grid>
                         <Grid
                             container
@@ -139,9 +193,12 @@ function Contact() {
                             paddingBottom={2}
                             paddingTop={2}
                         >
-                            <button className="contact-send-button" onClick={handleSubmit}>
+                            <button className="contact-send-button" onClick={handleSubmit} >
                                 அனுப்பு
                             </button>
+                        </Grid>
+                        <Grid item>
+                            <div className="response-message">{responseMessage}</div>
                         </Grid>
                     </Grid>
 
@@ -164,33 +221,31 @@ function Contact() {
                                     className="nav-text"
                                     style={{ display: "flex", marginRight: "10px" }}
                                 >
-                                    <FaFacebook />{" "}
-                                    <div style={{ marginLeft: "10px" }}>முகப்புத்தகம்</div>
+                                    <FaPhoneAlt />
+                                    <div style={{ marginLeft: "10px" }}>தொலைபேசி</div>
                                 </div>
-                                <a
-                                    className="nav-link"
-                                    href="https://web.facebook.com/TLAuom"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    https://web.facebook.com/TLAuom
+                                <a className="nav-link" href="">
+                                    அபினேஷ் - 076 843 2752
                                 </a>
                             </Grid>
                             <Grid item>
                                 <div
                                     className="nav-text"
                                     style={{ display: "flex", marginRight: "10px" }}
+                                    onClick={() => goSocialMedia("https://web.facebook.com/TLAuom")}
+                                >
+                                    <FaFacebook />{" "}
+                                    <div style={{ marginLeft: "10px" }}>முகப்புத்தகம்</div>
+                                </div>
+                            </Grid>
+                            <Grid item>
+                                <div
+                                    className="nav-text"
+                                    style={{ display: "flex", marginRight: "10px" }}
+                                    onClick={() => goSocialMedia("https://www.youtube.com/@TLAUOM")}
                                 >
                                     <FaYoutube /> <div style={{ marginLeft: "10px" }}>வலைஒளி</div>
                                 </div>
-                                <a
-                                    className="nav-link"
-                                    href="https://www.youtube.com/@TLAUOM"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    https://www.youtube.com/@TLAUOM
-                                </a>
                             </Grid>
                         </div>
                     </Grid>
