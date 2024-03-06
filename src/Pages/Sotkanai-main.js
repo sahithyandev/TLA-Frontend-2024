@@ -4,6 +4,7 @@ import Sponsors from "../Components/events/sotkanai/sponsers/Sponsers";
 import ImageGallery from "../Components/events/sotkanai/gallery/DistrictImage";
 import MainGalleryComponent from "../Components/events/sotkanai/gallery/MainGalleryComponent";
 import SotkanaiRules from "../Components/events/sotkanai/rules/Rules";
+import Agenda from "../Components/events/sotkanai/agenda/Agenda";
 
 const SotkanaiMain = () => {
     return (
@@ -15,9 +16,10 @@ const SotkanaiMain = () => {
                 <meta name="keywords" content="TLA, Tamil Literary Association, Sotknai" />
             </Helmet>
             <SotkanaiIntro />
-            <Sponsors/>
+            <Agenda />
+            {/* <Sponsors/>
             <SotkanaiRules/>
-            <MainGalleryComponent/>
+            <MainGalleryComponent/> */}
         </>
     );
 
