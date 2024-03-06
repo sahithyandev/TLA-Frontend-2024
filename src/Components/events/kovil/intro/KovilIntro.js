@@ -3,7 +3,6 @@ import {
     Grid, Container
 } from '@mui/material';
 import './kovilintro.css';
-import kovilimg from '../../../../images/Events/Card Illustration/kovil.png';
 import {social} from "../../../../shared/EventDetails";
 
 function KovilIntro() {
