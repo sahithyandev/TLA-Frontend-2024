@@ -9,8 +9,8 @@
   background: #e3e7eb;
   box-shadow: 0px 4px 4px 0px rgba(0, 34, 69, 0.25);
   margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
   background-image: url("../../../../../images/Events/aramiyam/seminarcardBG.png");
   background-position: right center;
   background-repeat: no-repeat;
@@ -21,8 +21,10 @@
 .frame {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
   flex-shrink: calc(100% - 20px);
+  margin-top: 5vw;
 }
 
 /* Responsive styles for screens smaller than 768px (typical mobile devices) */

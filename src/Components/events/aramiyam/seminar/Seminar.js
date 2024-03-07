@@ -16,7 +16,8 @@ const SeminarData = [
     speaker: {
       name: "ஹஸ்தினி சிவயோகநாதன்",
       position: "Manager, Waveguide Operations Program management, Meta",
-      profileImg: profileImg01,
+      profileImg:
+        "https://live.staticflickr.com/65535/53570913426_bc6c7ebdf8_w.jpg",
     },
     youtubeLink:
       "https://www.youtube.com/watch?v=pwnnY_qR1EU&t=524s&ab_channel=TLAUOM",
@@ -47,11 +48,12 @@ function Seminar() {
         <Grid
           className="card-container"
           container
-          direction="row"
+          display={"flex"}
+          flexDirection={"column"}
+          justifyContent={"center"}
+          alignItems={"center "}
           flexShrink={1}
-          justifyContent="space-around"
-          alignItems="center"
-          spacing={0.001}
+          spacing={4}
         >
           {SeminarData.map((seminarData) => {
             return (

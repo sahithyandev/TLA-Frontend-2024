@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .aramiyam-landing-heading1 {
@@ -24,7 +23,7 @@
 }
 
 .aramiyam-icon {
-  width: 50vh;
+  width: 30vw;
   margin-left: auto;
   margin-right: auto;
   display: block;
