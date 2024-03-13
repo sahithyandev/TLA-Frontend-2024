@@ -82,9 +82,9 @@ function SeminarCard({ SeminarData }) {
   return (
     <ThemeProvider theme={theme}>
       <div className="frame seminarCard">
-        <div className="frame seminar-heading">
+        {/* <div className="frame seminar-heading">
           கருத்தரங்கு {SeminarData.id}
-        </div>
+        </div> */}
         <Grid display={"flex"} flexDirection={"row"} container spacing={2}>
           <Grid
             direction={"column"}
@@ -101,11 +101,11 @@ function SeminarCard({ SeminarData }) {
               alignItems={"center"}
               marginTop={3}
             >
-              <Typography variant="h5">பெயர்: </Typography>
+              {/* <Typography variant="h5">பெயர்: </Typography> */}
               <Typography variant="h6">{SeminarData.speaker.name}</Typography>
             </Grid>
             <Grid display={"flex"} flexDirection={"column"}>
-              <Typography variant="h5">பதவி :</Typography>
+              {/* <Typography variant="h5">பதவி :</Typography> */}
               <Typography variant="h6">
                 {SeminarData.speaker.position}
               </Typography>
@@ -178,9 +178,10 @@ function SeminarCard({ SeminarData }) {
           alignSelf={{ xs: "center", md: "flex-end" }}
           marginRight={{ xs: 0, md: 15 }}
         >
-          <a href={SeminarData.youtubeLink} target="_blank">
-            {" "}
-            <img src={youtubeImg} alt="YouTube Video Preview" />
+          <a href={SeminarData.youtubeLink} target="_blank" className="video-link">
+            {/* {" "} */}
+            {/* <img src={youtubeImg} alt="YouTube Video Preview" /> */}
+            காணொளி
           </a>
         </Grid>
       </div>
