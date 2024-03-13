@@ -3,12 +3,6 @@ import {
     Grid, Container
 } from '@mui/material'
 import './sponsors.css'
-import img from '../../../../images/Events/Card Illustration/ani1.png'
-import img2 from '../../../../images/Events/Card Illustration/ani2.png'
-import img3 from '../../../../images/Events/Card Illustration/ani3.png'
-import img4 from '../../../../images/Events/Card Illustration/ani4.png'
-import img5 from '../../../../images/Events/Card Illustration/ani5.png'
-import img6 from '../../../../images/Events/Card Illustration/ani6.png'
 import Heading from "../../../../shared/Heading";
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";

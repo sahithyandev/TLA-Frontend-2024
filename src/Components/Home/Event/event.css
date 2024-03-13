@@ -5,19 +5,25 @@
 
 .event-container {
     min-height: 100vh;
-
-
+    margin-top: 2em;
 }
 
 .event-heading {
-
     color: #022345 !important;
     font-size: 80px !important;
     font-family: 'Heading' !important;
     letter-spacing: normal;
-
     text-align: center;
+}
 
+.intro-heading1 {
+    color: #717274 !important;
+    font-size: 24px !important;
+    font-family: 'Para' !important;
+    letter-spacing: normal;
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 0 4em;
 }
 
 .event-card {

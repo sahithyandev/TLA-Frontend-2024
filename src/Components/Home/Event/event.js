@@ -4,96 +4,146 @@ import {
     Grid, Container
 } from '@mui/material'
 import './event.css'
-import img from '../../../images/Events/Card Illustration/ani1.png'
-import img2 from '../../../images/Events/Card Illustration/ani2.png'
-import img3 from '../../../images/Events/Card Illustration/ani3.png'
-import img4 from '../../../images/Events/Card Illustration/ani4.png'
-import img5 from '../../../images/Events/Card Illustration/ani5.png'
-import img6 from '../../../images/Events/Card Illustration/ani6.png'
 import Heading from "../../../shared/Heading";
-
-const event = [
-    {
-        title: 'தைப்பொங்கல் ',
-        img: img4,
-        link: '/events/thaipongal',
-        descriiption: 'மதபேதமின்றி சூரியனுக்கும் விளைச்சலுக்கும் உதவிய கால்நடைகளுக்கு நன்றி கூறும் முகமாக தைமாதம் பல்கலைகழக வளாகத்தினுள் பாரம்பரியத்தை பறைசாற்றும் வகையில் பொங்கல் பொங்கி பாரம்பரிய கலாச்சார உடையில் தீப்பண்டங்களை விருந்தோம்பல் செய்து பாரம்பரிய தமிழர் விளையாட்டுக்களுடன் விழாக்கோலம் கானும்'
-    },
-    {
-        title: 'சொற்கணை',
-        img: img,
-        link: '/events/sotkanai-main',
-        descriiption: '’’சொற்கணை’’ என்பது மாபெரும் விவாதச்சமர். இலங்கையின் 25 மாவட்டங்களில் தேர்வு செய்யப்பட்ட சிறந்த விவாத அணிகள் சொல் எனும் கணை கொண்டு களமாடும் இறுதிகட்ட விவாத சமர் தலை நகரில் பிரதான மண்டபத்தில் பல்லாயிரக்கணக்கானோர் முன்னிலையில் மிகவும் கோலாகலமாக நடைபெறுவதாகும்.'
-    },
-    {
-        title: 'தமிழருவி',
-        img: img2,
-        link: '/events/comingSoon',
-        descriiption: 'தமிழ் சமூகத்தின் மிகப்பெரிய பேறுகளான கலை கல்வி மற்றும் கலாச்சாரம் ஆகியவற்றின் இன்றைய விருத்திக்கும் நாளைய இருப்பிற்கும் தூணாய் நிற்க முனையும் எம் மொறட்டுவை பல்கலைகழக தமிழ் மன்றம் வருடந்தோறும் தலைநகரில் இலட்சக்கணக்கானோர் முன்னிலையில் பிரம்மாண்டத்தின் உச்சமாக நடைபெறும் கலை நிகழ்வு "தமிழருவி" ஆகும்'
-    },
-    {
-        title: 'ஒளிச்சுவடு',
-        img: img3,
-        link: '/events/comingSoon',
-        descriiption: 'எமது தொழில்நுட்ப பல்கலைக்கழகத்தில் மாணவர்களின் தொழிநுட்ப துறை சார்ந்து மட்டுமல்லாது கலைதுறையில் ஆர்வம் காட்டத்துடிக்கும் மாணவர்களின் திறமைகளுக்கு முன்னுரிமை கொடுத்து அவர்களது அருமையை வெளிக்கொணரும் ஒளிப்பட போட்டியே "ஒளிச்சுவடு" ஆகும்'
-    },
-    {
-        title: 'இரத்ததான முகாம் ',
-        img: img5,
-        link: '/events/aramiyam',
-        descriiption: 'சாதி மத பேதமின்றி எமது சொந்தங்களை உதவிக்கரம் கொடுத்து உயிரை காப்பாற்றும் வகையில் மேற்கொள்ளப்பட்டு வருகின்றது. இது மன்றத்தின் சாதி மத பேதத்தை கடந்து ஒவ்வொரு வருடமும் வீரநடை போடுகின்றது.'
-    },
-    {
-        title: 'ஜீவநதி',
-        img: img6,
-        link: '/events/comingSoon',
-        descriiption: 'இது மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றத்தின் ஜீவ காருண்யப் பயணம். வறுமையில் தங்கள் வாழ் நிலைகளைத் தொலைத்து விட்ட பின் தங்கிய மாவட்டத்தின் துயர் ஒழுகும் வறுமையினையும் மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றத்தின் இந்த ஜீவநதி என்ற பயணம் வெளியுலகை அறியச் செய்கிறது.'
-    },
-    //  {
-    //     title: 'சொற்கணை',
-    //     img: img,
-    //     descriiption: '’’சொற்கணை’’ என்பது மாபெரும் விவாதச்சமர். இலங்கையின் 25 மாவட்டங்களில் தேர்வு செய்யப்பட்ட சிறந்த விவாத அணிகள் சொல் எனும் கணை கொண்டு களமாடும் இறுதிகட்ட விவாத சமர் தலை நகரில் பிரதான மண்டபத்தில் பல்லாயிரக்கணக்கானோர் முன்னிலையில் மிகவும் கோலாகலமாக நடைபெறுவதாகும்.'
-    // },
-    // {
-    //     title: 'தமிழருவி',
-    //     img: img2,
-    //     descriiption: 'தமிழ் சமூகத்தின் மிகப்பெரிய பேறுகளான கலை கல்வி மற்றும் கலாச்சாரம் ஆகியவற்றின் இன்றைய விருத்திக்கும் நாளைய இருப்பிற்கும் தூணாய் நிற்க முனையும் எம் மொறட்டுவை பல்கலைகழக தமிழ் மன்றம் வருடந்தோறும் தலைநகரில் இலட்சக்கணக்கானோர் முன்னிலையில் பிரம்மாண்டத்தின் உச்சமாக நடைபெறும் கலை நிகழ்வு "தமிழருவி" ஆகும்'
-    // },
-]
-
-
-
-
+import { cultureEvent, competition, guidance, social, carnival } from '../../../shared/EventDetails';
 
 function Event() {
     return (
-        <div className="event-container-div" id="event">
-            <Container maxWidth='lg' className="event-container" sx={{ pb: 4 }}>
-                <Heading>எமது நிகழ்வுகள்</Heading>
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="space-around"
-                    alignItems="center"
-                    spacing={4}
-                >
-                    {event.map((event, index) => <>
-                        <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index} >
-                            <Link to={event.link}>
-                                <div className="event-card">
-                                    <div className="event-card-top">
-                                        <div className="event-card-title"> {event.title}</div>
-                                        <div><img src={event.img} alt="" className="event-img" /></div>
+        <>
+            <div className="event-container-div" id="event">
+                <Container maxWidth='lg' className="event-container" sx={{ pb: 4 }}>
+                    <Heading>கலை கலாச்சார நிகழ்வுகள்</Heading>
+                    <div className="intro-heading1">பல்கலையில் பயிலும் தமிழ் மாணவர்களின் இயல், இசை, நாடகம் போன்ற கலைத்திறமைகளை வெளி உலகிற்கு பறைசாற்றிட மொறட்டுவை பல்கலைக்கழக தமிழ் மாணவர்களால் கோலாகலமாக நடத்தப்படும் நிகழ்வுகள்</div>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="space-around"
+                        alignItems="center"
+                        spacing={4}
+                    >
+                        {cultureEvent.map((event, index) => <>
+                            <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index} >
+                                <Link to={event.link}>
+                                    <div className="event-card">
+                                        <div className="event-card-top">
+                                            <div className="event-card-title"> {event.title}</div>
+                                            <div><img src={event.img} alt="" className="event-img" /></div>
+                                        </div>
+                                        <div className="event-heading1">{event.descriiption}</div>
                                     </div>
-                                    <div className="event-heading1">{event.descriiption}</div>
-                                </div>
-                            </Link>
-                        </Grid>
-                    </>
-                    )}
-                </Grid>
-            </Container>
-        </div>
+                                </Link>
+                            </Grid>
+                        </>
+                        )}
+                    </Grid>
+                </Container>
+                <Container maxWidth='lg' className="event-container" sx={{ pb: 4 }}>
+                    <Heading>போட்டிகள்</Heading>
+                    <div className="intro-heading1">தமிழர் தேசம் எங்கிலும் பரந்து வாழும் பாடசாலை மாணவர்களின் பல்முக திறமைகளுக்கு களம் அமைத்து அகில இலங்கைரீதியில் அந்த சாதனை வீர்ர்களுக்கு அங்கீகாரத்தை வழங்க தமிழ் இலக்கிய மன்றத்தால் பெருமையுடன் நடாத்தபடும் போட்டிகள்</div>
+                    <Grid container
+                        spacing={4}
+                        // columns={16}
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center">
+                        {competition.map((event, index) => <>
+                            <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index}>
+                                <Link to={event.link}>
+                                    <div className="event-card">
+                                        <div className="event-card-top">
+                                            <div className="event-card-title"> {event.title}</div>
+                                            <div><img src={event.img} alt="" className="event-img" /></div>
+                                        </div>
+                                        <div className="event-heading1">{event.descriiption}</div>
+                                    </div>
+                                </Link>
+                            </Grid>
+                        </>
+                        )}
+                    </Grid>
+                </Container>
+            </div>
+            <div>
+                <Container maxWidth='lg' className="event-container" sx={{ pb: 4 }}>
+                    <Heading>தொழில் வழிகாட்டுதல்</Heading>
+                    <div className="intro-heading1">தாங்கள் கடந்து வந்த அனுபவங்களையும் படிப்பினைகளையும் தமது தம்பி, தங்கைகளுக்கும் கூறி அவர்களை வழிநடத்தி அவர்களின் இலக்குகளை அடைய கைகோர்க்கும் சிரேஷ்ட மாணவர்களுக்கும் பல்கலைக்கழக மாணவர்களுக்குமான உறவுப்பாலம்</div>
+                    <Grid container
+                        spacing={4}
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        >
+                        {guidance.map((event, index) => <>
+                            <Grid item xl='4' lg='4' md='3' sm='6' xs='12' key={index}>
+                                <Link to={event.link}>
+                                    <div className="event-card">
+                                        <div className="event-card-top">
+                                            <div className="event-card-title"> {event.title}</div>
+                                            <div><img src={event.img} alt="" className="event-img" /></div>
+                                        </div>
+                                        <div className="event-heading1">{event.descriiption}</div>
+                                    </div>
+                                </Link>
+                            </Grid>
+                        </>
+                        )}
+                    </Grid>
+                </Container>
+            </div>
+            <div className="event-container-div" id="event">
+                <Container maxWidth='lg' className="event-container" sx={{ pb: 4 }}>
+                    <Heading>சமூக தொடர்பு</Heading>
+                    <div className="intro-heading1">ஏட்டுக்கல்வி முதல் பல்கலைக்கழகம் வரை தன்னை வழிப்படுத்தி ஒரு ஆளுமை மிக்க மாணவனாய் செதுக்கி தன்னை உருவாக்கிய இந்த சமூகத்திற்கு தன்னால் முடிந்த எதோ ஒன்றை செய்தே ஆகவேன்றும் என்ற ஒரு ஏக்கத்தின் வெளிப்பாடுகள்</div>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="space-around"
+                        alignItems="center"
+                        spacing={4}
+                        
+                    >
+                        {social.map((event, index) => <>
+                            <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index} >
+                                <Link to={event.link}>
+                                    <div className="event-card">
+                                        <div className="event-card-top">
+                                            <div className="event-card-title"> {event.title}</div>
+                                            <div><img src={event.img} alt="" className="event-img" /></div>
+                                        </div>
+                                        <div className="event-heading1">{event.descriiption}</div>
+                                    </div>
+                                </Link>
+                            </Grid>
+                        </>
+                        )}
+                    </Grid>
+                </Container>
+                <Container maxWidth='lg' className="event-container" sx={{ pb: 4 }}>
+                    <Heading>களியாட்டங்கள்</Heading>
+                    <div className="intro-heading1">ஓடி ஓடி களைத்திருக்கும் பல்கலைக்கழக மாணவர்கள் ஒய்யாரமாக கதைபேசி சக நண்பர்களுடன் உறவாடி கவலைகளை மறந்திருக்கும் தருணங்கள்</div>
+                    <Grid container
+                        spacing={4}
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center">
+                        {carnival.map((event, index) => <>
+                            <Grid item xl='4' lg='4' md='4' sm='6' xs='12' key={index}>
+                                <Link to={event.link}>
+                                    <div className="event-card">
+                                        <div className="event-card-top">
+                                            <div className="event-card-title"> {event.title}</div>
+                                            <div><img src={event.img} alt="" className="event-img" /></div>
+                                        </div>
+                                        <div className="event-heading1">{event.descriiption}</div>
+                                    </div>
+                                </Link>
+                            </Grid>
+                        </>
+                        )}
+                    </Grid>
+                </Container>
+            </div>
+        </>
     );
 }
 
