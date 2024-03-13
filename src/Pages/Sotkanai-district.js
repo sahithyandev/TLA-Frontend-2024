@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import Schedule from "../Components/events/sotkanai/sotkanai-district/schedule/schedule";
+import SchoolList from "../Components/events/sotkanai/sotkanai-district/school-list/SchoolList";
 
 const SotkanaiDistrict = () => {
     return (
@@ -9,7 +10,9 @@ const SotkanaiDistrict = () => {
                 <meta name="description" content="சொற்கணை என்பது மாபெரும் விவாதச்சமர். இலங்கையின் 25 மாவட்டங்களில் தேர்வு செய்யப்பட்ட சிறந்த விவாத அணிகள் சொல் எனும் கணை கொண்டு களமாடும் இறுதிகட்ட விவாத சமர் தலை நகரில் பிரதான மண்டபத்தில் பல்லாயிரக்கணக்கானோர் முன்னிலையில் மிகவும் கோலாகலமாக நடைபெறுவதாகும்." />
                 <meta name="keywords" content="TLA, Tamil Literary Association, Thai Pongal" />
             </Helmet>
-            <Schedule />
+            <Schedule/>
+            <SchoolList />
+            
         </>
     );
 }
