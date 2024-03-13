@@ -20,26 +20,32 @@ import { Container } from '@mui/material';
 import './navbar.css'
 import Logo from '../../../images/Logo-Nav/logo.png'
 const drawerWidth = 240;
+
 const navItems = [{
-  name: 'முகப்பு',
-  link: '/#landing'
-},
-{
-  name: 'அறிமுகம்',
-  link: '/#intro'
-},
-{
-  name: 'நிகழ்வுகள்',
-  link: '/#events'
-},
-{
-  name: 'காட்சி கூடம்',
-  link: '/#gallery'
-},
-{
-  name: 'தொடர்புகள்',
-  link: '/#contact'
-}];
+  name:'மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றம்',
+  link:'/'
+}]
+
+// const navItems = [{
+//   name: 'முகப்பு',
+//   link: '/#landing'
+// },
+// {
+//   name: 'அறிமுகம்',
+//   link: '/#intro'
+// },
+// {
+//   name: 'நிகழ்வுகள்',
+//   link: '/#events'
+// },
+// {
+//   name: 'காட்சி கூடம்',
+//   link: '/#gallery'
+// },
+// {
+//   name: 'தொடர்புகள்',
+//   link: '/#contact'
+// }];
 
 function Navbar(props) {
   const { window } = props;
