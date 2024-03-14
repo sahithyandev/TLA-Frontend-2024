@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Grid } from "@mui/material";
 // import "./contact.css";
 import Heading from "../shared/Heading";
+import Input from "./Input";
 
 function Login() {
 	const [formValid, setFormValid] = useState({
@@ -74,37 +75,25 @@ function Login() {
 			<Heading>உள்நுழை</Heading>
 
 			<Grid item>
-				<Grid item>
-					<div className="contact-row">மின்னஞ்சல்</div>
-					<div className="contact-icon-div">
-						<input
-							className="contact-input"
-							name="email"
-							value={formData.email}
-							onChange={handleInputChange}
-						></input>
-						<span className="contact-icon material-symbols-outlined">
-							mail
-						</span>
-					</div>
-					<div className={buttonClicked && !formData.email ? 'inValid-input' : 'valid-input'}>மின்னஞ்சலை சரியாக உள்ளிடவும்</div>
-				</Grid>
-				<Grid item>
-					<div className="contact-row">கடவுச்சொல்</div>
-					<div className="contact-icon-div">
-						<input
-							className="contact-input"
-							name="email"
-							value={formData.password}
-							onChange={handleInputChange}
-							type="password"
-						></input>
-						<span className="contact-icon material-symbols-outlined">
-							password
-						</span>
-					</div>
-					<div className={buttonClicked && !formData.email ? 'inValid-input' : 'valid-input'}>கடவுச்சொல்லை சரியாக உள்ளிடவும்</div>
-				</Grid>
+				<Input
+					onChange={handleInputChange}
+					value={formData.email}
+					name="email"
+					label="மின்னஞ்சல்"
+					icon="mail"
+					showValidation={buttonClicked && !formData.email}
+					validationMessage="மின்னஞ்சலை சரியாக உள்ளிடவும்"
+				/>
+				<Input
+					onChange={handleInputChange}
+					value={formData.password}
+					name="password"
+					label="கடவுச்சொல்"
+					icon="password"
+					showValidation={buttonClicked && !formData.password}
+					validationMessage="கடவுச்சொல்லை சரியாக உள்ளிடவும்"
+					type="password"
+				/>
 				<Grid
 					container
 					item
