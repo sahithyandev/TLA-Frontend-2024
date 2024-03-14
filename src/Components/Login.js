@@ -3,8 +3,9 @@ import { Container, Grid } from "@mui/material";
 // import "./contact.css";
 import Heading from "../shared/Heading";
 import Input from "./Input";
+import SimplifiedButton from "./SimplifiedButton";
 
-function Login() {
+function Login({ changeModal }) {
 	const [formValid, setFormValid] = useState({
 		email: false,
 		password: false,
@@ -74,7 +75,7 @@ function Login() {
 		<Container maxWidth="lg">
 			<Heading>உள்நுழை</Heading>
 
-			<Grid item>
+			<Grid>
 				<Input
 					onChange={handleInputChange}
 					value={formData.email}
@@ -107,6 +108,9 @@ function Login() {
 				</Grid>
 				<Grid item>
 					<div className="response-message">{responseMessage}</div>
+				</Grid>
+				<Grid container item justifyContent="center">
+					<SimplifiedButton onClick={changeModal.bind(null, "signup")}>கணக்கை உருவாக்கு</SimplifiedButton>
 				</Grid>
 			</Grid>
 		</Container>

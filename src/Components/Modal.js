@@ -31,9 +31,11 @@ const Modal = ({ isOpen, onClose, children } = {
 				closeDialogEventListener,
 				false
 			);
+		_dialog.addEventListener("close", onClose, false);
 
 		return function cleanup() {
 			_dialog.removeEventListener("click", closeDialogEventListener, false);
+			_dialog.removeEventListener("close", onClose, false);
 		};
 	}, []);
 

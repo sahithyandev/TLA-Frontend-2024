@@ -9,7 +9,7 @@ import Login from "../Components/Login";
 import Signup from "../Components/Signup";
 
 export default function MemorySharing() {
-	const [showPopup] = useState("signup");
+	const [showModal, setModal] = useState("signup");
 	const [sharedItems] = useState([
 		{
 			title: "சொற்கணை",
@@ -38,7 +38,15 @@ export default function MemorySharing() {
 			]
 		}
 	]);
+	
+	const changeModal = (modal) => {
+		if (modal == "signup" || modal == "login" || typeof modal == "undefined") {
+			console.log(modal);
+			setModal(modal);
+		} 
+	}	
 
+	const closeModal = changeModal.bind(null, undefined);
 
 	return (
 		<>
@@ -71,11 +79,11 @@ export default function MemorySharing() {
 				})}
 
 			</Container>
-			<Modal isOpen={showPopup == "login"} onClose={undefined}>
-				<Login />
+			<Modal isOpen={showModal == "login"} onClose={closeModal}>
+				<Login changeModal={changeModal} />
 			</Modal>
-			<Modal isOpen={showPopup == "signup"} onClose={undefined}>
-				<Signup />
+			<Modal isOpen={showModal == "signup"} onClose={closeModal}>
+				<Signup changeModal={changeModal} />
 			</Modal>
 		</>
 	);
