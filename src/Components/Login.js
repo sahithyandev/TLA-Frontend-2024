@@ -4,8 +4,11 @@ import { Container, Grid } from "@mui/material";
 import Heading from "../shared/Heading";
 import Input from "./Input";
 import SimplifiedButton from "./SimplifiedButton";
+import { login } from "../helpers/server";
+import { useAuth } from "../providers/AuthProvider";
 
 function Login({ changeModal }) {
+	const auth = useAuth();
 	const [formValid, setFormValid] = useState({
 		email: false,
 		password: false,
@@ -49,22 +52,18 @@ function Login({ changeModal }) {
 
 		try {
 			console.log(formValid);
-			if (formValid.email && formValid.password) {
-				const response = await fetch("http://localhost:3001/users", {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(formData),
-				});
-				setResponseMessage("உங்களுடைய தகவல் வெற்றிகரமாக அனுப்பப்பட்டுள்ளது")
-				document.getElementsByClassName("response-message")[0].style.color = "green";
-				setFormData({
-					email: "",
-					password: "",
-				});
-				setButtonClicked(false);
+			if (!formValid.email || !formValid.password) {
+				return;
 			}
+
+			await login(formData).then(auth.loggedIn);
+			setResponseMessage("உங்களுடைய தகவல் வெற்றிகரமாக அனுப்பப்பட்டுள்ளது")
+			document.getElementsByClassName("response-message")[0].style.color = "green";
+			setFormData({
+				email: "",
+				password: "",
+			});
+			setButtonClicked(false);
 		} catch (error) {
 			setResponseMessage("உங்களுடைய தகவல் அனுப்பப்படவில்லை")
 			document.getElementsByClassName("response-message")[0].style.color = "red";

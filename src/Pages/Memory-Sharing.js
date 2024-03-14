@@ -1,15 +1,18 @@
 import { Helmet } from "react-helmet";
-import { useState } from "react";
-import { Container } from "@mui/material";
+import { useEffect, useState } from "react";
+import { Container, Grid } from "@mui/material";
 
 import MemorySharingIntro from "../Components/memory-sharing/intro";
 import MemoryCardItem from "../Components/memory-sharing/card-item";
 import Modal from "../Components/Modal";
 import Login from "../Components/Login";
 import Signup from "../Components/Signup";
+import SimplifiedButton from "../Components/SimplifiedButton";
+import { useAuth } from "../providers/AuthProvider";
 
 export default function MemorySharing() {
-	const [showModal, setModal] = useState("signup");
+	const auth = useAuth();
+	const [showModal, setModal] = useState(undefined);
 	const [sharedItems] = useState([
 		{
 			title: "சொற்கணை",
@@ -25,7 +28,7 @@ export default function MemorySharing() {
 			]
 		},
 		{
-			title: "சொற்கணை",
+			title: "சொற்கணை 1",
 			content: '"சொற்கணை" என்பது மாபெரும் விவாதச்சமர்.இலங்கையின் 25 மாவட்டங்களில் தேர்வு செய்யப்பட்ட சிறந்த விவாத அணிகள் சொல் எனும் கணை கொண்டு களமாடும் இறுதிக்கட்ட விவாத சமர் தலைநகரில் பிரதான மண்டபத்தில் பல்லாயிரக்கணக்கானோர் முன்னிலையில் மிகவும் கோலாகலமாக நடைபெறுவதாகும்.',
 			sharedBy: {
 				name: "Kamal Mohan",
@@ -38,13 +41,23 @@ export default function MemorySharing() {
 			]
 		}
 	]);
-	
+
+	useEffect(() => {
+		console.log(showModal, auth.isLoggedIn)
+		if (showModal && auth.isLoggedIn) {
+			setModal(undefined);
+		}
+	}, [showModal, auth.isLoggedIn]);
+
 	const changeModal = (modal) => {
-		if (modal == "signup" || modal == "login" || typeof modal == "undefined") {
-			console.log(modal);
+		if (auth.isLoggedIn) return;
+		if (typeof modal == "undefined") {
+			setModal(undefined);
+		}
+		if (modal == "signup" || modal == "login") {
 			setModal(modal);
-		} 
-	}	
+		}
+	}
 
 	const closeModal = changeModal.bind(null, undefined);
 
@@ -64,12 +77,20 @@ export default function MemorySharing() {
 			</Helmet>
 			<MemorySharingIntro />
 			<Container>
-				<h2 style={{
-					fontFamily: "Para",
-					marginBottom: "0",
-					fontWeight: "400",
-					fontSize: "36px"
-				}}>நினைவுகள்</h2>
+				<Grid justifyContent="space-between" display="flex" alignItems="center" marginTop="1rem">
+					<h2 style={{
+						fontFamily: "Para",
+						margin: "0",
+						fontWeight: "400",
+						fontSize: "36px"
+					}}>நினைவுகள்</h2>
+					<SimplifiedButton onClick={() => {
+						if (!auth.isLoggedIn) {
+							changeModal("login")
+						}
+					}}>{auth.isLoggedIn ? "Logged in" : "Login"}</SimplifiedButton>
+
+				</Grid>
 				<hr style={{
 					marginTop: "0px",
 					marginBottom: "20px"
