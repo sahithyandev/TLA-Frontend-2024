@@ -4,8 +4,11 @@ import { Container } from "@mui/material";
 
 import MemorySharingIntro from "../Components/memory-sharing/intro";
 import MemoryCardItem from "../Components/memory-sharing/card-item";
+import Modal from "../Components/Modal";
+import Login from "../Components/Login";
 
 export default function MemorySharing() {
+	const [showPopup] = useState("login");
 	const [sharedItems] = useState([
 		{
 			title: "சொற்கணை",
@@ -67,6 +70,9 @@ export default function MemorySharing() {
 				})}
 
 			</Container>
+			<Modal isOpen={showPopup == "login"} onClose={undefined}>
+				<Login />
+			</Modal>
 		</>
 	);
 }
