@@ -6,9 +6,10 @@ import MemorySharingIntro from "../Components/memory-sharing/intro";
 import MemoryCardItem from "../Components/memory-sharing/card-item";
 import Modal from "../Components/Modal";
 import Login from "../Components/Login";
+import Signup from "../Components/Signup";
 
 export default function MemorySharing() {
-	const [showPopup] = useState("login");
+	const [showPopup] = useState("signup");
 	const [sharedItems] = useState([
 		{
 			title: "சொற்கணை",
@@ -72,6 +73,9 @@ export default function MemorySharing() {
 			</Container>
 			<Modal isOpen={showPopup == "login"} onClose={undefined}>
 				<Login />
+			</Modal>
+			<Modal isOpen={showPopup == "signup"} onClose={undefined}>
+				<Signup />
 			</Modal>
 		</>
 	);
