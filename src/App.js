@@ -12,7 +12,7 @@ import { currentUser } from "./helpers/server";
 function App() {
   const auth = useAuth();
   useEffect(() => {
-    currentUser().then(auth.loggedIn);
+    currentUser().then(auth.loggedIn).catch(() => { });
   }, []);
   return (
     <>

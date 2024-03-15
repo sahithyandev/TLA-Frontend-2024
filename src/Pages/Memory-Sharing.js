@@ -9,6 +9,7 @@ import Login from "../Components/Login";
 import Signup from "../Components/Signup";
 import SimplifiedButton from "../Components/SimplifiedButton";
 import { useAuth } from "../providers/AuthProvider";
+import { logout } from "../helpers/server";
 
 export default function MemorySharing() {
 	const auth = useAuth();
@@ -43,7 +44,6 @@ export default function MemorySharing() {
 	]);
 
 	useEffect(() => {
-		console.log(showModal, auth.isLoggedIn)
 		if (showModal && auth.isLoggedIn) {
 			setModal(undefined);
 		}
@@ -87,8 +87,10 @@ export default function MemorySharing() {
 					<SimplifiedButton onClick={() => {
 						if (!auth.isLoggedIn) {
 							changeModal("login")
+							return;
 						}
-					}}>{auth.isLoggedIn ? "Logged in" : "Login"}</SimplifiedButton>
+						logout().then(auth.loggedOut);
+					}}>{auth.isLoggedIn ? "Log Out" : "Login"}</SimplifiedButton>
 
 				</Grid>
 				<hr style={{

@@ -51,3 +51,9 @@ export async function login(data) {
 export async function currentUser() {
 	return server("/users/current");
 }
+
+export async function logout() {
+	return server("/users/logout", {
+		method: "POST",
+	});
+}

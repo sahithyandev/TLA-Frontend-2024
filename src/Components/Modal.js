@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-function closeDialogEventListener(event) {
+function closeDialogEventListener(onClose, event) {
 	const _dialog = event.target;
 	if (!(_dialog instanceof HTMLDialogElement)) return;
 
@@ -11,6 +11,7 @@ function closeDialogEventListener(event) {
 		rect.bottom < event.clientY
 	) {
 		_dialog.close();
+		onClose();
 	}
 }
 
@@ -20,6 +21,7 @@ const Modal = ({ isOpen, onClose, children } = {
 	children: null
 }) => {
 	const dialogRef = useRef(null);
+	const _closeListener = closeDialogEventListener.bind(null, onClose);
 
 	useEffect(() => {
 		const _dialog = dialogRef.current;
@@ -28,14 +30,12 @@ const Modal = ({ isOpen, onClose, children } = {
 		_dialog
 			.addEventListener(
 				'click',
-				closeDialogEventListener,
+				_closeListener,
 				false
 			);
-		_dialog.addEventListener("close", onClose, false);
 
 		return function cleanup() {
-			_dialog.removeEventListener("click", closeDialogEventListener, false);
-			_dialog.removeEventListener("close", onClose, false);
+			_dialog.removeEventListener("click", _closeListener, false);
 		};
 	}, []);
 
@@ -48,12 +48,6 @@ const Modal = ({ isOpen, onClose, children } = {
 			_dialog.close();
 		}
 	}, [isOpen]);
-
-	const handleClose = () => {
-		if (onClose) {
-			onClose();
-		}
-	};
 
 	return (
 		<dialog ref={dialogRef}>
