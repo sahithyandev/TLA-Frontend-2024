@@ -44,19 +44,21 @@ export default function MemorySharing() {
 	]);
 
 	useEffect(() => {
-		if (showModal && auth.isLoggedIn) {
+		if ((showModal == "signup" || showModal == "login") && auth.isLoggedIn) {
 			setModal(undefined);
 		}
 	}, [showModal, auth.isLoggedIn]);
 
 	const changeModal = (modal) => {
-		if (auth.isLoggedIn) return;
+		if ((modal == "signup" || modal == "login") && auth.isLoggedIn) return;
 		if (typeof modal == "undefined") {
 			setModal(undefined);
 		}
-		if (modal == "signup" || modal == "login") {
+		if (modal == "signup" || modal == "login" || modal == "new-post") {
 			setModal(modal);
+			return
 		}
+		console.warn("unknown modal", modal);
 	}
 
 	const closeModal = changeModal.bind(null, undefined);
@@ -80,23 +82,39 @@ export default function MemorySharing() {
 				<Grid justifyContent="space-between" display="flex" alignItems="center" marginTop="1rem">
 					<h2 style={{
 						fontFamily: "Para",
-						margin: "0",
+						margin: "-4px 5px 0 0",
 						fontWeight: "400",
 						fontSize: "36px"
-					}}>நினைவுகள்</h2>
-					<SimplifiedButton onClick={() => {
-						if (!auth.isLoggedIn) {
-							changeModal("login")
-							return;
-						}
-						logout().then(auth.loggedOut);
-					}}>{auth.isLoggedIn ? "Log Out" : "Login"}</SimplifiedButton>
+					}}>
+						நினைவுகள்
+					</h2>
+					{auth.isLoggedIn ?
+						<SimplifiedButton title="Add a memory" onClick={changeModal.bind(null, "new-post")}>
+							<span className="icon material-symbols-outlined pointable">
+								add_circle
+							</span>
+						</SimplifiedButton>
+						: null}
+
+					<div style={{ marginLeft: "auto" }}>
+						{auth.isLoggedIn ? <span style={{
+							marginRight: 5
+						}}>Logged in as {auth.userInfo.name}</span> : null}
+						<SimplifiedButton onClick={() => {
+							if (!auth.isLoggedIn) {
+								changeModal("login")
+								return;
+							}
+							logout().then(auth.loggedOut);
+						}}>{auth.isLoggedIn ? `Log Out` : "Login"}</SimplifiedButton>
+					</div>
 
 				</Grid>
 				<hr style={{
 					marginTop: "0px",
 					marginBottom: "20px"
 				}} />
+
 				{sharedItems.map(item => {
 					return <MemoryCardItem key={item.title} data={item} />
 				})}
@@ -107,6 +125,11 @@ export default function MemorySharing() {
 			</Modal>
 			<Modal isOpen={showModal == "signup"} onClose={closeModal}>
 				<Signup changeModal={changeModal} />
+			</Modal>
+			<Modal isOpen={showModal == "new-post"} onClose={closeModal}>
+				<div>
+					New post
+				</div>
 			</Modal>
 		</>
 	);
