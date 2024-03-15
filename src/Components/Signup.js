@@ -4,6 +4,8 @@ import { Container, Grid } from "@mui/material";
 import Heading from "../shared/Heading";
 import Input from "./Input";
 import SimplifiedButton from "./SimplifiedButton";
+import { signup } from "../helpers/server";
+import { useAuth } from "../providers/AuthProvider";
 
 
 const validateEmail = (email) => {
@@ -13,12 +15,13 @@ const validateNotEmpty = (str) => {
 	return str.length > 0;
 }
 const validatePhoneNo = (phoneNo) => {
-	if (typeof phoneNo !="string" || phoneNo.length < 10) return false;
+	if (typeof phoneNo != "string" || phoneNo.length < 10) return false;
 	// TODO additional valdiation?
 	return true;
 }
 
 function Signup({ changeModal }) {
+	const auth = useAuth();
 	const [formValid, setFormValid] = useState({
 		name: false,
 		email: false,
@@ -47,8 +50,10 @@ function Signup({ changeModal }) {
 				break;
 			case 'name':
 			case 'password':
-			case 'confirmPassword':
 				setFormValid((prevFormValid) => ({ ...prevFormValid, [name]: validateNotEmpty(value) }));
+				break;
+			case 'confirmPassword':
+				setFormValid((prevFormValid) => ({ ...prevFormValid, [name]: validateNotEmpty(value) && formData.password == formData.confirmPassowrd }));
 				break;
 			case 'phoneNo':
 				setFormValid((prevFormValid) => ({ ...prevFormValid, phoneNo: validatePhoneNo(value) }));
@@ -62,29 +67,25 @@ function Signup({ changeModal }) {
 		e.preventDefault();
 		setButtonClicked(true);
 
-		console.log("submit" + e.target)
-
 		try {
-			console.log(formValid);
-			if (formValid.email && formValid.password) {
-				const response = await fetch("http://localhost:3001/users", {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(formData),
-				});
-				setResponseMessage("உங்களுடைய தகவல் வெற்றிகரமாக அனுப்பப்பட்டுள்ளது")
-				document.getElementsByClassName("response-message")[0].style.color = "green";
-				setFormData({
-					name: "",
-					email: "",
-					password: "",
-					confirmPassowrd: "",
-					phoneNo: ""
-				});
-				setButtonClicked(false);
+			const anythingInvalid = Object.values(formValid).findIndex((v) => !v) != -1;
+			if (anythingInvalid) {
+				return;
 			}
+
+			const { confirmPassowrd, ...createUserData } = formData;
+			await signup(createUserData).then(auth.loggedIn);
+
+			setResponseMessage("உங்களுடைய தகவல் வெற்றிகரமாக அனுப்பப்பட்டுள்ளது")
+			document.getElementsByClassName("response-message")[0].style.color = "green";
+			setFormData({
+				name: "",
+				email: "",
+				password: "",
+				confirmPassowrd: "",
+				phoneNo: ""
+			});
+			setButtonClicked(false);
 		} catch (error) {
 			setResponseMessage("உங்களுடைய தகவல் அனுப்பப்படவில்லை")
 			document.getElementsByClassName("response-message")[0].style.color = "red";

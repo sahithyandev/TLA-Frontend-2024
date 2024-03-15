@@ -57,3 +57,23 @@ export async function logout() {
 		method: "POST",
 	});
 }
+
+/**
+ * @typedef CreateUserData
+ * @prop {string} name
+ * @prop {string} email
+ * @prop {string} password
+ * @prop {string} phoneNo
+ * 
+ * @param {CreateUserData} data
+ */
+export async function signup(data) {
+	return server("/users", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(data)
+	})
+
+}
