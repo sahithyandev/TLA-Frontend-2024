@@ -36,10 +36,7 @@ const navItems = [{
   name: 'காட்சி கூடம்',
   link: '/#gallery'
 },
-{
-  name: 'தொடர்புகள்',
-  link: '/#contact'
-}];
+];
 
 function Navbar(props) {
   const { window } = props;

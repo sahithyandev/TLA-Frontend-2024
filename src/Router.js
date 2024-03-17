@@ -17,6 +17,7 @@ import Brammam from './Pages/Brammam';
 import BrammamEventAbout from './Components/events/brammam/aboutEvent/BrammamEventAbout';
 import ExtraInfo from './Components/events/brammam/ExtraInfo/ExtraInfo';
 import MovieNight from './Pages/Movie-night';
+import Hackthon from './Pages/Hackthon';
 
 function Router() {
     return (
@@ -98,6 +99,10 @@ function Router() {
                     {
                         path:'movie-night',
                         element:<MovieNight/>
+                    },
+                    {
+                        path:'/events/hackthon',
+                        element:<Hackthon/>
                     }
                 ]
             },

@@ -14,7 +14,7 @@ function App() {
     <>
       <ScrollToTop />
       <Navbar />
-      <Router />
+      <Router/>
       <Footer />
     </>
   );
