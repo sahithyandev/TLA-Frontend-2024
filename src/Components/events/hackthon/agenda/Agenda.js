@@ -45,6 +45,7 @@ function Agenda() {
             <h1>நேரவரிசை</h1>
             <div className="timelineCOntainer">
                 <Timeline align="alternate" className="tline">
+                
                     {events.map((event, index) => <>
                         <TimelineItem key={index}>
                             <TimelineSeparator>

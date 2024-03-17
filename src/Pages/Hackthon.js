@@ -1,3 +1,4 @@
+import ContactCard from "../Components/events/hackthon/ContactCard/ContactCard";
 import RulesButton from "../Components/events/hackthon/RulesButton/RulesButton";
 import Agenda from "../Components/events/hackthon/agenda/Agenda";
 import HackIntro from "../Components/events/hackthon/intro/HackIntro";
@@ -14,6 +15,7 @@ const Hackthon = () => {
                 <HackIntro />
                 <RulesButton/>
                 <Agenda/>
+                <ContactCard/>
         </>
     );
 }
