@@ -1,11 +1,21 @@
-.timelineBox{
+.timelineBoxLeft{
     background-color: #002245;
     color: white;
     width: fit-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight:lighter;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 0 20px 20px 20px;
+    text-align: left;
+}
+.timelineBoxRight{
+    background-color: #002245;
+    color: white;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:lighter;
+    padding: 20px;
+    border-radius: 20px 0 20px 20px;
     text-align: left;
 }
 
