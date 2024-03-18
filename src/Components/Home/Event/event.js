@@ -6,6 +6,7 @@ import {
 import './event.css'
 import Heading from "../../../shared/Heading";
 import { cultureEvent, competition, guidance, social, carnival } from '../../../shared/EventDetails';
+import greet_name from'greet_name';
 
 function Event() {
     return (
@@ -51,7 +52,7 @@ function Event() {
                                 <Link to={event.link}>
                                     <div className="event-card">
                                         <div className="event-card-top">
-                                            <div className="event-card-title"> {event.title}</div>
+                                            <div className="event-card-title" onClick={() => greet_name(event.title)}> {event.title}</div>
                                             <div><img src={event.img} alt="" className="event-img" /></div>
                                         </div>
                                         <div className="event-heading1">{event.descriiption}</div>

@@ -8,7 +8,9 @@ import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineDot from '@material-ui/lab/TimelineDot'
+import TimelineDot from '@material-ui/lab/TimelineDot';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 
 
 function Agenda() {
@@ -46,10 +48,12 @@ function Agenda() {
             <div className="timelineCOntainer">
                 <Timeline align="alternate" className="tline">
                 
-                    {events.map((event, index) => <>
+                    {events.map((event, index) =>
                         <TimelineItem key={index}>
                             <TimelineSeparator>
-                                <TimelineDot className="dot" color="#002245;" variant="default"/>
+                                <TimelineDot color="inherit">
+                                        <FiberManualRecord className="dot" htmlColor="#002245"/>
+                                </TimelineDot>
                                 {(index-events.length)===-1? "":<TimelineConnector />}
                             </TimelineSeparator>
                             <TimelineContent>
@@ -60,7 +64,7 @@ function Agenda() {
                                 </div>
                             </TimelineContent>
                         </TimelineItem>
-                        </>
+                       
                         )}
                 </Timeline>
             </div>

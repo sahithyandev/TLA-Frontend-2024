@@ -18,7 +18,7 @@ function HackIntro() {
                         justifyContent="center"
                         alignItems="center"
                     >
-                        <Grid item sm='12'>
+                        <Grid item >
                             <Container maxWidth="md">
                                 <div className="intro-decription">{competition[2].descriiption}</div>
                             </Container>
