@@ -1,52 +1,18 @@
 import React from "react";
 import { Grid, Container } from "@mui/material";
 import "./agenda.css";
-import Heading from "../../../../shared/Heading";
-// import React from 'react';
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
-import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 import isOdd from "greet_name/isOdd";
+import eventlist from "./eventList";
 
 function Agenda() {
-  const events = [
-    {
-      time: "17th April 2024",
-      title: "Registrations Opening",
-      content:
-        "தைமாதம் பல்கலைக்கழக வளாகத்தினுள் பாரம்பரியத்தை பறைசாற்றும் வகையில் பாரம்பரிய தமிழர் விளையாட்டுக்களுடன் விழாக்கோலம் காணும்",
-    },
-    {
-      time: "18th April 2024",
-      title: "Registrations Opening",
-      content:
-        "தைமாதம் பல்கலைக்கழக வளாகத்தினுள் பாரம்பரியத்தை பறைசாற்றும் வகையில் பாரம்பரிய தமிழர் விளையாட்டுக்களுடன் விழாக்கோலம் காணும்",
-    },
-    {
-      time: "19th April 2024",
-      title: "Registrations Opening",
-      content:
-        "தைமாதம் பல்கலைக்கழக வளாகத்தினுள் பாரம்பரியத்தை பறைசாற்றும் வகையில் பாரம்பரிய தமிழர் விளையாட்டுக்களுடன் விழாக்கோலம் காணும்",
-    },
-    {
-      time: "17th April 2024",
-      title: "Registrations Opening",
-      content:
-        "தைமாதம் பல்கலைக்கழக வளாகத்தினுள் பாரம்பரியத்தை பறைசாற்றும் வகையில் பாரம்பரிய தமிழர் விளையாட்டுக்களுடன் விழாக்கோலம் காணும்",
-    },
-    {
-      time: "17th April 2024",
-      title: "Registrations Opening",
-      content:
-        "தைமாதம் பல்கலைக்கழக வளாகத்தினுள் பாரம்பரியத்தை பறைசாற்றும் வகையில் பாரம்பரிய தமிழர் விளையாட்டுக்களுடன் விழாக்கோலம் காணும்",
-    },
-  ];
-
+  const events = eventlist;
   return (
     <>
       <h1>நேரவரிசை</h1>
