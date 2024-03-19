@@ -1,3 +1,8 @@
+.head-landing-container{
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(227, 230, 235), rgba(227, 230, 235), rgba(255, 0, 0, 0));
+    padding-bottom: 40px;
+}
+
 .head-landing-heading1 {
     color: #022345 !important;
     font-size: 30px !important;
@@ -18,7 +23,71 @@
     padding-top: 2rem;
     /* background-color: #E3E7EB !important; */
 }
+.head-landing-body1 {
+    color: #022345 !important;
+    font-size: 20px !important;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 1rem;
+    display: flex;
+    justify-content:space-evenly;
+}
+.head-landing-icon{
+    line-height: 1.5;
+    padding-top: 2rem;
+    display: flex;
+    justify-content:space-evenly;
+}
+.head-landing-description {
+    color: #022345 !important;
+    font-size: 20px !important;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    line-height: 1.5;
+    padding-top: 2rem;
+    display: flex;
+    justify-content:space-evenly;
+}
+.head-landing-des1 {
+    color: #022345 !important;
+    font-size: 20px !important;
+    width: 30%;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+@media only screen and (max-width: 600px) {
+    .head-landing-body1 {
+        /* margin-left:20%; */
+        display: flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items: center;
+    }
+    .head-landing-des1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .head-landing-des2 {
+        margin-left: 30px;
+        width: 185px;
+        text-align: left;
+    }
+  }
 
+.head-landing-register {
+    color: #022345 !important;
+    font-size: 20px !important;
+    font-family: 'Heading' !important;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
 
 .sotkanai-district-landing-container-div {
     height: 100vh;
@@ -38,6 +107,7 @@
     text-align: center;
     line-height: 1.5;
     padding-top: 2rem;
+    margin-bottom: 80px;
 }
 .sotkanai-district-icon {
     height: 50vh;

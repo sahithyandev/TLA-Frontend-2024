@@ -1,9 +1,7 @@
 .seminar-container {
   display: flex;
+  flex-direction: column !important;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center !important;
   margin-top: 5vw;
-}
-.card-container {
-  width: 80vh;
 }
