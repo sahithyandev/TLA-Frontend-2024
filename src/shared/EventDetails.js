@@ -6,6 +6,7 @@ import aramiyam from '../../src/images/Events/Card Illustration/aramiyamintro.pn
 import sotkanai from '../../src/images/Events/Card Illustration/sotkanai.png'
 import brammam from '../../src/images/Events/Card Illustration/brammam.png'
 import jeevanathi from '../../src/images/Events/Card Illustration/jeevanathi.png'
+import hackthon from '../../src/images/Events/Card Illustration/hackthon.png'
 import kovil from '../../src/images/Events/Card Illustration/kovil.png'
 import ppl from '../../src/images/Events/Card Illustration/ppl.png'
 import foodfestival from '../../src/images/Events/Card Illustration/foodfestival.png'
@@ -45,6 +46,12 @@ export const competition = [
         img: brammam,
         link: '/events/brammam',
         descriiption: 'பாடசாலை மாணவர்கள் மற்றும் உலகெங்கும் பரந்து வாழும் தமிழ் சொந்தங்களின் சிந்தனையாக்கம், பேச்சாற்றல், கற்பனைத்திறன், தொழில்நுட்ப ஆற்றல் போன்ற திறமைகளை வெளிக்கொணர இப்போட்டிகள் நடாத்தப்படுகிறது. இப்போட்டிகள் முற்று முழுதாக இணையவழியிலே நடத்தப்படுகிறது. மாணவர்கள் வீட்டிலிருந்தே தமது திறமைகளை வெளிக்கொணரமுடியும்'
+    },
+    {
+        title: 'Hackthon',
+        img: hackthon,
+        link: '/events/hackthon',
+        descriiption: 'வளர்ந்து வரும் தகவல் தொழில்நுட்ப உலகில் சாதனையாளர்களை தேடும் தமிழ் இலக்கிய மன்றத்தின் புதியதோர் முயற்ச்சி'
     }
 ]
 
@@ -55,6 +62,7 @@ export const guidance = [
         link: '/events/aramiyam',
         descriiption: 'பல்கலைக்கழகம் முடித்து தொழில் மற்றும் உயர்கல்விக்கு செல்ல இருக்கும் மாணவர்களின் எதிர்காலம் தொடர்பான கலந்துரையாடல்களும் தொழில் வழிகாட்டல்களும்'
     }
+
 ]
 
 export const social = [

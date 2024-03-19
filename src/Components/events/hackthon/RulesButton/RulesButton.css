@@ -1,0 +1,25 @@
+.btnContainer{
+    align-content: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.rulesBtn {
+    font-family: sunf;
+    color: #002245 !important;
+    font-size: 28px !important;
+    font-family: 'Para' !important;
+    text-align: center;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    background-color: #E3E7EB;
+    border-radius: 10px;
+    margin: 15px;
+    transition-duration: 0.7s;
+}
+
+.rulesBtn:hover{
+    transform: scale(1.2);
+    background-color: #002245;
+    color: #E3E7EB !important;
+}
