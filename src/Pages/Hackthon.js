@@ -9,8 +9,8 @@ const Hackthon = () => {
         <>
             <Helmet>
                 <title>Hackthon</title>
-                <meta name="description" content="மதபேதமின்றி சூரியனுக்கும் விளைச்சலுக்கும் உதவிய கால்நடைகளுக்கு நன்றி கூறும் முகமாக தைமாதம் பல்கலைகழக வளாகத்தினுள் பாரம்பரியத்தை பறைசாற்றும் வகையில் பொங்கல் பொங்கி பாரம்பரிய கலாச்சார உடையில் தீப்பண்டங்களை விருந்தோம்பல் செய்து பாரம்பரிய தமிழர் விளையாட்டுக்களுடன் விழாக்கோலம் கானும்." />
-                <meta name="keywords" content="TLA, Tamil Literary Association, Thai Pongal" />
+                <meta name="description" content="வளர்ந்து வரும் தகவல் தொழில்நுட்ப உலகில் சாதனையாளர்களை தேடும் தமிழ் இலக்கிய மன்றத்தின் புதியதோர் முயற்ச்சி." />
+                <meta name="keywords" content="TLA, Tamil Literary Association, Hackthon." />
             </Helmet>
                 <HackIntro />
                 <RulesButton/>

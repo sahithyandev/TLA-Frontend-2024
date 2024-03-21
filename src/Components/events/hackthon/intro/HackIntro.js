@@ -3,12 +3,12 @@ import {
     Grid, Container
 } from '@mui/material';
 import './HackIntro.css';
-import {competition} from "../../../../shared/EventDetails";
+import { competition } from "../../../../shared/EventDetails";
 
 function HackIntro() {
     return (
         <>
-            <div>
+            <div className="pongal-landing-container-div">
                 <Container maxWidth='' className="firstFrame">
                     <div className="pongal-landing-heading1">Hackthon</div>
                     <img src={competition[2].img} alt="pongal" className="thaipongal-icon" />
