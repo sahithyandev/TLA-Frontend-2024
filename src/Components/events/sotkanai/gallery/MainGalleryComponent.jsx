@@ -1,6 +1,7 @@
 import React from 'react';
 import './photoGallery.css';
 import ImageGallery from './DistrictImage';
+import SotkanaiData from '../Sotkanai-Data';
 // import { useState,useEffect } from 'react';
 
 //Sample Json Response
@@ -173,7 +174,7 @@ const MainGalleryComponent = () => {
     // }
 
     return ( <div>
-        {imageData.provinces.map((province, index) => (
+        {SotkanaiData.provinces.map((province, index) => (
           <ImageGallery key={index} province={province} />
         ))}
       </div>
