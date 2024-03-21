@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Grid } from "@mui/material";
-// import "./contact.css";
 import Heading from "../shared/Heading";
 import Input from "./Input";
 import SimplifiedButton from "./SimplifiedButton";

@@ -9,39 +9,17 @@ import Login from "../Components/Login";
 import Signup from "../Components/Signup";
 import SimplifiedButton from "../Components/SimplifiedButton";
 import { useAuth } from "../providers/AuthProvider";
-import { logout } from "../helpers/server";
+import { getAllSharedMemories, logout } from "../helpers/server";
+import ShareMemoryForm from "../Components/memory-sharing/ShareMemoryForm";
 
 export default function MemorySharing() {
 	const auth = useAuth();
 	const [showModal, setModal] = useState(undefined);
-	const [sharedItems] = useState([
-		{
-			title: "சொற்கணை",
-			content: '"சொற்கணை" என்பது மாபெரும் விவாதச்சமர்.இலங்கையின் 25 மாவட்டங்களில் தேர்வு செய்யப்பட்ட சிறந்த விவாத அணிகள் சொல் எனும் கணை கொண்டு களமாடும் இறுதிக்கட்ட விவாத சமர் தலைநகரில் பிரதான மண்டபத்தில் பல்லாயிரக்கணக்கானோர் முன்னிலையில் மிகவும் கோலாகலமாக நடைபெறுவதாகும்.',
-			sharedBy: {
-				name: "Kamal Mohan",
-				email: "kumar@gmail.com",
-				image: "/images/user-mock-image.png"
-			},
-			images: [
-				"/images/mock-image-1.jpeg",
-				"/images/mock-image-2.jpeg",
-			]
-		},
-		{
-			title: "சொற்கணை 1",
-			content: '"சொற்கணை" என்பது மாபெரும் விவாதச்சமர்.இலங்கையின் 25 மாவட்டங்களில் தேர்வு செய்யப்பட்ட சிறந்த விவாத அணிகள் சொல் எனும் கணை கொண்டு களமாடும் இறுதிக்கட்ட விவாத சமர் தலைநகரில் பிரதான மண்டபத்தில் பல்லாயிரக்கணக்கானோர் முன்னிலையில் மிகவும் கோலாகலமாக நடைபெறுவதாகும்.',
-			sharedBy: {
-				name: "Kamal Mohan",
-				email: "kumar@gmail.com",
-				image: "/images/user-mock-image.png"
-			},
-			images: [
-				"/images/mock-image-1.jpeg",
-				"/images/mock-image-2.jpeg",
-			]
-		}
-	]);
+	const [sharedMemoryItems, setSharedMemoryItems] = useState([]);
+
+	useEffect(() => {
+		getAllSharedMemories().then(memories => setSharedMemoryItems(memories)).catch();
+	}, []);
 
 	useEffect(() => {
 		if ((showModal == "signup" || showModal == "login") && auth.isLoggedIn) {
@@ -115,7 +93,7 @@ export default function MemorySharing() {
 					marginBottom: "20px"
 				}} />
 
-				{sharedItems.map(item => {
+				{sharedMemoryItems.map(item => {
 					return <MemoryCardItem key={item.title} data={item} />
 				})}
 
@@ -127,9 +105,7 @@ export default function MemorySharing() {
 				<Signup changeModal={changeModal} />
 			</Modal>
 			<Modal isOpen={showModal == "new-post"} onClose={closeModal}>
-				<div>
-					New post
-				</div>
+				<ShareMemoryForm closeModal={closeModal} />
 			</Modal>
 		</>
 	);

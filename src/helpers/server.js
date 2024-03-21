@@ -75,5 +75,34 @@ export async function signup(data) {
 		},
 		body: JSON.stringify(data)
 	})
+}
 
+/**
+ * @typedef CreateMemoryData
+ * @prop {string} title
+ * @prop {string} description
+ * @prop {File[]} images
+ * 
+ * @param {CreateMemoryData} data
+ */
+export async function createMemory(data) {
+	const form = new FormData();
+
+	form.append("title", data.title);
+	form.append("description", data.description);
+
+	for (let i = 0; i < data.images.length; i++) {
+		const image = data.images[i];
+		form.append("images", image);
+	}
+
+	console.log(form);
+	return server("/shared-memories", {
+		method: "POST",
+		body: form
+	})
+}
+
+export async function getAllSharedMemories() {
+	return server("/shared-memories");
 }
