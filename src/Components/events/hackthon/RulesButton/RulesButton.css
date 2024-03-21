@@ -16,10 +16,40 @@
     border-radius: 10px;
     margin: 15px;
     transition-duration: 0.7s;
+    cursor: pointer;
 }
 
 .rulesBtn:hover{
     transform: scale(1.2);
     background-color: #002245;
     color: #E3E7EB !important;
+}
+
+.boxStyle{
+    /* transition-duration: 1s; */
+    background-color: #E3E7EB;
+    border-radius: 16px;
+    padding: 30px;
+    width: 80vw;
+
+}
+
+.boxHeading{
+    color: #002245;
+    text-align: center;
+    font-family:  "Heading" !important;
+    font-size: large;
+    text-decoration: underline;
+}
+
+.listItem{
+    font-family: "Heading";
+    font-weight: lighter;
+    list-style-type: none;
+    color: #002245;
+}
+
+.bulletImg{
+    width: 2rem;
+    display: inline-flex;
 }
