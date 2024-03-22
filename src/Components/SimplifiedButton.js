@@ -1,6 +1,6 @@
 import "./simplified-button.css";
 
 export default function SimplifiedButton(props) {
-	const { children, ...otherProps } = props;
-	return <button className="simplified-button" {...otherProps}>{children}</button>
+	const { children, className, ...otherProps } = props;
+	return <button className={"simplified-button".concat(className ? " ".concat(className) : "")} {...otherProps}>{children}</button>
 }

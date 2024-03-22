@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Container, Grid } from "@mui/material";
 // import "./contact.css";
 import Heading from "../shared/Heading";
@@ -7,6 +7,7 @@ import SimplifiedButton from "./SimplifiedButton";
 import { signup } from "../helpers/server";
 import { useAuth } from "../providers/AuthProvider";
 
+import "./signup.css";
 
 const validateEmail = (email) => {
 	return /\S+@\S+\.\S+/.test(email);
@@ -23,19 +24,21 @@ const validatePhoneNo = (phoneNo) => {
 function Signup({ changeModal }) {
 	const auth = useAuth();
 	const [formValid, setFormValid] = useState({
-		name: false,
-		email: false,
-		password: false,
-		confirmPassword: false,
-		phoneNo: false
+		name: true,
+		email: true,
+		password: true,
+		confirmPassword: true,
+		phoneNo: true,
+		profileImage: true
 	});
 	const [buttonClicked, setButtonClicked] = useState(false);
 	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
-		password: "",
-		confirmPassowrd: "",
-		phoneNo: ""
+		name: "testing",
+		email: "testing@gmail.com",
+		password: "teskjk",
+		confirmPassowrd: "teskjk",
+		phoneNo: "1234567890",
+		profileImage: undefined
 	});
 
 	const [responseMessage, setResponseMessage] = useState("");
@@ -63,6 +66,12 @@ function Signup({ changeModal }) {
 		}
 	};
 
+	const imageUrl = useMemo(() => {
+		const profileImage = formData.profileImage;
+		if (!profileImage) return undefined;
+		return URL.createObjectURL(profileImage);
+	}, [formData.profileImage]);
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setButtonClicked(true);
@@ -78,12 +87,14 @@ function Signup({ changeModal }) {
 
 			setResponseMessage("உங்களுடைய தகவல் வெற்றிகரமாக அனுப்பப்பட்டுள்ளது")
 			document.getElementsByClassName("response-message")[0].style.color = "green";
+			URL.revokeObjectURL(imageUrl);
 			setFormData({
 				name: "",
 				email: "",
 				password: "",
 				confirmPassowrd: "",
-				phoneNo: ""
+				phoneNo: "",
+				profileImage: undefined
 			});
 			setButtonClicked(false);
 		} catch (error) {
@@ -96,7 +107,30 @@ function Signup({ changeModal }) {
 		<Container maxWidth="lg">
 			<Heading>கணக்கை உருவாக்கு</Heading>
 
-			<Grid>
+			<Grid className="sign-up--form-content" >
+				<label className="sign-up--image-preview" >
+					<input type="file" accept="image/*" onChange={(event) => {
+						const files = event.target.files;
+						if (files.length == 0) return;
+
+						URL.revokeObjectURL(imageUrl);
+						const file = files[0];
+						setFormData((prev) => {
+							return {
+								...prev, profileImage: file
+							}
+						})
+					}} />
+					<div>
+						{
+							formData.profileImage == undefined ?
+								<span className="icon material-symbols-outlined">
+									add_a_photo
+								</span> :
+								<img src={imageUrl} />
+						}
+					</div>
+				</label>
 				<Input
 					onChange={handleInputChange}
 					value={formData.name}
@@ -123,6 +157,7 @@ function Signup({ changeModal }) {
 					icon="mail"
 					showValidation={buttonClicked && !formData.email}
 					validationMessage="மின்னஞ்சலை சரியாக உள்ளிடவும்"
+					type="email"
 				/>
 				<Input
 					onChange={handleInputChange}
@@ -144,25 +179,25 @@ function Signup({ changeModal }) {
 					validationMessage="கடவுச்சொல்லை மீளவும் சரியாக உள்ளிடவும்"
 					type="password"
 				/>
-				<Grid
-					container
-					item
-					justifyContent="flex-end"
-					paddingBottom={2}
-					paddingTop={2}
-				>
-					<button className="contact-send-button" onClick={handleSubmit} >
-						அனுப்பு
-					</button>
-				</Grid>
-				<Grid item>
-					<div className="response-message">{responseMessage}</div>
-				</Grid>
-				<Grid container item justifyContent="center">
-					<SimplifiedButton onClick={changeModal.bind(null, "login")}>
-						உள்நுழை
-					</SimplifiedButton>
-				</Grid>
+			</Grid>
+			<Grid
+				container
+				item
+				justifyContent="flex-end"
+				paddingBottom={2}
+				paddingTop={2}
+			>
+				<button className="contact-send-button" onClick={handleSubmit} >
+					அனுப்பு
+				</button>
+			</Grid>
+			<Grid item className="response-message">
+				{responseMessage}
+			</Grid>
+			<Grid container item justifyContent="center">
+				<SimplifiedButton onClick={changeModal.bind(null, "login")}>
+					உள்நுழை
+				</SimplifiedButton>
 			</Grid>
 		</Container>
 	);

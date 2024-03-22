@@ -1,5 +1,5 @@
 import { Card } from "@mui/material";
-import "./card-item.css";
+import "./memory-card-item.css";
 
 export default function MemoryCardItem({ data }) {
 	return <Card className="memory-card-item">

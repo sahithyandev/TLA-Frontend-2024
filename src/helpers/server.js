@@ -64,16 +64,24 @@ export async function logout() {
  * @prop {string} email
  * @prop {string} password
  * @prop {string} phoneNo
+ * @prop {File} profileImage
  * 
  * @param {CreateUserData} data
  */
 export async function signup(data) {
+	const form = new FormData();
+
+	const entries = Object.entries(data)
+
+	for (let i = 0; i < entries.length; i++) {
+		const [key, value] = entries[i];
+		console.log(key, value);
+		form.append(key, value);
+	}
+
 	return server("/users", {
 		method: "POST",
-		headers: {
-			"Content-Type": "application/json"
-		},
-		body: JSON.stringify(data)
+		body: form
 	})
 }
 

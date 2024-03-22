@@ -126,7 +126,7 @@ function ShareMemoryForm({ closeModal }) {
 	};
 
 	return (
-		<Container style={{ width: "60vw", maxWidth: "820px" }}>
+		<Container>
 			<Heading>உங்கள் நினைவு</Heading>
 
 			<Grid>
@@ -156,15 +156,10 @@ function ShareMemoryForm({ closeModal }) {
 						படங்கள்
 					</div>
 					<div className="input-images-container">
-
-
 						{imageUrls.map(image => {
 							return <img src={image} key={image} />
 						})}
-
 						<label style={{ display: "contents" }}>
-
-
 							<input type="file" multiple accept="image/*" onChange={async (event) => {
 								const target = event.target;
 								if (!(target instanceof HTMLInputElement) || target.type != "file" || target.files.length == 0) {

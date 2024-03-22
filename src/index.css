@@ -18,6 +18,7 @@ a:hover {
 }
 
 dialog {
+	width: min(40rem, 82vw);
 	border-radius: 8px;
 	border: 0;
 	--shadow-color: 30deg 3% 70%;

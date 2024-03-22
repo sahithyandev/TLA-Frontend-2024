@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Container, Grid } from "@mui/material";
 
 import MemorySharingIntro from "../Components/memory-sharing/intro";
-import MemoryCardItem from "../Components/memory-sharing/card-item";
+import MemoryCardItem from "../Components/memory-sharing/memory-card-item";
 import Modal from "../Components/Modal";
 import Login from "../Components/Login";
 import Signup from "../Components/Signup";
@@ -57,41 +57,29 @@ export default function MemorySharing() {
 			</Helmet>
 			<MemorySharingIntro />
 			<Container>
-				<Grid justifyContent="space-between" display="flex" alignItems="center" marginTop="1rem">
-					<h2 style={{
-						fontFamily: "Para",
-						margin: "-4px 5px 0 0",
-						fontWeight: "400",
-						fontSize: "36px"
-					}}>
+				<header className="memory-sharing-page--header">
+					<h2>
 						நினைவுகள்
 					</h2>
 					{auth.isLoggedIn ?
-						<SimplifiedButton title="Add a memory" onClick={changeModal.bind(null, "new-post")}>
+						<SimplifiedButton className="add-memory" title="Add a memory" onClick={changeModal.bind(null, "new-post")}>
 							<span className="icon material-symbols-outlined pointable">
 								add_circle
 							</span>
 						</SimplifiedButton>
 						: null}
 
-					<div style={{ marginLeft: "auto" }}>
-						{auth.isLoggedIn ? <span style={{
-							marginRight: 5
-						}}>Logged in as {auth.userInfo.name}</span> : null}
-						<SimplifiedButton onClick={() => {
-							if (!auth.isLoggedIn) {
-								changeModal("login")
-								return;
-							}
-							logout().then(auth.loggedOut);
-						}}>{auth.isLoggedIn ? `Log Out` : "Login"}</SimplifiedButton>
-					</div>
+					{auth.isLoggedIn ? <span className="logged-in-as">Logged in as {auth.userInfo.name}</span> : null}
+					<SimplifiedButton className="log-action" onClick={() => {
+						if (!auth.isLoggedIn) {
+							changeModal("login")
+							return;
+						}
+						logout().then(auth.loggedOut);
+					}}>{auth.isLoggedIn ? `Log Out` : "Login/Sign up"}</SimplifiedButton>
 
-				</Grid>
-				<hr style={{
-					marginTop: "0px",
-					marginBottom: "20px"
-				}} />
+				</header>
+				<hr />
 
 				{sharedMemoryItems.map(item => {
 					return <MemoryCardItem key={item.title} data={item} />
