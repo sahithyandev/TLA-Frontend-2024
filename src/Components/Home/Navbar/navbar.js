@@ -82,7 +82,7 @@ function Navbar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', height: '64px' }}>
+    <Box sx={{ display: 'flex', height: '64px' }} className='navbar-container'>
       <AppBar component="nav" className='appBar'>
         <Container maxWidth='xl' >
           <Toolbar sx={{ height: '64px' }}>
