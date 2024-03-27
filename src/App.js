@@ -1,4 +1,3 @@
-import { useRoutes } from "react-router-dom";
 
 import "./App.css";
 
@@ -7,9 +6,14 @@ import Navbar from "./Components/Home/Navbar/navbar";
 import Footer from "./Components/Home/Footer/footer";
 import ScrollToTop from "./Components/ScrollToTop";
 import { useEffect } from "react";
+import { useAuth } from "./providers/AuthProvider";
+import { currentUser } from "./helpers/server";
 
 function App() {
-  useEffect(() => {}, []);
+  const auth = useAuth();
+  useEffect(() => {
+    currentUser().then(auth.loggedIn).catch(() => { });
+  }, []);
   return (
     <>
       <ScrollToTop />

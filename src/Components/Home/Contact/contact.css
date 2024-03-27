@@ -21,10 +21,10 @@
 
 .contact-input {
     width: 100%;
-    height: 5vh;
     border: none;
     border-radius: 5px;
     font-size: 20px;
+    padding: 10px 12px;
 }
 
 .valid-input{
@@ -68,6 +68,7 @@
 
 .contact-icon-div {
     display: flex;
+    align-items: center;
     border: 2px solid rgb(226, 225, 225);
     border-radius: 5px;
     background-color: #ffffff;
@@ -85,7 +86,7 @@
 }
 
 .contact-icon {
-    margin: 5px 0px 0px 0px;
+    margin: 0px;
     font-size: 25px;
     color: #022345;
     width: 35px;

@@ -61,8 +61,13 @@ export const guidance = [
         img: aramiyam,
         link: '/events/aramiyam',
         descriiption: 'பல்கலைக்கழகம் முடித்து தொழில் மற்றும் உயர்கல்விக்கு செல்ல இருக்கும் மாணவர்களின் எதிர்காலம் தொடர்பான கலந்துரையாடல்களும் தொழில் வழிகாட்டல்களும்'
+    },
+    {
+        title: 'நினைவுகள் மீட்டல்',
+        img: blooddonation,
+        link: '/memory-sharing',
+        descriiption: 'தமிழ் இலக்கிய மன்றத்துடனான நினைவுகளை நண்பர்களுடன் பகிர்ந்து கொள்ளுங்கள்.'
     }
-
 ]
 
 export const social = [
