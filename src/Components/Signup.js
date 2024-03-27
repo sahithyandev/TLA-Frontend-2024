@@ -24,20 +24,20 @@ const validatePhoneNo = (phoneNo) => {
 function Signup({ changeModal }) {
 	const auth = useAuth();
 	const [formValid, setFormValid] = useState({
-		name: true,
-		email: true,
-		password: true,
-		confirmPassword: true,
-		phoneNo: true,
-		profileImage: true
+		name: false,
+		email: false,
+		password: false,
+		confirmPassword: false,
+		phoneNo: false,
+		profileImage: false
 	});
 	const [buttonClicked, setButtonClicked] = useState(false);
 	const [formData, setFormData] = useState({
-		name: "testing",
-		email: "testing@gmail.com",
-		password: "teskjk",
-		confirmPassowrd: "teskjk",
-		phoneNo: "1234567890",
+		name: "",
+		email: "",
+		password: "",
+		confirmPassword: "",
+		phoneNo: "",
 		profileImage: undefined
 	});
 
@@ -47,6 +47,7 @@ function Signup({ changeModal }) {
 		const { name, value } = e.target;
 		setFormData((prevData) => ({ ...prevData, [name]: value }));
 
+		
 		switch (name) {
 			case 'email':
 				setFormValid((prevFormValid) => ({ ...prevFormValid, email: validateEmail(value) }));
@@ -56,7 +57,7 @@ function Signup({ changeModal }) {
 				setFormValid((prevFormValid) => ({ ...prevFormValid, [name]: validateNotEmpty(value) }));
 				break;
 			case 'confirmPassword':
-				setFormValid((prevFormValid) => ({ ...prevFormValid, [name]: validateNotEmpty(value) && formData.password == formData.confirmPassowrd }));
+				setFormValid((prevFormValid) => ({ ...prevFormValid, [name]: value === formData.password }));
 				break;
 			case 'phoneNo':
 				setFormValid((prevFormValid) => ({ ...prevFormValid, phoneNo: validatePhoneNo(value) }));
@@ -64,6 +65,8 @@ function Signup({ changeModal }) {
 			default:
 			// Handle default case if needed
 		}
+		console.log(formData.password);
+		console.log(formData.confirmPassword);
 	};
 
 	const imageUrl = useMemo(() => {
@@ -92,7 +95,7 @@ function Signup({ changeModal }) {
 				name: "",
 				email: "",
 				password: "",
-				confirmPassowrd: "",
+				confirmPassword: "",
 				phoneNo: "",
 				profileImage: undefined
 			});
@@ -137,7 +140,7 @@ function Signup({ changeModal }) {
 					name="name"
 					label="பெயர்"
 					icon="person"
-					showValidation={buttonClicked && !formData.name}
+					showValidation={buttonClicked && !formValid.name}
 					validationMessage="பெயரை சரியாக உள்ளிடவும்"
 				/>
 				<Input
@@ -146,7 +149,7 @@ function Signup({ changeModal }) {
 					name="phoneNo"
 					label="தொலைபேசி இலக்கம்"
 					icon="call"
-					showValidation={buttonClicked && !formData.phoneNo}
+					showValidation={buttonClicked && !formValid.phoneNo}
 					validationMessage="தொலைபேசி இலக்கத்தை சரியாக உள்ளிடவும்"
 				/>
 				<Input
@@ -155,7 +158,7 @@ function Signup({ changeModal }) {
 					name="email"
 					label="மின்னஞ்சல்"
 					icon="mail"
-					showValidation={buttonClicked && !formData.email}
+					showValidation={buttonClicked && !formValid.email}
 					validationMessage="மின்னஞ்சலை சரியாக உள்ளிடவும்"
 					type="email"
 				/>
@@ -165,7 +168,7 @@ function Signup({ changeModal }) {
 					name="password"
 					label="கடவுச்சொல்"
 					icon="password"
-					showValidation={buttonClicked && !formData.password}
+					showValidation={buttonClicked && !formValid.password}
 					validationMessage="கடவுச்சொல்லை சரியாக உள்ளிடவும்"
 					type="password"
 				/>
@@ -175,7 +178,7 @@ function Signup({ changeModal }) {
 					name="confirmPassword"
 					label="கடவுச்சொல்"
 					icon="password"
-					showValidation={buttonClicked && (!formData.confirmPassowrd || (formData.password != formData.confirmPassowrd))}
+					showValidation={buttonClicked && (!formValid.confirmPassowrd || (formData.password !== formData.confirmPassowrd))}
 					validationMessage="கடவுச்சொல்லை மீளவும் சரியாக உள்ளிடவும்"
 					type="password"
 				/>
