@@ -33,7 +33,7 @@ const imageData = {
         {
           name: "முல்லைத்தீவு",
           images: [
-            "https://cdn.audleytravel.com/5237/3740/79/1332748-jaffna-library.jpg",
+            "https://live.staticflickr.com/65535/52613194496_2d3d39870c_o.png",
             "district2_image2.jpg",
             "district2_image10.jpg",
           ],

@@ -5,12 +5,10 @@ import SotkanaiData from "../../Sotkanai-Data";
 
 
 import { CalendarMonth,AccessTime,LocationOn } from "@mui/icons-material";
-const Schedule = () => {
+const Schedule = ({ districtName, districtSchedule }) => {
   const provinces = SotkanaiData.provinces;
 
-  // Assuming you want to display the schedule for the first district of the first province
-  const districtSchedule = provinces[0].districts[0].schedule;
-  const districtName = provinces[0].districts[0].name;
+
 
   return (
     <React.Fragment>

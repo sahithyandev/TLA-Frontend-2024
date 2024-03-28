@@ -13,7 +13,7 @@ const Button = ({ text }) => {
   );
 };
 
-const SchoolList = () => {
+const SchoolList = ({participated_schools}) => {
   const initialButtons = [
     { text: 'யாழ் / இந்துக் கல்லூரி' },
     { text: 'யாழ் / இந்துக் கல்லூரி' },
@@ -24,31 +24,30 @@ const SchoolList = () => {
     { text: 'யாழ் / இந்துக் கல்லூரி' },
     { text: 'யாழ் / இந்துக் கல்லூரி' },
   ];
-  const [buttons, setButtons] = useState(initialButtons.slice(0, 6)); // Initially show only two rows
+  const [buttons, setButtons] = useState(participated_schools.slice(0, 6)); // Initially show only two rows
   const [showAll, setShowAll] = useState(false);
 
   const toggleShowAll = () => {
     setShowAll(!showAll);
     if (!showAll) {
-      setButtons(initialButtons);
+      setButtons(participated_schools);
     } else {
-      setButtons(initialButtons.slice(0, 6)); // Show only two rows
+      setButtons(participated_schools.slice(0, 6)); // Show only two rows
     }
   };
 
   return (
     <div className='set-width'>
       <div className="button-school-container">
-        {buttons.map((button, index) => (
-          <Button key={index} text={button.text} />
-        ))}
+        {buttons.map((school, index) => (
+          <Button key={index} text={school} />
+          ))}
       </div>
       {!showAll && (
         <div className='button-school-container-arrow'>
-
-        <button onClick={toggleShowAll} className="button-school">
-        <KeyboardArrowDownIcon />
-        </button>
+          <button onClick={toggleShowAll} className="button-school">
+            <KeyboardArrowDownIcon />
+          </button>
         </div>
       )}
     </div>
