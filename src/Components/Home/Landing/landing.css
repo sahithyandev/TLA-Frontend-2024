@@ -16,8 +16,19 @@
     text-align: center;
     line-height: 1.5;
     padding-left: 80px;
+  animation: topToBottom 2s forwards; 
 }
 
+@keyframes topToBottom {
+    from {
+      transform: translateY(20px); /* Start from top */
+      opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+      transform: translateY(0); /* End at original position */
+      opacity: 1; /* Gradually fade in */
+    }
+  }
 
 .landing-heading-letter {
     font-size: 120px;
@@ -28,6 +39,15 @@
     height: auto;
     width: 850px;
 }
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .fade-in.fade-in-active {
+    opacity: 1;
+  }
 
 
 /* Extra small devices (phones, 600px and down) */
