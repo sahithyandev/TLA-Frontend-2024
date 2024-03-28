@@ -10,6 +10,17 @@ import Kovil from './Pages/Kovil';
 import ComingSoon from './shared/comingSoon/ComingSoon';
 import BloodDonation from './Pages/Blood-donation';
 import FoodFestival from './Pages/Food-festival';
+import VaniVilla from './Pages/Vani-villa';
+import Thamilaruvi from './Pages/Thamilaruvi';
+import PPL from "./Pages/PPL";
+import Brammam from './Pages/Brammam';
+import BrammamEventAbout from './Components/events/brammam/aboutEvent/BrammamEventAbout';
+import ExtraInfo from './Components/events/brammam/ExtraInfo/ExtraInfo';
+import MovieNight from './Pages/Movie-night';
+
+import Hackthon from './Pages/Hackthon';
+import Books from './Pages/Books';
+import MemorySharing from './Pages/Memory-Sharing';
 
 function Router() {
     return (
@@ -38,11 +49,17 @@ function Router() {
                         element: <Aramiyam />
                     },
                     {
-
                         path: 'jeevanathi',
                         element:<Jeevanathi/>
-                    },{
-
+                    },
+                    {
+                        path:'vani-villa',
+                        element:<VaniVilla/>
+                    },
+                    {    
+                        element: <Jeevanathi />
+                    },
+                    {
                         path: 'kovil',
                         element: <Kovil />
                     },
@@ -53,14 +70,53 @@ function Router() {
                     {
                         path: 'food-festival',
                         element: <FoodFestival />
+                    },
+                    {
+                        path:'thamilaruvi',
+                        element:<Thamilaruvi/>
+
+                    },
+                    {
+                        path: 'brammam',
+                        element: <Brammam />
+
+                    },
+                    {
+                        path: 'brammam/:event',
+                        element: <BrammamEventAbout />
+
+                    },
+                    {
+                        path: 'brammam/:event/rules',
+                        element: <ExtraInfo />
 
                     },
                     {
                         path: 'comingSoon',
                         element: <ComingSoon />
                     },
+                    {
+                        path: 'ppl',
+                        element: <PPL />
+                    },
+                    {
+                        path:'movie-night',
+                        element:<MovieNight/>
+                    },
+                    {
+                        path:'/events/hackthon',
+                        element:<Hackthon/>
+                    }
                 ]
             },
+            {
+                path: "/memory-sharing",
+                element: <MemorySharing />
+            },
+            {
+                path: "/books",
+                element: <Books />
+            }
         ])
     );
 }

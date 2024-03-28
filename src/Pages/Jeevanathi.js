@@ -1,56 +1,48 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import JeevanathiIntro from "../Components/events/jeevanathi/intro/Jeevanathiintro";
-import hand from "../images/Events/jeevanathi/people-hands-bringing-money-together-to-donate-to-charity 1.png"
+import hand from "../images/Events/jeevanathi/people-hands-bringing-money-together-to-donate-to-charity 1.png";
 import PastProject from "../Components/events/jeevanathi/helps/PastProject";
-
+import PopupCard from "../Components/events/jeevanathi/popup/PopupCard";
 function Jeevanathi() {
- 
   return (
     <>
       <Helmet>
         <title>ஜீவநதி | தமிழ் இலக்கிய மன்றம்</title>
-        <meta
-          name="description"
-          content=""
-        />
-        <meta
-          name="keywords"
-          content="TLA, Tamil Literary Association, jeevanathi"
-        />
+        <meta name="description" content="" />
+        <meta name="keywords" content="TLA, Tamil Literary Association, jeevanathi" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
-      <JeevanathiIntro/>
-      <img src={hand}  style={{
-            maxWidth: '100%',
-            display: 'block',
-            margin: '0 auto',
-            objectFit: 'cover',
-            zoom: '110%',
-          
-        }}/>
-         <button
-          style={{
-            position: 'absolute',
-            top: '145%',
-            left: '20%',
-            transform: 'translate(-50%, -50%)',
-            padding: '30px',
-            backgroundColor: 'rgba(255, 255, 255, 0.7)', // Semi-transparent white background
-            border: 'none',
-            borderRadius: '10px',
-            cursor: 'pointer',
-            color: '#022345',
-            fontFamily: 'Heading',
-            textAlign: 'center',
-            fontSize: '30px'
-            
-          }}
-          onClick={() => alert('வங்கி கணக்கு விபரம் \n 0080292080 \n BOC \n Jaffna main branch \n X XXXXX'
-          )}
-        >
-          எம்முடன் இணையுங்கள் 
-        </button>
-         <div
+      <div style={{ position: 'relative' }}>
+        <JeevanathiIntro />
+        <div style={{ position: 'relative' }}>
+          <img
+            src={hand}
+            style={{
+              maxWidth: '100%',
+              height: 'auto',
+              display: 'block',
+              margin: '0 auto',
+              objectFit: 'cover',
+              width: '100%'
+            }}
+          />
+          <PopupCard
+            buttonText="எம்முடன் இணையுங்கள்"
+            content={[
+              "வங்கி கணக்கு விபரம்",
+              "Account Name : Tamil Literary Association",
+              "Account Number : 320654",
+              "Bank Name : Bank of Ceylon",
+              "Branch Name : Kattubeda Branch",
+              "",
+              "தொடர்புகளுக்கு",
+              "Kisanth - 077 591 4008",
+              "Keethasaba - 076 263 7656"
+            ]}
+          />
+        </div>
+        <div
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -60,9 +52,9 @@ function Jeevanathi() {
             height: '100%',
           }}
         >
-          <PastProject/>
+          <PastProject />
         </div>
-     
+      </div>
     </>
   );
 }
