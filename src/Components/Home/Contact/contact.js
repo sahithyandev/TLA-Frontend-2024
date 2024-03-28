@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Container, Grid } from "@mui/material";
 import "./contact.css";
 import Heading from "../../../shared/Heading";
 import { FaEnvelope, FaFacebook, FaYoutube, FaPhoneAlt } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
     const [formValid, setFormValid] = useState({
@@ -20,6 +21,8 @@ function Contact() {
         category: "",
         phoneNumber: "",
     });
+
+    const form = useRef();
 
     const [responseMessage, setResponseMessage] = useState("");
 
@@ -67,29 +70,40 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setButtonClicked(true);
-
-        console.log("submit" + e.target)
+        emailjs.init('2l7l4CqPtakXvObMJ');
 
         try {
-            console.log(formValid);
             if (formValid.category && formValid.email && formValid.message && formValid.userName && formValid.phoneNumber) {
-                const response = await fetch("http://localhost:3001/contacts", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                });
-                setResponseMessage("உங்களுடைய தகவல் வெற்றிகரமாக அனுப்பப்பட்டுள்ளது")
-                document.getElementsByClassName("response-message")[0].style.color = "green";
-                setFormData({
-                    userName: "",
-                    email: "",
-                    message: "",
-                    category: "",
-                    phoneNumber: "",
-                });
-                setButtonClicked(false);
+                // const response = await fetch("http://localhost:3001/contacts", {
+                //     method: "POST",
+                //     headers: {
+                //         "Content-Type": "application/json",
+                //     },
+                //     body: JSON.stringify(formData),
+                // });
+                emailjs.send(
+                    'service_v9oy0xw',
+                    'template_c9bgvus',
+                    formData)
+                    .then(
+                        () => {
+                            setResponseMessage("உங்களுடைய தகவல் வெற்றிகரமாக அனுப்பப்பட்டுள்ளது")
+                            document.getElementsByClassName("response-message")[0].style.color = "green";
+                            setFormData({
+                                userName: "",
+                                email: "",
+                                message: "",
+                                category: "",
+                                phoneNumber: "",
+                            });
+                            setButtonClicked(false);
+                        },
+                        (error) => {
+                            setResponseMessage("உங்களுடைய தகவல் அனுப்பப்படவில்லை")
+                            document.getElementsByClassName("response-message")[0].style.color = "red";
+                        },
+                    );
+
             }
         } catch (error) {
             setResponseMessage("உங்களுடைய தகவல் அனுப்பப்படவில்லை")
@@ -167,9 +181,9 @@ function Contact() {
                                     <option value="" disabled hidden>
                                         {/* ஓர் வகைய தேர்ந்தெடு */}
                                     </option>
-                                    <option value="option 1">அனுசரனையாளர்கள்</option>
-                                    <option value="option 2">நலன் விரும்பிகள்</option>
-                                    <option value="option 3">மாணவர்கள்</option>
+                                    <option value="Sponsor">அனுசரனையாளர்</option>
+                                    <option value="Wellwisher">நலன் விரும்பி</option>
+                                    <option value="Student">மாணவர்</option>
                                 </select>
                             </div>
                             <div className={buttonClicked && !formData.category ? 'inValid-input' : 'valid-input'}>தொடர்புவகையை தெரிவு செய்யவும்</div>
