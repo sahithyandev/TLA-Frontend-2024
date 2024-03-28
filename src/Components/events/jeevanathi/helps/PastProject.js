@@ -1,6 +1,7 @@
 import "./pastproject.css"; 
 import React from "react";
 import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
+import SchoolA from "../../../../images/Events/jeevanathi/semmalai-2024/img1.jpg";
 import School1 from "../../../../images/Events/jeevanathi/udaweriya-2018/school1.jpg";
 import School2 from "../../../../images/Events/jeevanathi/udaweriya-2018/school2.jpg";
 import School3 from "../../../../images/Events/jeevanathi/udaweriya-2018/school3.jpg";
@@ -17,6 +18,12 @@ import Landslide4 from "../../../../images/Events/jeevanathi/landslide-badulla-2
 
 
 const pastEvents = [
+  {
+    projectName: "செம்மலை மகா வித்தியாலய திட்டம் - 2024",
+    photos: [SchoolA],
+    description:
+      "மொறட்டுவை பல்கலைக்கழக தமிழ் இலக்கிய மன்றத்தின் ஜீவநதி செயற்றிட்டத்தின் மூலம் முல்லைத்தீவு செம்மலை மகா வித்தியாலயத்தின் மாணவர்களுக்கு ஐந்து துவிச்சக்கரவண்டிகள் இலங்கை தமிழர் சமூகம் கத்தாரின் உதவியுடன் கையளிக்கப்பட்டது.",
+  },
   {
     projectName: "உடவேரிய பாடசாலை திட்டம் - 2018",
     photos: [School1, School2, School3, School4],
