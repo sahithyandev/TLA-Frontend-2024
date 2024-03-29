@@ -27,8 +27,8 @@ const SotkanaiDistrict = () => {
             </Helmet>
             <Schedule districtName={districtName} districtSchedule={districtSchedule} />
             <Winners winning_schools={winning_schools} />
-            <SchoolList participated_schools={participated_schools} />
-            <SotkanaiDistrictGallery images={images} />
+            {/* <SchoolList participated_schools={participated_schools} /> */}
+            {/* <SotkanaiDistrictGallery images={images} /> */}
         </>
     );
 }

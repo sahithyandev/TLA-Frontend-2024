@@ -37,7 +37,7 @@ function Router() {
                         element: <Thaipongal />
                     },
                     {
-                        path: 'sotkanai-main',
+                        path: 'sotkanai',
                         element: <SotkanaiMain />
                     },
                     {

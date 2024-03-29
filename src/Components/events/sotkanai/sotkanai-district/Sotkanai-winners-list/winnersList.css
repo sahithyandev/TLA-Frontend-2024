@@ -1,3 +1,7 @@
+.winners-conatainer{
+    min-height: 35vh;
+}
+
 .sotkanai-landing-containerx {
     display: flex;
     justify-content: center; /* Center align the container horizontally */

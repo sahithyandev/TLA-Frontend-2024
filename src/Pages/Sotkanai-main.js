@@ -16,8 +16,8 @@ const SotkanaiMain = () => {
                 <meta name="keywords" content="TLA, Tamil Literary Association, Sotknai" />
             </Helmet>
             <SotkanaiIntro />
-            <Agenda />
-            <Sponsors/>
+            {/* <Agenda /> */}
+            {/* <Sponsors/> */}
             <SotkanaiRules/>
             <MainGalleryComponent/>
         </>
