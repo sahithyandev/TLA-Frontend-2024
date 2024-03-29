@@ -13,9 +13,9 @@ const SotkanaiData = {
             "https://live.staticflickr.com/65535/52613194496_2d3d39870c_o.png"
           ],
           schedule: {
-            date: "2024-06-10",
-            time: "மு.ப 10:00",
-            venue: "யாழ்ப்பாணம் இந்துக் கல்லூரி",
+            // date: "2024-06-10",
+            // time: "மு.ப 10:00",
+            // venue: "யாழ்ப்பாணம் இந்துக் கல்லூரி",
           },
           winning_schools: {
             // "1st_place": "யாழ்ப்பாணம் இந்துக் கல்லூரி",

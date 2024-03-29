@@ -4,10 +4,6 @@
     width: 100%;
 }
 
-.fixed-footer{
-    position: fixed;
-}
-
 .footer-text{
     background-color: #DFE5E8;
     text-align: center;
