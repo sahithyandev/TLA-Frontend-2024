@@ -185,3 +185,8 @@
     align-items: start;
     height: 100vh;
 }
+
+.sotkanai-landing-container {
+    max-width: 75%; /* Adjust the maximum width as needed */
+    margin: auto; /* Center align the container */
+}

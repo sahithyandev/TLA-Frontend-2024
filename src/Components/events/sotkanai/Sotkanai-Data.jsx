@@ -18,9 +18,9 @@ const SotkanaiData = {
             venue: "யாழ்ப்பாணம் இந்துக் கல்லூரி",
           },
           winning_schools: {
-            "1st_place": "Jaffna Hindu College",
-            "2nd_place": "St. John's College",
-            "3rd_place": "St. Patrick's College",
+            "1st_place": "யாழ்ப்பாணம் இந்துக் கல்லூரி",
+            "2nd_place": "வேம்படி மகளிர் கல்லூரி",
+            "3rd_place": "கொக்குவில் இந்துக் கல்லூரி",
           },
           participated_schools :[
             "யாழ்ப்பாணம் இந்துக் கல்லூரி",

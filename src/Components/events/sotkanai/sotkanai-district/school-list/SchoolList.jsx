@@ -14,16 +14,6 @@ const Button = ({ text }) => {
 };
 
 const SchoolList = ({participated_schools}) => {
-  const initialButtons = [
-    { text: 'யாழ் / இந்துக் கல்லூரி' },
-    { text: 'யாழ் / இந்துக் கல்லூரி' },
-    { text: 'யாழ் / இந்துக் கல்லூரி' },
-    { text: 'யாழ் / இந்துக் கல்லூரி' },
-    { text: 'யாழ் / இந்துக் கல்லூரி' },
-    { text: 'யாழ் / இந்துக் கல்லூரி' },
-    { text: 'யாழ் / இந்துக் கல்லூரி' },
-    { text: 'யாழ் / இந்துக் கல்லூரி' },
-  ];
   const [buttons, setButtons] = useState(participated_schools.slice(0, 6)); // Initially show only two rows
   const [showAll, setShowAll] = useState(false);
 
@@ -38,6 +28,9 @@ const SchoolList = ({participated_schools}) => {
 
   return (
     <div className='set-width'>
+      <div className="school-landing-container">
+        <div className="head-landing-heading1"> பாடசாலைகள் விபரம் </div>
+        </div>
       <div className="button-school-container">
         {buttons.map((school, index) => (
           <Button key={index} text={school} />
@@ -51,6 +44,7 @@ const SchoolList = ({participated_schools}) => {
         </div>
       )}
     </div>
+    
   );
 };
 
