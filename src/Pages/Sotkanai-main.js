@@ -17,9 +17,9 @@ const SotkanaiMain = () => {
             </Helmet>
             <SotkanaiIntro />
             <Agenda />
-            {/* <Sponsors/>
+            <Sponsors/>
             <SotkanaiRules/>
-            <MainGalleryComponent/> */}
+            <MainGalleryComponent/>
         </>
     );
 
