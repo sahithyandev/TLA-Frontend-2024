@@ -1,4 +1,18 @@
-import React from "react";
+// import React from "react";
+
+import React, { useState, useEffect } from 'react';
+
+// function SotkanaiData() {
+//   const [sotkanaiData, setSotkanaiData] = useState(null);
+
+//   useEffect(() => {
+//     fetch('http://localhost:3001/sotkanaiData')
+//       .then(response => response.json())
+//       .then(data => setSotkanaiData(data))
+//       .catch(error => console.error('Error fetching data:', error));
+//   }, []);
+// }
+// export default SotkanaiData;
 
 const SotkanaiData = {
   provinces: [
