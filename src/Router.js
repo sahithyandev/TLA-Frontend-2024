@@ -21,6 +21,8 @@ import MovieNight from './Pages/Movie-night';
 import Hackthon from './Pages/Hackthon';
 import Books from './Pages/Books';
 import MemorySharing from './Pages/Memory-Sharing';
+import TeamsPage from './Pages/Teams-Page';
+import HistoryPage from './Pages/History';
 
 function Router() {
     return (
@@ -116,6 +118,14 @@ function Router() {
             {
                 path: "/books",
                 element: <Books />
+            },
+            {
+                path:'teams',
+                element:<TeamsPage/>
+            },
+            {
+                path:'history',
+                element:<HistoryPage/>
             }
         ])
     );
