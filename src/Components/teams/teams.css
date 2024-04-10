@@ -1,0 +1,36 @@
+h1 {
+    font-family: "Heading" !important;
+    font-size: 40px;
+}
+
+p {
+    font-family: "Para" !important;
+    font-size: 22px;
+}
+
+.teams {
+    margin: 7%;
+}
+
+.teams-card {
+    background-color: #e3e7eb;
+    border-radius: 5px;
+    padding: 3%;
+    margin-bottom: 4%;
+}
+
+.teams-card h1 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px;
+    width: 93%;
+}
+
+.teams-card img {
+    width: 300px;
+    padding-right: 20px;
+}
