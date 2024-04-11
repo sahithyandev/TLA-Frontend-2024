@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect,useState} from "react";
 import { Grid, Container } from "@mui/material";
 import "./agenda.css";
 import Timeline from "@material-ui/lab/Timeline";
@@ -13,11 +13,29 @@ import eventlist from "./eventList";
 
 function Agenda() {
   const events = eventlist;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width to state
+      setWindowWidth(window.innerWidth);
+    }
+    
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, [windowWidth]);
   return (
     <>
       <h1>நேரவரிசை</h1>
       <div className="timelineCOntainer">
-        <Timeline align="alternate" className="tline">
+        <Timeline align={windowWidth > 490 ? "alternate" : "left"} className="tline">
           {events.map((event, index) => (
             <TimelineItem key={index}>
               <TimelineSeparator>
@@ -29,9 +47,9 @@ function Agenda() {
               <TimelineContent>
                 <div
                   className={
-                    isOdd(index) !== "odd"
-                      ? "timelineBoxLeft"
-                      : "timelineBoxRight"
+                    isOdd(index) == "odd" && windowWidth > 490
+                      ? "timelineBoxRight"
+                      : "timelineBoxLeft"
                   }
                 >
                   <h6>{event.time}</h6>
