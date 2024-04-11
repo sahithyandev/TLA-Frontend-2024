@@ -20,11 +20,6 @@ p {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.teams-card h1 {
-    text-align: left;
-    margin-top: 0;
-}
-
 .intro {
     text-align: center;
     margin: 20px;
@@ -34,4 +29,9 @@ p {
 .teams-card img {
     width: 300px;
     padding-right: 20px;
+}
+
+.teams-card-title {
+    font-size: 35px;
+    margin: 0;
 }
