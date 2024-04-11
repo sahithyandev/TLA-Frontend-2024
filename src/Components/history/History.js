@@ -12,7 +12,7 @@ const History = () => {
         <div className="history">
             <div class="container">
                 <h1>எமது வரலாறு</h1>
-                <p>
+                <p className="history-para">
                     மூவாயிரத்திற்கும் அதிகமான ஆண்டு வரலாற்றை உடைய எம் கண்ணியாம்
                     தமிழை பல நல்ல அறிஞர்கள் வளர்த்து செழுமைபடுத்தியமை வரலாற்றில்
                     பதிவாகியுள்ளது. தொன்மையான வரலாற்றுப் பாரம்பரியத்தை உடைய
@@ -48,7 +48,7 @@ const History = () => {
                     <div class="container_img">
                         <img src={img2} alt="sample" />
                     </div>
-                    <div class="container_text test">
+                    <div class="container_text">
                         1972-1980 வரையான காலம் ஈழத்து நாடக வரலாற்றில் முக்கிய
                         காலம். இந்த காலப்பகுதியில் 19 நாடகங்கள்
                         மேடையேற்றப்பட்டது. தமிழ்ச் சங்கம் அடைந்த பெரும் மைல்கல்.
@@ -79,18 +79,16 @@ const History = () => {
                         <img src={img3} alt="sample" />
                     </div>
                 </div>
-
-                <div class="sub-container">
-                    <img src={img41} class="book-image" alt="sample" />
-                    <img src={img42} class="book-image" alt="sample" />
-                </div>
                 <p>
                     இதுவரை இனப்பிரச்சனை. கலவரம். பொருளாதாரச் சிக்கல்.
                     அடக்குமுறை. ஈழப்போர் என அத்தனை வளைவுகளிலும் பயணித்து ஐந்து
                     தசாப்தங்களை கடந்தும் அரை அங்குலம் கூட அசைக்க படாமல் வான் உயர
                     தூணாய் நிமிர்ந்து நிற்கிறது தமிழ் இலக்கிய மன்றம்.
                 </p>
-                <img src={img5} alt="sample" class="img" />
+                <div class="sub-container">
+                    <img src={img41} class="book-image" alt="sample" />
+                    <img src={img42} class="book-image" alt="sample" />
+                </div>
                 <p>
                     தமிழ் இலக்கிய மன்றமானது தமிழ் பல்கலைக்கழக மாணவர்கள்
                     இடத்திலும் அதை தாண்டி பாடசாலை மாணவர்களிடத்தில் தமிழ் மொழி
@@ -106,6 +104,8 @@ const History = () => {
                     உதவித்தொகை, ஜீவநதி, பொங்கல் விழா, தமிழருவி போன்ற
                     செயற்பாடுகளை முன்னெடுத்து வருகின்றது.
                 </p>
+                <img src={img5} alt="sample" class="img" />
+                
             </div>
         </div>
     );

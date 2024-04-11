@@ -18,7 +18,7 @@ import BrammamEventAbout from './Components/events/brammam/aboutEvent/BrammamEve
 import ExtraInfo from './Components/events/brammam/ExtraInfo/ExtraInfo';
 import MovieNight from './Pages/Movie-night';
 
-import Hackthon from './Pages/Hackthon';
+import Ideathon from './Pages/Ideathon';
 import Books from './Pages/Books';
 import MemorySharing from './Pages/Memory-Sharing';
 import TeamsPage from './Pages/Teams-Page';
@@ -106,8 +106,8 @@ function Router() {
                         element:<MovieNight/>
                     },
                     {
-                        path:'/events/hackthon',
-                        element:<Hackthon/>
+                        path:'/events/ideathon',
+                        element:<Ideathon/>
                     }
                 ]
             },

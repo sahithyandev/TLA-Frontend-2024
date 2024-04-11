@@ -10,8 +10,8 @@ function HackIntro() {
         <>
             <div className="pongal-landing-container-div">
                 <Container maxWidth='' className="firstFrame">
-                    <div className="pongal-landing-heading1">Hackthon</div>
-                    <img src={competition[2].img} alt="pongal" className="thaipongal-icon" />
+                    <div className="pongal-landing-heading1">{competition[1].title}</div>
+                    <img src={competition[1].img} alt="pongal" className="thaipongal-icon" />
                     <Grid
                         container
                         direction="column"
@@ -20,7 +20,7 @@ function HackIntro() {
                     >
                         <Grid item >
                             <Container maxWidth="md">
-                                <div className="intro-decription">{competition[2].descriiption}</div>
+                                <div className="intro-decription">{competition[1].descriiption}</div>
                             </Container>
                         </Grid>
                     </Grid>
