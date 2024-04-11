@@ -1,13 +1,12 @@
 import React from "react";
 import { useState } from 'react';
 import "./booksContainer.css";
-import { Container } from "@material-ui/core";
+import { Container,Box } from "@material-ui/core";
+import { Document } from 'react-pdf'
 import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
 
-import pdfurl from '../../../../assets/React.pdf';
+import pdfurl from "../../../../assets/React.pdf"
 
-import { Viewer } from '@react-pdf-viewer/core';
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 
 // Import styles
@@ -57,7 +56,7 @@ const BooksContainer = () => {
 
     return (
         <Container className="books-container">
-            <div className="sub-container">
+            <div className="book-sub-container">
                 <p className="sub-heading">தமிழ் இலக்கிய மன்றத்தின் வெளியீடுகள்</p>
                 <hr class="underline"></hr>
                 <div className="books">
@@ -88,10 +87,18 @@ const BooksContainer = () => {
                                             <p className="popup-book-description">எமது மொறட்டுவை பல்கலைக்கழக தமிழ் மாணவர்களின் எழுத்தாற்றல்களை வெளிக்கொணரும் ஓர் களம்.</p>
                                             <button className="read-button" onClick={handleView}>பார்வை</button>
                                             {showViewer && (
-                                                <Viewer
+                                                /* <Viewer
                                                     fileUrl={pdfurl}
                                                     plugins={[defaultLayoutPluginInstance]}
                                                     onClose={handleCloseViewer}
+                                                /> */
+                                                /* <div>
+                                                    <Document file='https://faculty.ksu.edu.sa/sites/default/files/ObjectOrientedProgramminginC4thEdition.pdf'>
+                                                        <Page pageNumber={1} />
+                                                    </Document>
+                                                </div> */
+                                                <Document
+                                                    file="https://faculty.ksu.edu.sa/sites/default/files/ObjectOrientedProgramminginC4thEdition.pdf"
                                                 />
                                             )}
                                             <button className="download-button">தரவிறக்கம்</button>
@@ -104,11 +111,11 @@ const BooksContainer = () => {
                     };
                 </div>
             </div>
-            <div className="sub-container">
+            <div className="book-sub-container">
                 <p className="sub-heading">பல்கலைக்கழக மாணவர்களின் வெளியீடுகள்</p>
                 <hr class="underline"></hr>
             </div>
-        </Container>
+        </Container >
     );
 }
 
