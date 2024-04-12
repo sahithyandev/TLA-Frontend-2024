@@ -19,33 +19,34 @@ import Button from '@mui/material/Button';
 import { Container } from '@mui/material';
 import './navbar.css'
 import Logo from '../../../images/Logo-Nav/logo.png'
+import { NavLink } from 'react-router-dom';
 const drawerWidth = 240;
 
-const navItems = [{
-  name:'மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றம்',
-  link:'/'
-}]
-
 // const navItems = [{
-//   name: 'முகப்பு',
-//   link: '/#landing'
-// },
-// {
-//   name: 'அறிமுகம்',
-//   link: '/#intro'
-// },
-// {
-//   name: 'நிகழ்வுகள்',
-//   link: '/#events'
-// },
-// {
-//   name: 'காட்சி கூடம்',
-//   link: '/#gallery'
-// },
-// {
-//   name: 'தொடர்புகள்',
-//   link: '/#contact'
-// }];
+//   name:'மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றம்',
+//   link:'/'
+// }]
+
+const navItems = [{
+  name: 'முகப்பு',
+  link: '/'
+},
+{
+  name: 'வரலாறு',
+  link: '/history'
+},
+{
+  name: 'நூல்கள்',
+  link: '/books'
+},
+{
+  name: 'அணிகள்',
+  link: '/teams'
+},
+{
+  name: 'தொடர்புகள்',
+  link: '/contact'
+}];
 
 function Navbar(props) {
   const { window } = props;
@@ -68,7 +69,7 @@ function Navbar(props) {
           <ListItem key={item.name} disablePadding >
             <ListItemButton sx={{ textAlign: 'center' }} >
               <ListItemText >
-                <Link to={item.link} className="nav-Items"  onClick={() => console.log(`Link Clicked: ${item.link}`)}>
+                <Link to={item.link} className="nav-Items">
                   {item.name}
                 </Link>
               </ListItemText>
@@ -108,9 +109,9 @@ function Navbar(props) {
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
-                <Button key={item.name} to={item.link} className='nav-Items'  onClick={() => console.log(`Link Clicked: ${item.link}`)}>
+                <NavLink key={item.name} to={item.link} className='nav-Items' activeClassName="active-nav-Item">
                   {item.name}
-                </Button>
+                </NavLink>
               ))}
             </Box>
           </Toolbar>

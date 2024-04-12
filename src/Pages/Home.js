@@ -8,8 +8,21 @@ import Gallery from '../Components/Home/Gallery/gallery'
 import Timeline from '../Components/Home/Timeline/Timeline'
 import Contact from '../Components/Home/Contact/contact'
 import { Helmet } from 'react-helmet'
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Home() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.querySelector(location.hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+
     return (
         <>
             <Helmet>
@@ -28,7 +41,9 @@ function Home() {
             <Event />
             {/* <Gallery /> */}
             {/* <Timeline /> */}
-            <Contact />
+            <div id="contact">
+                <Contact />
+            </div>
         </>)
 }
 export default Home
