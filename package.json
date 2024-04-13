@@ -20,6 +20,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.8",
     "greet_name": "^1.0.3",
     "material-ui": "^0.20.2",
     "pdfjs-dist": "^3.4.120",

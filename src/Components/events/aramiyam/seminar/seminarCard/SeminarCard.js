@@ -1,6 +1,7 @@
 import React from "react";
 import "./seminarcard.css";
 import youtubeImg from "../../../../../images/Events/aramiyam/Youtube.png";
+import profileImg01 from "../../../../../images/Events/aramiyam/profile01.png";
 import {
   Container,
   Grid,
@@ -93,7 +94,7 @@ function SeminarCard({ SeminarData }) {
             xs={12}
             className="profile-frame"
           >
-            <img className="profile-img" src={SeminarData.speaker.profileImg} />
+            <img className="profile-img" src={SeminarData.speaker.profileImg != '' ? SeminarData.speaker.profileImg :profileImg01} />
             <Grid
               display={"flex"}
               flexDirection={{ xs: "column", md: "row" }}
