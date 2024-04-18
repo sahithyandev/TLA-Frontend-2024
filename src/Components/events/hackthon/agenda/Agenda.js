@@ -8,6 +8,7 @@ import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 import isOdd from "greet_name/isOdd";
+import axios from 'axios';
 
 function Agenda() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -17,14 +18,10 @@ function Agenda() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('https://testing.tlauom.com/ideathon');
+        const response = await axios.get('https://testing.tlauom.com/ideathon');
+        
 
-        if (!response.ok) {
-          throw new Error('Failed to fetch events');
-        }
-
-        const data = await response.json();
-        setEvents(data);
+        setEvents(response.data);
       } catch (error) { 
         console.error('Error fetching events:', error);
       }
@@ -70,11 +67,7 @@ function Agenda() {
                       : "timelineBoxLeft"
                   }
                 >
-<<<<<<< HEAD
                   <h6>{event.time}</h6>
-=======
-                  <h5>{event.time}</h5>
->>>>>>> 493d3c3115d101f8045b488e78468ad85e2c983b
                   <h3>{event.title}</h3>
                   <h4>{event.content}</h4>
                   {event.link && (

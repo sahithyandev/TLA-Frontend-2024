@@ -29,9 +29,9 @@
     /* transition-duration: 1s; */
     background-color: #E3E7EB;
     border-radius: 25px;
-    /* padding: 30px; */
-    width: 80vw;
-    max-width: 1000px;
+    padding: 30px;
+     width: 80vw;
+    max-width: 1000px; 
 }
 
 .boxHeading{
@@ -40,6 +40,7 @@
     font-family:  "Heading" !important;
     font-size: large;
     text-decoration: underline;
+    /* overflow-y: scroll; */
 }
 
 .listItem{
@@ -51,5 +52,4 @@
 
 .bulletImg{
     width: 2rem;
-    display: inline-flex;
 }

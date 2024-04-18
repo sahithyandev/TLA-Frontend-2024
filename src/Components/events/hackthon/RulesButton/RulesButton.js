@@ -26,8 +26,11 @@ function RulesButton() {
   const handleClose = () => setOpen(false);
 
   return (
+    <div>
     <div className='btnContainer'>
       <div className="rulesBtn" onClick={() => handleOpen()}> போட்டி விதிமுறைகள்</div>
+
+      </div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -39,16 +42,17 @@ function RulesButton() {
             போட்டி விதிமுறைகள்
           </Typography>
           <Typography id="modal-modal-description" >
-            {rules.map((rules, index) => (
-              <ul key={index}>
-                <li className='listItem'><img className='bulletImg' src={bullet}  alt='>'/>{rules.rule}</li>
-              </ul>
-            ))}
-
+            <div>
+              {rules.map((rules, index) => (
+                <ul key={index}>
+                  <li className='listItem'><img className='bulletImg' src={bullet}  alt='>'/>{rules.rule}</li>
+                </ul>
+              ))}
+            </div>
           </Typography>
         </Box>
       </Modal>
-    </div>
+      </div>
   )
 }
 
