@@ -1,7 +1,7 @@
 import React from "react";
 
-import BooksContainer from "../Components/events/book/books-container/BooksContainer";
-import Intro from "../Components/events/book/intro/Intro";
+import BooksContainer from "../Components/book/books-container/BooksContainer";
+import Intro from "../Components/book/intro/Intro";
 
 const Books = () => {
     return (

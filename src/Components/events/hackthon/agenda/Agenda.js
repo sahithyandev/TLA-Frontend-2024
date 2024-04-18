@@ -8,11 +8,30 @@ import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 import isOdd from "greet_name/isOdd";
-import eventlist from "./eventList";
 
 function Agenda() {
-  const events = eventlist;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('https://testing.tlauom.com/ideathon');
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch events');
+        }
+
+        const data = await response.json();
+        setEvents(data);
+      } catch (error) { 
+        console.error('Error fetching events:', error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
 
   useEffect(() => {
     // Handler to call on window resize
@@ -20,13 +39,13 @@ function Agenda() {
       // Set window width to state
       setWindowWidth(window.innerWidth);
     }
-    
+
     // Add event listener
     window.addEventListener('resize', handleResize);
-    
+
     // Call handler right away so state gets updated with initial window size
     handleResize();
-    
+
     // Remove event listener on cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, [windowWidth]);
@@ -51,9 +70,18 @@ function Agenda() {
                       : "timelineBoxLeft"
                   }
                 >
+<<<<<<< HEAD
                   <h6>{event.time}</h6>
+=======
+                  <h5>{event.time}</h5>
+>>>>>>> 493d3c3115d101f8045b488e78468ad85e2c983b
                   <h3>{event.title}</h3>
                   <h4>{event.content}</h4>
+                  {event.link && (
+                    <a href={event.link} className="link-button" target="_blank">
+                      {event.linkDescription}
+                    </a>
+                  )}
                 </div>
               </TimelineContent>
             </TimelineItem>

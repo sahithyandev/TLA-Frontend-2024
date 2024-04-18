@@ -32,6 +32,14 @@ p {
 }
 
 .teams-card-title {
-    font-size: 35px;
+    font-size: 30px;
     margin: 0;
+    font-family: "Heading" !important;
+    color: #022345 !important;
+}
+
+.teams-card-description{
+    font-size: 20px;
+    font-family: "Para" !important;
+    /* color: #022345 !important; */
 }

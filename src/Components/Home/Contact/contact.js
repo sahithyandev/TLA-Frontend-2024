@@ -19,7 +19,7 @@ function Contact() {
         email: "",
         message: "",
         category: "",
-        phoneNumber: "",
+        phoneNumber: ""
     });
 
     const form = useRef();

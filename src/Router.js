@@ -23,6 +23,7 @@ import Books from './Pages/Books';
 import MemorySharing from './Pages/Memory-Sharing';
 import TeamsPage from './Pages/Teams-Page';
 import HistoryPage from './Pages/History';
+import Contact from './Components/Home/Contact/contact';
 
 function Router() {
     return (
@@ -106,7 +107,7 @@ function Router() {
                         element:<MovieNight/>
                     },
                     {
-                        path:'/events/ideathon',
+                        path:'ideathon',
                         element:<Ideathon/>
                     }
                 ]
@@ -126,6 +127,10 @@ function Router() {
             {
                 path:'history',
                 element:<HistoryPage/>
+            },
+            {
+                path:'contact',
+                element:<Contact/>
             }
         ])
     );
