@@ -28,10 +28,10 @@
 .boxStyle{
     /* transition-duration: 1s; */
     background-color: #E3E7EB;
-    border-radius: 16px;
-    padding: 30px;
+    border-radius: 25px;
+    /* padding: 30px; */
     width: 80vw;
-
+    max-width: 1000px;
 }
 
 .boxHeading{

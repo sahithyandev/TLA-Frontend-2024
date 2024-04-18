@@ -1,5 +1,4 @@
 import React , {useEffect,useState} from "react";
-import { Grid, Container } from "@mui/material";
 import "./agenda.css";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -35,7 +34,7 @@ function Agenda() {
     <>
       <h1>நேரவரிசை</h1>
       <div className="timelineCOntainer">
-        <Timeline align={windowWidth > 490 ? "alternate" : "left"} className="tline">
+        <Timeline align={windowWidth > 560 ? "alternate" : "left"} className="tline">
           {events.map((event, index) => (
             <TimelineItem key={index}>
               <TimelineSeparator>
@@ -47,13 +46,13 @@ function Agenda() {
               <TimelineContent>
                 <div
                   className={
-                    isOdd(index) == "odd" && windowWidth > 490
+                    isOdd(index) === "odd" && windowWidth > 560
                       ? "timelineBoxRight"
                       : "timelineBoxLeft"
                   }
                 >
                   <h6>{event.time}</h6>
-                  <h5>{event.title}</h5>
+                  <h3>{event.title}</h3>
                   <h4>{event.content}</h4>
                 </div>
               </TimelineContent>

@@ -12,7 +12,10 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-
+  display: "flex",
+  flexDirection:"column",
+  justifyContent:"center",
+  alignItems:"center"
 };
 
 
@@ -38,7 +41,7 @@ function RulesButton() {
           <Typography id="modal-modal-description" >
             {rules.map((rules, index) => (
               <ul key={index}>
-                <li className='listItem'><img className='bulletImg' src={bullet} />{rules.rule}</li>
+                <li className='listItem'><img className='bulletImg' src={bullet}  alt='>'/>{rules.rule}</li>
               </ul>
             ))}
 
