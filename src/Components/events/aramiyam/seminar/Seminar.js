@@ -4,7 +4,7 @@ import { Container, Grid } from "@mui/material";
 import SeminarCard from "./seminarCard/SeminarCard";
 import profileImg01 from "../../../../images/Events/aramiyam/profile01.png";
 import "./seminar.css";
-import axios from "axios"; 
+import axios from "axios";
 
 // const SeminarData = [
 //   {
@@ -110,11 +110,25 @@ import axios from "axios";
 function Seminar() {
   const [seminarData, setSeminarData] = useState([]);
 
+  const BASE_URL = 'https://testing.tlauom.com';
+
+  const axiosInstance = axios.create({
+    baseURL: BASE_URL
+  });
+
   useEffect(() => {
     const fetchSeminarData = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/aramiyams");
-        setSeminarData(response.data);
+        // const response = await axios.get("https://testing.tlauom.com/aramiyams");
+        axiosInstance.get('/aramiyams')
+          .then(response => {
+            console.log(response.data);
+            setSeminarData(response.data);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+        
       } catch (error) {
         console.error("Error fetching seminar data:", error);
       }

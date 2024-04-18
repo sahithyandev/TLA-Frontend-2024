@@ -29,12 +29,19 @@
     min-width: 220px;
     height: 280px;
     border-radius: 5px;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.book-card.fade-in {
+    opacity: 1;
 }
 
 .book-card:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transform: scale(1.01);
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 .book-name{
@@ -54,7 +61,15 @@
     letter-spacing: normal;
     text-align: center;
     margin: 0;
+}
 
+.book-author{
+    color: #022345 !important;
+    font-size: 18px;
+    font-family: 'Para' !important;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 0;
 }
 
 .book-img{
