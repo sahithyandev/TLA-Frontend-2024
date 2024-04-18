@@ -1,6 +1,6 @@
 .btnContainer{
-    align-content: center;
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -10,7 +10,7 @@
     font-size: 28px !important;
     font-family: 'Para' !important;
     text-align: center;
-    width: fit-content;
+    /* max-width: fit-content; */
     padding: 5px 10px 5px 10px;
     background-color: #E3E7EB;
     border-radius: 10px;
@@ -20,7 +20,6 @@
 }
 
 .rulesBtn:hover{
-    transform: scale(1.2);
     background-color: #002245;
     color: #E3E7EB !important;
 }
@@ -29,9 +28,18 @@
     /* transition-duration: 1s; */
     background-color: #E3E7EB;
     border-radius: 25px;
-    padding: 30px;
-     width: 80vw;
+    padding: 50px;
+    width: 80vw;
     max-width: 1000px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .boxHeading{

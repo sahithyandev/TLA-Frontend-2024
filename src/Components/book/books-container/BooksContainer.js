@@ -41,7 +41,7 @@ const BooksContainer = () => {
                     {books.map((book) => {
                         return (
                             <>
-                                {book.isTlaBook == true && (
+                                {book.isTlaBook === true && (
                                     <div className={loading ? "book-card fade-in" : "book-card"} onClick={() => handleOpen(book)}>
                                         <img src={book.img} alt="book" className="book-img" />
                                         <p className="book-name">{book.bookName}</p>
@@ -61,7 +61,7 @@ const BooksContainer = () => {
                     {books.map((book) => {
                         return (
                             <>
-                                {book.isTlaBook == false && (
+                                {book.isTlaBook === false && (
                                     <div className={loading ? "book-card fade-in" : "book-card"} onClick={() => handleOpen(book)}>
                                         <img src={book.img} alt="book" className="book-img" />
                                         <p className="book-name">{book.bookName}</p>

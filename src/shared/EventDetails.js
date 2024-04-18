@@ -9,7 +9,6 @@ import jeevanathi from "../../src/images/Events/Card Illustration/jeevanathi.png
 import ideathon from "../../src/images/Events/Card Illustration/ideathon.png";
 import kovil from "../../src/images/Events/Card Illustration/kovil.png";
 import ppl from "../../src/images/Events/Card Illustration/ppl.png";
-import foodfestival from "../../src/images/Events/Card Illustration/foodfestival.png";
 import blooddonation from "../../src/images/Events/Card Illustration/blooddonation.png";
 import movienight from "../../src/images/Events/Card Illustration/movienight.png";
 

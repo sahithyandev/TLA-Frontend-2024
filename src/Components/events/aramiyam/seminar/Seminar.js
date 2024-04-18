@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Heading from "../../../../shared/Heading";
 import { Container, Grid } from "@mui/material";
 import SeminarCard from "./seminarCard/SeminarCard";
-import profileImg01 from "../../../../images/Events/aramiyam/profile01.png";
 import "./seminar.css";
 import axios from "axios";
 
@@ -135,6 +134,7 @@ function Seminar() {
     };
 
     fetchSeminarData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

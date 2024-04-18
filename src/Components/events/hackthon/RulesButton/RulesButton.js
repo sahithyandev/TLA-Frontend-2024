@@ -6,42 +6,32 @@ import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 import { rules } from './rules';
 import bullet from "./bullet.png";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  display: "flex",
-  flexDirection:"column",
-  justifyContent:"center",
-  alignItems:"center"
-};
 
 
 function RulesButton() {
   // write expanded rules displaying method here.
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   return (
     <>
     <div className='btnContainer'>
-      <div className="rulesBtn" onClick={() => handleOpen()}> போட்டி விதிமுறைகள்</div>
-
-      </div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style} className='boxStyle'>
-          <Typography id="modal-modal-title" className='boxHeading'>
-            போட்டி விதிமுறைகள்
-          </Typography>
-          <Typography id="modal-modal-description" >
+      <Accordion>
+        <AccordionSummary
+          className='rulesBtn'
+          sx={{backgroundColor:"#E3E7EB"}}
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          போட்டி விதிமுறைகள்
+        </AccordionSummary>
+        <AccordionDetails>
+          <div id="modal-modal-description" >
             <div>
               {rules.map((rules, index) => (
                 <ul key={index}>
@@ -49,9 +39,10 @@ function RulesButton() {
                 </ul>
               ))}
             </div>
-          </Typography>
-        </Box>
-      </Modal>
+          </div>
+        </AccordionDetails>
+      </Accordion>
+      </div>
       </>
   )
 }

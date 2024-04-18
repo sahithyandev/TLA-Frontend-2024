@@ -71,7 +71,7 @@ function Agenda() {
                   <h3>{event.title}</h3>
                   <h4>{event.content}</h4>
                   {event.link && (
-                    <a href={event.link} className="link-button" target="_blank">
+                    <a href={event.link} className="link-button" target="_blank" rel="noreferrer">
                       {event.linkDescription}
                     </a>
                   )}
