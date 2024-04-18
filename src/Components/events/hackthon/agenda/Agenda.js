@@ -60,7 +60,7 @@ function Agenda() {
                 </TimelineDot>
                 {index - events.length === -1 ? "" : <TimelineConnector />}
               </TimelineSeparator>
-              <TimelineContent>
+              <TimelineContent className="tlbox">
                 <div
                   className={
                     isOdd(index) === "odd" && windowWidth > 560
