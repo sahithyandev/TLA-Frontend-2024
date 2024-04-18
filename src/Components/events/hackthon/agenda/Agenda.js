@@ -9,26 +9,27 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 import isOdd from "greet_name/isOdd";
 import axios from 'axios';
+import events from "./eventList";
 
 function Agenda() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const [events, setEvents] = useState([]);
+  // const [events, setEvents] = useState(events);
 
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await axios.get('https://testing.tlauom.com/ideathon');
+  // useEffect(() => {
+  //   const fetchEvents = async () => {
+  //     try {
+  //       const response = await axios.get('/ideathon');
         
 
-        setEvents(response.data);
-      } catch (error) { 
-        console.error('Error fetching events:', error);
-      }
-    };
+  //       setEvents(response.data);
+  //     } catch (error) { 
+  //       console.error('Error fetching events:', error);
+  //     }
+  //   };
 
-    fetchEvents();
-  }, []);
+  //   fetchEvents();
+  // }, []);
 
   useEffect(() => {
     // Handler to call on window resize

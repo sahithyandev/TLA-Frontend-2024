@@ -1,8 +1,5 @@
 import React from 'react'
 import "./RulesButton.css"
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 import { rules } from './rules';
 import bullet from "./bullet.png";
@@ -19,31 +16,31 @@ function RulesButton() {
 
   return (
     <>
-    <div className='btnContainer'>
-      <Accordion>
-        <AccordionSummary
-          className='rulesBtn'
-          sx={{backgroundColor:"#E3E7EB"}}
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1-content"
-          id="panel1-header"
-        >
-          போட்டி விதிமுறைகள்
-        </AccordionSummary>
-        <AccordionDetails>
-          <div id="modal-modal-description" >
-            <div>
-              {rules.map((rules, index) => (
-                <ul key={index}>
-                  <li className='listItem'><img className='bulletImg' src={bullet}  alt='>'/>{rules.rule}</li>
-                </ul>
-              ))}
+      <div className='btnContainer'>
+        <Accordion className='acc'>
+          <AccordionSummary
+            className='rulesBtn'
+            sx={{backgroundColor:"#E3E7EB"}}
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            போட்டி விதிமுறைகள்
+          </AccordionSummary>
+          <AccordionDetails>
+            <div id="modal-modal-description" >
+              <div>
+                {rules.map((rules, index) => (
+                  <ul key={index}>
+                    <li className='listItem'><img className='bulletImg' src={bullet}  alt='>'/>{rules.rule}</li>
+                  </ul>
+                ))}
+              </div>
             </div>
-          </div>
-        </AccordionDetails>
-      </Accordion>
+          </AccordionDetails>
+        </Accordion>
       </div>
-      </>
+    </>
   )
 }
 
