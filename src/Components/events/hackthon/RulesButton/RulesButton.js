@@ -26,7 +26,7 @@ function RulesButton() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <>
     <div className='btnContainer'>
       <div className="rulesBtn" onClick={() => handleOpen()}> போட்டி விதிமுறைகள்</div>
 
@@ -52,7 +52,7 @@ function RulesButton() {
           </Typography>
         </Box>
       </Modal>
-      </div>
+      </>
   )
 }
 
