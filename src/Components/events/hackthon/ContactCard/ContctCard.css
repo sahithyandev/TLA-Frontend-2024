@@ -1,15 +1,45 @@
-.endCard{
-    width: fit-content;
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.contact-card{
+    width: 40%;
+    height: 110px;
     background-color:#E3E7EB;
-    padding: 10px 60px;
-    margin: auto;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    gap:10px;
+    padding: 10px 0;
+    border-radius: 10px;
     text-align: center;
-    margin-top: 20px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .contact{
     transform: translateY(3pt);
+    margin: 0 2px;
+}
+
+.contact-label{
+    font-family: "Para";
+    font-size: 20px;
+    margin: 5px;
+}
+
+h2{
+    font-family: "Heading";
+    font-size: 30px;
+    color: #002245;
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-card{
+        width: 90%;
+    }
 }

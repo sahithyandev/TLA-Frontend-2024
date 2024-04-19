@@ -3,8 +3,8 @@ import "./RulesButton.css"
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { useState } from 'react';
-import { rules } from './rules';
+import { useEffect, useState } from 'react';
+// import { rules } from './rules';
 import bullet from "./bullet.png";
 
 const style = {
@@ -22,6 +22,26 @@ function RulesButton() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const [rules, setRules] = useState([]);
+
+  useEffect(() => {
+      const fetchEvents = async () => {
+          try {
+              const response = await fetch('/ideathon-rules');
+
+              if (!response.ok) {
+                  throw new Error('Failed to fetch events');
+              }
+
+              const data = await response.json();
+              setRules(data);
+          } catch (error) {
+              console.error('Error fetching events:', error);
+          }
+      };
+      fetchEvents();
+    }, []);
+
   return (
     <div className='btnContainer'>
       <div className="rulesBtn" onClick={() => handleOpen()}> போட்டி விதிமுறைகள்</div>
@@ -38,7 +58,7 @@ function RulesButton() {
           <Typography id="modal-modal-description" >
             {rules.map((rules, index) => (
               <ul key={index}>
-                <li className='listItem'><img className='bulletImg' src={bullet} />{rules.rule}</li>
+                <li className='listItem'>{rules.description}</li>
               </ul>
             ))}
 
