@@ -28,7 +28,7 @@ function Agenda() {
         setEvents(data);
       } catch (error) { 
         console.error('Error fetching events:', error);
-      }
+      } 
     };
 
     fetchEvents();

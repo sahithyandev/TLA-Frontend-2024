@@ -22,7 +22,7 @@ const BooksContainer = () => {
             }
         };
 
-        fetchEvents();
+        fetchEvents(); 
         setTimeout(() => {
             setLoading(true);
         }, 500);
@@ -76,7 +76,7 @@ const BooksContainer = () => {
                 </div>
             </div>
         </Container>
-    );
+    )
 }
 
 export default BooksContainer;

@@ -14,7 +14,7 @@ function Seminar() {
         if (!response.ok) {
           throw new Error('Failed to fetch events');
         }
-
+ 
         const data = await response.json();
         setSeminarData(data);
       } catch (error) {

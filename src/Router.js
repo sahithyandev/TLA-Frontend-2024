@@ -59,9 +59,6 @@ function Router() {
                         path:'vani-villa',
                         element:<VaniVilla/>
                     },
-                    {    
-                        element: <Jeevanathi />
-                    },
                     {
                         path: 'kovil',
                         element: <Kovil />
@@ -77,22 +74,18 @@ function Router() {
                     {
                         path:'thamilaruvi',
                         element:<Thamilaruvi/>
-
                     },
                     {
                         path: 'brammam',
                         element: <Brammam />
-
                     },
                     {
                         path: 'brammam/:event',
                         element: <BrammamEventAbout />
-
                     },
                     {
                         path: 'brammam/:event/rules',
                         element: <ExtraInfo />
-
                     },
                     {
                         path: 'comingSoon',
@@ -105,16 +98,15 @@ function Router() {
                     {
                         path:'movie-night',
                         element:<MovieNight/>
-                    }
-                   
+                    }            
                 ]
             },
             {
-                path:'ideathon',
+                path:'/ideathon',
                 element:<Ideathon/>
             },
             {
-                path: "/memory-sharing",
+                path: "memory-sharing",
                 element: <MemorySharing />
             },
             {
