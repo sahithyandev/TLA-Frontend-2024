@@ -105,13 +105,12 @@ function Router() {
                     {
                         path:'movie-night',
                         element:<MovieNight/>
+                    },
+                    {
+                        path:'ideathon',
+                        element:<Ideathon/>
                     }
-                   
                 ]
-            },
-            {
-                path:'ideathon',
-                element:<Ideathon/>
             },
             {
                 path: "/memory-sharing",

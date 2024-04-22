@@ -9,14 +9,14 @@ const BooksContainer = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('/books');
+                const response = await fetch('http://localhost:3001/books');
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch events');
                 }
 
                 const data = await response.json();
-                setBooks(data); 
+                setBooks(data);
             } catch (error) {
                 console.error('Error fetching events:', error);
             }

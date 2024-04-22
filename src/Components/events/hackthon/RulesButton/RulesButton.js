@@ -1,8 +1,5 @@
 import React from 'react'
 import "./RulesButton.css"
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 import { rules } from './rules';
 import bullet from "./bullet.png";
@@ -16,46 +13,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function RulesButton() {
   // write expanded rules displaying method here.
   const [open, setOpen] = useState(false);
-
-  const [rules, setRules] = useState([]);
-
-  useEffect(() => {
-      const fetchEvents = async () => {
-          try {
-              const response = await fetch('/ideathon-rules');
-
-              if (!response.ok) {
-                  throw new Error('Failed to fetch events');
-              }
-
-              const data = await response.json();
-              setRules(data);
-          } catch (error) {
-              console.error('Error fetching events:', error);
-          }
-      };
-      fetchEvents();
-    }, []);
-
-  const [rules, setRules] = useState([]);
-
-  useEffect(() => {
-      const fetchEvents = async () => {
-          try {
-              const response = await fetch('/ideathon-rules');
-
-              if (!response.ok) {
-                  throw new Error('Failed to fetch events');
-              }
-
-              const data = await response.json();
-              setRules(data);
-          } catch (error) {
-              console.error('Error fetching events:', error);
-          }
-      };
-      fetchEvents();
-    }, []);
 
   return (
     <>
