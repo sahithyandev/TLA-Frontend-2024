@@ -16,7 +16,7 @@ const Intro = () => {
       <div className="left">
         <p className="cover-text">எமது மொறட்டுவை பல்கலைக்கழக தமிழ் மாணவர்களின் எழுத்தாற்றல்களை வெளிக்கொணரும் ஓர் களம்.</p>
       </div>
-      <div className="right"><img className={loading?"cover-img fade-in":"cover-img"} src={bookCoverImg} alt="right"/></div>
+      <div className="right"><img className={loading?"cover-img fade-in":"cover-img"} src={bookCoverImg}/></div>
     </div>
   );
 }

@@ -1,12 +1,15 @@
 import React from "react";
 import "./seminarcard.css";
+import youtubeImg from "../../../../../images/Events/aramiyam/Youtube.png";
 import profileImg01 from "../../../../../images/Events/aramiyam/profile01.png";
 import {
+  Container,
   Grid,
   ThemeProvider,
   Typography,
   createTheme,
 } from "@mui/material";
+import { Gif } from "@mui/icons-material";
 
 const theme = createTheme({
   components: {
@@ -91,7 +94,7 @@ function SeminarCard({ SeminarData }) {
             xs={12}
             className="profile-frame"
           >
-            <img className="profile-img" src={SeminarData.speaker.profileImg !== '' ? SeminarData.speaker.profileImg :profileImg01} alt="profile"/>
+            <img className="profile-img" src={SeminarData.speaker.profileImg != '' ? SeminarData.speaker.profileImg :profileImg01} />
             <Grid
               display={"flex"}
               flexDirection={{ xs: "column", md: "row" }}
@@ -176,7 +179,7 @@ function SeminarCard({ SeminarData }) {
           alignSelf={{ xs: "center", md: "flex-end" }}
           marginRight={{ xs: 0, md: 15 }}
         >
-          <a href={SeminarData.youtubeLink} target="_blank" className="video-link" rel="noreferrer">
+          <a href={SeminarData.youtubeLink} target="_blank" className="video-link">
             {/* {" "} */}
             {/* <img src={youtubeImg} alt="YouTube Video Preview" /> */}
             காணொளி

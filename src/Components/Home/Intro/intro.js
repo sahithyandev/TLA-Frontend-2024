@@ -1,9 +1,10 @@
 import React from "react";
 import {
-    Grid, Container
+    Grid, Container, Box
 } from '@mui/material'
 import Heading from "../../../shared/Heading";
 import './intro.css'
+import ReactPlayer from 'react-player'
 
 function Intro() {
     return (

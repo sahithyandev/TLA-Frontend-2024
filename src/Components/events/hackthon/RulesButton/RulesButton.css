@@ -1,6 +1,6 @@
 .btnContainer{
+    align-content: center;
     display:flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -10,7 +10,7 @@
     font-size: 28px !important;
     font-family: 'Para' !important;
     text-align: center;
-    /* max-width: fit-content; */
+    width: fit-content;
     padding: 5px 10px 5px 10px;
     background-color: #E3E7EB;
     border-radius: 10px;
@@ -19,15 +19,8 @@
     cursor: pointer;
 }
 
-
-@media only screen and (max-width: 960px) {
-    .acc{
-        width: 70vw;
-    }
-  }
-
-
 .rulesBtn:hover{
+    transform: scale(1.2);
     background-color: #002245;
     color: #E3E7EB !important;
 }
@@ -35,19 +28,10 @@
 .boxStyle{
     /* transition-duration: 1s; */
     background-color: #E3E7EB;
-    border-radius: 25px;
-    padding: 50px;
+    border-radius: 16px;
+    padding: 30px !important;
     width: 80vw;
-    max-width: 1000px; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block !important;
 }
 
 .boxHeading{
@@ -56,16 +40,23 @@
     font-family:  "Heading" !important;
     font-size: large;
     text-decoration: underline;
-    /* overflow-y: scroll; */
+    font-size: 28px !important;
 }
 
 .listItem{
-    font-family: "Heading";
+    font-family: "Para" !important;
     font-weight: lighter;
     list-style-type: none;
     color: #002245;
+    font-size: 20px;
+    margin: 0;
+}
+
+li.listItem{
+    line-height: 1;
 }
 
 .bulletImg{
     width: 2rem;
+    display: inline-flex;
 }

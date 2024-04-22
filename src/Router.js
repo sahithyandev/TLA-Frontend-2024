@@ -98,11 +98,12 @@ function Router() {
                     {
                         path:'movie-night',
                         element:<MovieNight/>
-                    }            
+                    }
+                   
                 ]
             },
             {
-                path:'/ideathon',
+                path:'ideathon',
                 element:<Ideathon/>
             },
             {

@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
@@ -14,10 +15,13 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
 import "./navbar.css";
 import Logo from "../../../images/Logo-Nav/logo.png";
 import { NavLink } from "react-router-dom";
+import { colors } from "material-ui/styles";
+import { Padding } from "@mui/icons-material";
 const drawerWidth = 240;
 
 // const navItems = [{
@@ -84,7 +88,7 @@ function Navbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", height: "64px" , }} className="navbar-container">
+    <Box sx={{ display: "flex", height: "64px" }} className="navbar-container">
       <AppBar component="nav" className="appBar">
         <Container maxWidth="xl">
           <Toolbar sx={{ height: "64px" }}>
@@ -110,7 +114,7 @@ function Navbar(props) {
                   height={50}
                   style={{ marginRight: "10px" }}
                 />
-                <p>மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றம்</p>
+                <p className="uni-name">மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றம்</p>
               </Link>
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>

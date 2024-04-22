@@ -1,13 +1,12 @@
 .timelineBoxLeft{
     background-color: #002245;
-    color: #ffffff;
+    color: white;
     width: fit-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight:lighter;
     padding: 20px;
     border-radius: 0 20px 20px 20px;
     text-align: left;
-    transform-origin: left center;
 }
 .timelineBoxRight{
     background-color: #002245;
@@ -17,8 +16,7 @@
     font-weight:lighter;
     padding: 20px;
     border-radius: 20px 0 20px 20px;
-    text-align: right;
-    transform-origin: right center;
+    text-align: left;
 }
 
 h5{
@@ -26,11 +24,11 @@ h5{
     padding: auto;
 }
 
-h3{
-    font-family:  "Heading" !important;
-    margin:5px 0;
-    letter-spacing: 2px;
+h4{
+    font-family:  "Para" !important;
     font-weight: lighter;
+    font-size: 20px;
+    margin: 10px 0;
 }
 
 h3{
@@ -38,6 +36,13 @@ h3{
     font-family:  "Para" !important;
     font-weight: lighter;
     font-size: 26px;
+}
+
+h2{
+    font-family: "Heading";
+    font-size: 30px;
+    color: #002245;
+    text-align: center;
 }
 
 .dot{
@@ -69,7 +74,7 @@ h3{
     }
   }
 
-  @media only screen and (max-width: 560px) {
+  @media only screen and (max-width: 490px) {
     .tline{
         display:  flex;
         width: 95vw;
@@ -81,9 +86,6 @@ h3{
     .tline ::before{
         display: none;
     }
-    .timelineBoxRight, .timelineBoxLeft{
-        max-width: 80vw;
-    }
   }
 
 .timelineContainer{
@@ -93,31 +95,3 @@ h3{
     justify-content: center;
     
 }
-
-/* .timelineBoxLeft{
-    animation: flipBookOpenRight 3s forwards;
-}
-.timelineBoxRight{
-    animation: flipBookOpenLeft 3s forwards;  
-}
-
-@keyframes flipBookOpenRight {
-    from {
-        transform: rotateY(-90deg);
-    }
-    to {
-        transform: rotateY(0deg); /* Adjust as needed for visual effect */
-    /* }
-}
-@keyframes flipBookOpenLeft {
-    from {
-        transform: rotateY(90deg);
-    }
-    to {
-        transform: rotateY(0deg); /* Adjust as needed for visual effect */
-    /* }
-}
-/*  */
-/* .tlbox{
-    perspective: 2000px;
-} */ 
