@@ -16,17 +16,21 @@ function Agenda() {
 
   // const [events, setEvents] = useState(events);
 
-  // useEffect(() => {
-  //   const fetchEvents = async () => {
-  //     try {
-  //       const response = await axios.get('/ideathon');
-        
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('/ideathon');
 
-  //       setEvents(response.data);
-  //     } catch (error) { 
-  //       console.error('Error fetching events:', error);
-  //     }
-  //   };
+        if (!response.ok) {
+          throw new Error('Failed to fetch events');
+        }
+
+        const data = await response.json();
+        setEvents(data);
+      } catch (error) { 
+        console.error('Error fetching events:', error);
+      }
+    };
 
   //   fetchEvents();
   // }, []);
@@ -49,7 +53,7 @@ function Agenda() {
   }, [windowWidth]);
   return (
     <>
-      <h1>நேரவரிசை</h1>
+      <h2>நேரவரிசை</h2>
       <div className="timelineCOntainer">
         <Timeline align={windowWidth > 560 ? "alternate" : "left"} className="tline">
           {events.map((event, index) => (

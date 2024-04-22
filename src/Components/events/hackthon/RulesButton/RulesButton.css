@@ -56,14 +56,20 @@
     font-family:  "Heading" !important;
     font-size: large;
     text-decoration: underline;
-    /* overflow-y: scroll; */
+    font-size: 28px !important;
 }
 
 .listItem{
-    font-family: "Heading";
+    font-family: "Para" !important;
     font-weight: lighter;
     list-style-type: none;
     color: #002245;
+    font-size: 20px;
+    margin: 0;
+}
+
+li.listItem{
+    line-height: 1;
 }
 
 .bulletImg{

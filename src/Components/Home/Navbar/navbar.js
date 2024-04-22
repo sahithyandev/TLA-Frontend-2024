@@ -110,7 +110,7 @@ function Navbar(props) {
                   height={50}
                   style={{ marginRight: "10px" }}
                 />
-                <p>மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றம்</p>
+                <p className="uni-name">மொறட்டுவைப் பல்கலைக்கழக தமிழ் இலக்கிய மன்றம்</p>
               </Link>
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
