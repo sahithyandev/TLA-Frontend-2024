@@ -37,14 +37,12 @@ h3{
     font-weight: lighter;
     font-size: 26px;
 }
-
 h2{
     font-family: "Heading";
     font-size: 30px;
     color: #002245;
     text-align: center;
 }
-
 .dot{
     transform: scale(1.8);
 }

@@ -16,7 +16,7 @@ const BooksContainer = () => {
                 }
 
                 const data = await response.json();
-                setBooks(data); 
+                setBooks(data);
             } catch (error) {
                 console.error('Error fetching events:', error);
             }

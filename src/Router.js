@@ -99,7 +99,6 @@ function Router() {
                         path:'movie-night',
                         element:<MovieNight/>
                     }
-                   
                 ]
             },
             {
