@@ -5,44 +5,19 @@ import "./ContctCard.css";
 import { Container } from "@mui/material";
 
 function ContactCard() {
-
-  const contactDetails = [
-    {
-      name: "கேதீஸ்வரன் குகேசன்",
-      email: "kkukesan29@gmail.com",
-      phone: "077 123 4567",
-    },
-    {
-      name: "காயத்ரி சிவகுமார்",
-      email: "sivathri30@gmail.com",
-      phone: "076 544 9380",
-    },
-    {
-      name: "வீனியஸ் டிலான்",
-      email: "delanvenesious27@gmail.com",
-      phone: "071 157 2216"
-    }
-  ]
-
   return (
     <Container>
-      <h2>தொடர்புகளுக்கு</h2>
-      <div className="contact-container">
-        {contactDetails.map((contact, index) => (
-          <div className="contact-card">
-            <div className="contact-label">
-              {contact.name}
-            </div>
-            <div className="contact-label">
-              <MailIcon className="contact" />
-              {contact.email}
-            </div>
-            <div className="contact-label">
-              <PhoneIcon className="contact" />
-              {contact.phone}
-            </div>
-          </div>
-        ))}
+      <div className="endCard">
+        <h4>மேலதிக விபரங்கள்</h4>
+        <div>
+          <MailIcon className="contact" />
+          testinghackthon@gmail.com
+        </div>
+        <br></br>
+        <div>
+          <PhoneIcon className="contact" />
+          077 123 4567
+        </div>
       </div>
     </Container>
   );

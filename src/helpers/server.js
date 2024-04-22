@@ -71,7 +71,7 @@ export async function logout() {
 export async function signup(data) {
 	const form = new FormData();
 
-	const entries = Object.entries(data)
+	const entries = Object.entries(data);
 
 	for (let i = 0; i < entries.length; i++) {
 		const [key, value] = entries[i];
@@ -82,7 +82,7 @@ export async function signup(data) {
 	return server("/users", {
 		method: "POST",
 		body: form
-	})
+	});
 }
 
 /**
@@ -108,7 +108,7 @@ export async function createMemory(data) {
 	return server("/shared-memories", {
 		method: "POST",
 		body: form
-	})
+	});
 }
 
 export async function getAllSharedMemories() {

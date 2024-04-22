@@ -9,14 +9,14 @@ const BooksContainer = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('/books');
+                const response = await fetch('http://localhost:3001/books');
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch events');
                 }
 
                 const data = await response.json();
-                setBooks(data); 
+                setBooks(data);
             } catch (error) {
                 console.error('Error fetching events:', error);
             }
@@ -41,7 +41,7 @@ const BooksContainer = () => {
                     {books.map((book) => {
                         return (
                             <>
-                                {book.isTlaBook == true && (
+                                {book.isTlaBook === true && (
                                     <div className={loading ? "book-card fade-in" : "book-card"} onClick={() => handleOpen(book)}>
                                         <img src={book.img} alt="book" className="book-img" />
                                         <p className="book-name">{book.bookName}</p>
@@ -61,7 +61,7 @@ const BooksContainer = () => {
                     {books.map((book) => {
                         return (
                             <>
-                                {book.isTlaBook == false && (
+                                {book.isTlaBook === false && (
                                     <div className={loading ? "book-card fade-in" : "book-card"} onClick={() => handleOpen(book)}>
                                         <img src={book.img} alt="book" className="book-img" />
                                         <p className="book-name">{book.bookName}</p>
