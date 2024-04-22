@@ -81,6 +81,9 @@ h3{
     .tline ::before{
         display: none;
     }
+    .timelineBoxRight, .timelineBoxLeft{
+        max-width: 80vw;
+    }
   }
 
 .timelineContainer{
