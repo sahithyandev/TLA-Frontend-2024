@@ -35,6 +35,13 @@ h2{
     margin-top: 40px;
 }
 
+.wish-text{
+    font-family: "Para";
+    font-size: 28px;
+    color: #002245 ;
+    text-align: center ;
+}
+
 @media only screen and (max-width: 600px) {
     .contact-container{
         flex-direction: column;

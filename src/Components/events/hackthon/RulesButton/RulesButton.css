@@ -44,7 +44,7 @@
 }
 
 .listItem{
-    font-family: "Heading";
+    font-family: "Para" !important;
     font-weight: lighter;
     list-style-type: none;
     color: #002245;
@@ -53,4 +53,12 @@
 .bulletImg{
     width: 2rem;
     display: inline-flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .boxStyle {
+        width: 90% !important;
+        padding: 10px 0 !important;
+        height: fit-content !important;
+    }
 }

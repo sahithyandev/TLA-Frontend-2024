@@ -50,7 +50,7 @@ function Agenda() {
   }, [windowWidth]);
   return (
     <>
-      <h1>நேரவரிசை</h1>
+      <h2>நேரவரிசை</h2>
       <div className="timelineCOntainer">
         <Timeline align={windowWidth > 490 ? "alternate" : "left"} className="tline">
           {events.map((event, index) => (

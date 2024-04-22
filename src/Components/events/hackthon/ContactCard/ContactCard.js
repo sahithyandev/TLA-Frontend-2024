@@ -44,6 +44,7 @@ function ContactCard() {
           </div>
         ))}
       </div>
+      <h3 className="wish-text">பங்குபற்றும் மாணவர்களுக்கு எங்கள் “நிரலி” ஒழுங்கமைப்பு குழுவின் வாழ்த்துக்கள்.</h3>
     </Container>
   );
 }
