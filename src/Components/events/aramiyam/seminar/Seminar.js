@@ -10,11 +10,13 @@ function Seminar() {
   useEffect(() => {
     const fetchSeminarData = async () => {
       try {
-        const response = await fetch("https://testing.tlauom.com/aramiyams");
-        const data = await response.json();
-        console.log(data);
-        setSeminarData(data);
+        const response = await fetch('/aramiyams');
+        if (!response.ok) {
+          throw new Error('Failed to fetch events');
+        }
 
+        const data = await response.json();
+        setSeminarData(data);
       } catch (error) {
         console.error('Error fetching events:', error);
       }
