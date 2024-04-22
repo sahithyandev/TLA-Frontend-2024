@@ -10,16 +10,11 @@ function Seminar() {
   useEffect(() => {
     const fetchSeminarData = async () => {
       try {
-        // const response = await axios.get("https://testing.tlauom.com/aramiyams");
-        axiosInstance.get('/aramiyams')
-          .then(response => {
-            console.log(response.data);
-            setSeminarData(response.data);
-          })
-          .catch(error => {
-            console.error(error);
-          });
-        
+        const response = await fetch("https://testing.tlauom.com/aramiyams");
+        const data = await response.json();
+        console.log(data);
+        setSeminarData(data);
+
       } catch (error) {
         console.error('Error fetching events:', error);
       }

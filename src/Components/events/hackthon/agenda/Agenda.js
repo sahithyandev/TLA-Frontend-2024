@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
-=======
 import { Grid, Container } from "@mui/material";
->>>>>>> parent of 2a52b0a (Merge pull request #37 from sajeethan19/main)
 import "./agenda.css";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -15,24 +12,11 @@ import isOdd from "greet_name/isOdd";
 
 function Agenda() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-<<<<<<< HEAD
-  const [events, setEvents] = useState(events);
-=======
   const [events, setEvents] = useState([]);
->>>>>>> parent of 2a52b0a (Merge pull request #37 from sajeethan19/main)
 
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-<<<<<<< HEAD
-        const response = await axios.get('/ideathon');
-        setEvents(response.data);
-      } catch (error) {
-        console.error('Error fetching events:', error);
-      }
-    };
-=======
         const response = await fetch('/ideathon');
 
         if (!response.ok) {
@@ -45,8 +29,6 @@ function Agenda() {
         console.error('Error fetching events:', error);
       }
     };
-
->>>>>>> parent of 2a52b0a (Merge pull request #37 from sajeethan19/main)
     fetchEvents();
   }, []);
 
