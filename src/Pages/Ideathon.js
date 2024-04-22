@@ -3,6 +3,7 @@ import RulesButton from "../Components/events/hackthon/RulesButton/RulesButton";
 import Agenda from "../Components/events/hackthon/agenda/Agenda";
 import HackIntro from "../Components/events/hackthon/intro/HackIntro";
 import { Helmet } from "react-helmet";
+import Prize from "../Components/events/hackthon/prize/prize";
 
 const Ideathon = () => {
     return (
@@ -15,6 +16,7 @@ const Ideathon = () => {
             <HackIntro />
             <RulesButton />
             <Agenda />
+            <Prize/>
             <ContactCard />
         </>
     );

@@ -106,7 +106,7 @@ function Router() {
                 element:<Ideathon/>
             },
             {
-                path: "memory-sharing",
+                path: "/memory-sharing",
                 element: <MemorySharing />
             },
             {

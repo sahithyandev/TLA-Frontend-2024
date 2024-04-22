@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Container } from "@mui/material";
 import "./agenda.css";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -9,28 +8,23 @@ import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 import isOdd from "greet_name/isOdd";
+import axios from 'axios';
+import events from "./eventList";
 
 function Agenda() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState(events);
 
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('/ideathon');
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch events');
-        }
-
-        const data = await response.json();
-        setEvents(data);
-      } catch (error) { 
+        const response = await axios.get('/ideathon');
+        setEvents(response.data);
+      } catch (error) {
         console.error('Error fetching events:', error);
-      } 
+      }
     };
-
     fetchEvents();
   }, []);
 
@@ -52,9 +46,9 @@ function Agenda() {
   }, [windowWidth]);
   return (
     <>
-      <h2>நேரவரிசை</h2>
+      <h1>நேரவரிசை</h1>
       <div className="timelineCOntainer">
-        <Timeline align={windowWidth > 490 ? "alternate" : "left"} className="tline">
+        <Timeline align={windowWidth > 560 ? "alternate" : "left"} className="tline">
           {events.map((event, index) => (
             <TimelineItem key={index}>
               <TimelineSeparator>
@@ -63,19 +57,19 @@ function Agenda() {
                 </TimelineDot>
                 {index - events.length === -1 ? "" : <TimelineConnector />}
               </TimelineSeparator>
-              <TimelineContent>
+              <TimelineContent className="tlbox">
                 <div
                   className={
-                    isOdd(index) == "odd" && windowWidth > 490
+                    isOdd(index) === "odd" && windowWidth > 560
                       ? "timelineBoxRight"
                       : "timelineBoxLeft"
                   }
                 >
-                  <h5>{event.time}</h5>
+                  <h6>{event.time}</h6>
                   <h3>{event.title}</h3>
                   <h4>{event.content}</h4>
                   {event.link && (
-                    <a href={event.link} className="link-button" target="_blank">
+                    <a href={event.link} className="link-button" target="_blank" rel="noreferrer">
                       {event.linkDescription}
                     </a>
                   )}
