@@ -9,7 +9,7 @@ const BooksContainer = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('/books');
+                const response = await fetch('/api/books');
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch events');

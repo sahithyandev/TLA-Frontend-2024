@@ -17,7 +17,7 @@ function Agenda() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('/ideathon');
+        const response = await fetch('/api/ideathon');
 
         if (!response.ok) {
           throw new Error('Failed to fetch events');
