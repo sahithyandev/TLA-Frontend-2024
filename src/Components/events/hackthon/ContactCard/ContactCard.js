@@ -10,7 +10,7 @@ function ContactCard() {
     {
       name: "கேதீஸ்வரன் குகேசன்",
       email: "kkukesan29@gmail.com",
-      phone: "077 123 4567",
+      phone: "075 546 4760",
     },
     {
       name: "காயத்ரி சிவகுமார்",
