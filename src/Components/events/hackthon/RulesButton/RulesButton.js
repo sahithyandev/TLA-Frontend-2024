@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useEffect, useState } from 'react';
 // import { rules } from './rules';
-import bullet from "./bullet.png";
 
 const style = {
   position: 'absolute',
