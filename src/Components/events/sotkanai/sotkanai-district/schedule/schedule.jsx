@@ -7,9 +7,6 @@ import SotkanaiData from "../../Sotkanai-Data";
 import { CalendarMonth, AccessTime, LocationOn } from "@mui/icons-material";
 const Schedule = ({ districtName, districtSchedule }) => {
   const provinces = SotkanaiData.provinces;
-
-
-
   return (
     <React.Fragment>
       {/* <div className="sotkanai-landing-container-div"> */}
