@@ -88,14 +88,14 @@ const BrammamEventAbout = () => {
       <>
         <div className="pongal-landing-container-div">
           <Container>
-            <div className="pongal-landing-heading1">
+            <div className="event-landing-heading1">
               {eventDetails?.nameTamil + " - 2024"}
             </div>
             <div style={{ marginTop: "50px" }} />
             <img
               src={usedImages[2]}
               alt=""
-              className="sotkanai-icon"
+              className="event-icon"
               style={{ height: "39vh", filter: "grayscale(100%)" }}
             />
             <Grid
