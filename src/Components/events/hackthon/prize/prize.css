@@ -34,11 +34,13 @@
 
 .prizeItem{
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    width: 30%;
 }
 .prizeInfo{
     margin: 10px;
-    max-width: 90%;
+    display: flex;
+
 }
 .wishInfo{
     width: 80vw;
