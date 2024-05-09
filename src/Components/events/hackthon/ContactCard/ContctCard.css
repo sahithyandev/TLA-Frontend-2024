@@ -47,6 +47,6 @@ h2{
         flex-direction: column;
     }
     .contact-card{
-        width: 90%;
+        width: 100%;
     }
 }
