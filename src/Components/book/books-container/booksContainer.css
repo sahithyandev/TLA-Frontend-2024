@@ -27,6 +27,7 @@
     margin-bottom: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     min-width: 220px;
+    width: 220px;
     height: 280px;
     border-radius: 5px;
     opacity: 0;
@@ -75,7 +76,6 @@
 .book-img{
     width: 100%;
     height: 70%;
-    object-fit: cover;
 }
 
 .book-modal{
@@ -178,4 +178,10 @@
 
 .rpv-core__inner-page{
     background-color: #717274 !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .books{
+        justify-content: center;
+    }
 }

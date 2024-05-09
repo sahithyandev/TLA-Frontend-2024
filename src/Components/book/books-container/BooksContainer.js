@@ -22,7 +22,7 @@ const BooksContainer = () => {
             }
         };
 
-        fetchEvents(); 
+        fetchEvents();
         setTimeout(() => {
             setLoading(true);
         }, 500);
@@ -38,19 +38,20 @@ const BooksContainer = () => {
                 <p className="sub-heading">தமிழ் இலக்கிய மன்றத்தின் வெளியீடுகள்</p>
                 <hr class="underline"></hr>
                 <div className="books">
-                    {books.map((book) => {
-                        return (
-                            <>
-                                {book.isTlaBook == true && (
+                    {books
+                        .filter(book => book.isTlaBook)
+                        .sort((a, b) => a.year - b.year)
+                        .map((book) => {
+                            return (
+                                <>
                                     <div className={loading ? "book-card fade-in" : "book-card"} onClick={() => handleOpen(book)}>
                                         <img src={book.img} alt="book" className="book-img" />
                                         <p className="book-name">{book.bookName}</p>
                                         <p className="book-year">{book.year}</p>
                                     </div>
-                                )}
-                            </>
-                        )
-                    })
+                                </>
+                            )
+                        })
                     }
                 </div>
             </div>
@@ -58,20 +59,20 @@ const BooksContainer = () => {
                 <p className="sub-heading">பல்கலைக்கழக மாணவர்களின் வெளியீடுகள்</p>
                 <hr class="underline"></hr>
                 <div className="books">
-                    {books.map((book) => {
-                        return (
-                            <>
-                                {book.isTlaBook == false && (
+                    {books
+                        .filter(book => !book.isTlaBook)
+                        .sort((a, b) => a.year - b.year)
+                        .map((book) => {
+                            return (
+                                <>
                                     <div className={loading ? "book-card fade-in" : "book-card"} onClick={() => handleOpen(book)}>
                                         <img src={book.img} alt="book" className="book-img" />
                                         <p className="book-name">{book.bookName}</p>
-                                        {/* <p className="book-year">{book.year}</p> */}
                                         <p className="book-author">{book.author}</p>
                                     </div>
-                                )}
-                            </>
-                        )
-                    })
+                                </>
+                            )
+                        })
                     }
                 </div>
             </div>

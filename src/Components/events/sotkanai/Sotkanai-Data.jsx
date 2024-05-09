@@ -1,23 +1,35 @@
-// import React from "react";
+import React from "react";
 
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 
 // function SotkanaiData() {
 //   const [sotkanaiData, setSotkanaiData] = useState(null);
 
 //   useEffect(() => {
-//     fetch('http://localhost:3001/sotkanaiData')
-//       .then(response => response.json())
-//       .then(data => setSotkanaiData(data))
-//       .catch(error => console.error('Error fetching data:', error));
+//       const fetchEvents = async () => {
+//         try {
+//             const response = await fetch('/api/sotkanais');
+
+//             if (!response.ok) {
+//                 throw new Error('Failed to fetch events');
+//             }
+
+//             const data = await response.json();
+//             setSotkanaiData(data);
+//         } catch (error) {
+//             console.error('Error fetching events:', error);
+//         }
+//     };
+//     fetchEvents();
 //   }, []);
+//   console.log("sotkanaiData source", sotkanaiData);
+//   return sotkanaiData;
 // }
 // export default SotkanaiData;
 
-const SotkanaiData = {
-  provinces: [
+const SotkanaiData = [
     {
-      name: "வடக்கு மாகாணம்",
+      provinceName: "வடக்கு மாகாணம்",
       districts: [
         {
           name: "யாழ்ப்பாணம்",
@@ -134,7 +146,7 @@ const SotkanaiData = {
       ],
     },
     {
-      name: "கிழக்கு மாகாணம்",
+      provinceName: "கிழக்கு மாகாணம்",
       districts: [
         {
           name: "திருகோணமலை",
@@ -202,7 +214,7 @@ const SotkanaiData = {
       ],
     },
     {
-      name: "சப்ரகமுவ மாகாணம்",
+      provinceName: "சப்ரகமுவ மாகாணம்",
       districts: [
         {
           name: "இரத்தினபுரி",
@@ -248,7 +260,7 @@ const SotkanaiData = {
       ],
     },
     {
-      name: "மத்திய மாகாணம்",
+      provinceName: "மத்திய மாகாணம்",
       districts: [
         {
           name: "நுவரெலியா",
@@ -317,7 +329,7 @@ const SotkanaiData = {
       ],
     },
     {
-      name: "ஊவா மாகாணம்",
+      provinceName: "ஊவா மாகாணம்",
       districts: [
         {
           name: "பதுளை",
@@ -362,7 +374,7 @@ const SotkanaiData = {
       ],
     },
     {
-      name: "மேல் மாகாணம்",
+      provinceName: "மேல் மாகாணம்",
       districts: [
         {
           name: "கொழும்பு",
@@ -430,7 +442,7 @@ const SotkanaiData = {
       ],
     },
     {
-      name: "வடமேல் மாகாணம்",
+      provinceName: "வடமேல் மாகாணம்",
       districts: [
         {
           name: "குருநாகல்",
@@ -475,7 +487,7 @@ const SotkanaiData = {
       ]
     },
     {
-      name: "தெற்கு மாகாணம்",
+      provinceName: "தெற்கு மாகாணம்",
       districts: [
         {
           name: "காலி",
@@ -540,7 +552,7 @@ const SotkanaiData = {
       ],
     },
     {
-      name: "வடமத்திய மாகாணம்",
+      provinceName: "வடமத்திய மாகாணம்",
       districts: [
         {
           name: "அநுராதபுரம்",
@@ -584,6 +596,5 @@ const SotkanaiData = {
         }
       ],
     }
-  ]
-};
+  ];
 export default SotkanaiData;
