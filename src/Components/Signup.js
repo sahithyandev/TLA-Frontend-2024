@@ -29,7 +29,7 @@ function Signup({ changeModal }) {
 		password: false,
 		confirmPassword: false,
 		phoneNo: false,
-		profileImage: false
+		profileImage: true
 	});
 	const [buttonClicked, setButtonClicked] = useState(false);
 	const [formData, setFormData] = useState({
@@ -79,6 +79,7 @@ function Signup({ changeModal }) {
 		try {
 			const anythingInvalid = Object.values(formValid).findIndex((v) => !v) != -1;
 			if (anythingInvalid) {
+				console.log("invalid", formValid)
 				return;
 			}
 
